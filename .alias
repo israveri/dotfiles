@@ -3,8 +3,8 @@ alias reload="source $HOME/.zshrc && echo 'Shell reloaded. :)'"
 alias cleanup="sudo pacman -Rns $(pacman -Qtdq)"
 alias sysupdate="sudo pacman -Syu"
 
-alias ls="ls -l --color=always"
-alias lsa="ls -al --color=always"
+alias ls="ls -lh --color=always"
+alias lsa="ls -alh --color=always"
 alias ..="cd .."
 alias ...="cd ../.."
 
