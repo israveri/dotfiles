@@ -6,6 +6,12 @@
   editor       = vim
   excludesfile = ~/.gitignore
 
+[include]
+  path = .gitconfig.local
+  
+[push]
+  default      = simple
+
 [color]
   branch       = auto
   diff         = auto
@@ -13,15 +19,12 @@
   ui           = auto
 
 [color "status"]
-  added        = green bold
+  added        = blue bold
   changed      = yellow bold
   untracked    = red bold
 
-[push]
-  default      = simple
-
 [pull]
-  rebase       = true
+  rebase       = false
 
 [merge]
   ff           = false
