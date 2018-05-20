@@ -1,0 +1,16 @@
+# system
+alias reload="source $HOME/.zshrc && echo 'Shell reloaded. :)'"
+alias cleanup="sudo pacman -Rns $(pacman -Qtdq)"
+alias sysupdate="sudo pacman -Syu"
+
+alias ls="ls -l --color=always"
+alias lsa="ls -al --color=always"
+alias ..="cd .."
+alias ...="cd ../.."
+
+# bundler
+alias be="bundle exec"
+alias bi="bundle install"
+alias bl="bundle list"
+alias bo="bundle open"
+alias bu="bundle update"
