@@ -1,0 +1,46 @@
+[user]
+  name         = Israel Ribeiro
+  email        = israveri@gmail.com
+
+[core]
+  editor       = vim
+  excludesfile = ~/.gitignore
+
+[color]
+  branch       = auto
+  diff         = auto
+  status       = auto
+  ui           = auto
+
+[color "status"]
+  added        = green bold
+  changed      = yellow bold
+  untracked    = red bold
+
+[push]
+  default      = simple
+
+[pull]
+  rebase       = true
+
+[merge]
+  ff           = false
+
+[alias]
+  a            = add --all
+  b            = branch
+  bd           = branch -D
+  c            = commit
+  cm           = commit -m
+  cma          = commit -ma
+  d            = diff
+  dc           = diff --cached
+  m            = merge
+  ma           = merge --abort
+  mc           = merge --continue
+  ms           = merge --skip
+  co           = checkout
+  cob          = checkout -b
+  cot          = checkout --track
+  s            = status
+  sb           = status -s -b
