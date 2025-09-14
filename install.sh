@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Exit if a command finished with non-zero status
+set -eE
+
+readonly script_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# Foundations
+source "$script_dir"/install/packages.sh
+
