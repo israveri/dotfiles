@@ -1,0 +1,15 @@
+# Shell
+alias reload="exec zsh"
+
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+
+# Core
+alias ls="eza --header --long --git --classify --group-directories-first --color=always"
+alias lst="ls --tree --level=2"
+alias lsa="ls --all"
+alias lsta="lst --all"
+
+# Utilities
+alias grep="grep --color=always"

@@ -1,0 +1,30 @@
+[user]
+  name		= Israel Ribeiro
+  email 	= israveri@gmail.com
+
+[core]
+  editor	= nvim
+  excludesfile  = ~/.config/git/gitignore
+
+[push]
+  default	= simple
+
+[color]
+  branch	= auto
+  diff		= auto
+  status	= auto
+  ui		= auto
+
+[color "status"]
+  added		= green bold
+  changed	= yellow bold
+  untracked	= red bold
+
+[pull]
+  rebase	= true
+
+[merge]
+  ff		= true
+
+[init]
+  defaultBranch = main
