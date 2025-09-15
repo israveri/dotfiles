@@ -11,5 +11,8 @@ alias lst="ls --tree --level=2"
 alias lsa="ls --all"
 alias lsta="lst --all"
 
+# Applications
+alias vim="nvim"
+
 # Utilities
 alias grep="grep --color=always"
