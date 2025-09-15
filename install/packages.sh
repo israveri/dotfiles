@@ -43,6 +43,7 @@ pkgs=(
 	ttf-dejavu
 	nerd-fonts
 	inter-font
+	brightnessctl
 )
 
 sudo pacman -S --noconfirm --needed "${pkgs[@]}"
