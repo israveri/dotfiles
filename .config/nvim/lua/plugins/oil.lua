@@ -7,7 +7,6 @@ return {
 	{ "-", "<cmd>Oil --float --preview<cr>", desc = "Open file explorer in Oil" }
     },
     dependencies = {
-	--{ "nvim-treesitter/nvim-treesitter" }, 
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
     },
     opts = {

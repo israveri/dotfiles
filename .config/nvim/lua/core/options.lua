@@ -1,6 +1,7 @@
 --
 -- Custom configurations
 --
+vim.opt.undofile = true                 -- Persists undo history between sessions
 vim.g.have_nerd_font = true             -- Declare nerd font installed and setup in terminal
 vim.opt.number = true                   -- Turn on line numbers
 vim.opt.relativenumber = true           -- Make line numbers relative
@@ -33,8 +34,12 @@ vim.opt.expandtab = false               -- Don't turn Tabs into Spaces with the 
 vim.opt.smartindent = true              -- Do auto indentation after some characters (eg. after '{' )
 vim.opt.autoindent = true               -- Copy indentation from current line into new line
 
+-- Splitting
+vim.opt.splitright = true               -- Always split to the right in vertical splits
+vim.opt.splitbelow = true               -- Always split below in horizontal splits
+
 -- Clipboard: Sync OS and Neovim clipboards
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+    vim.o.clipboard = 'unnamedplus'
 end)
 
