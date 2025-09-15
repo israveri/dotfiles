@@ -47,6 +47,7 @@ pkgs=(
         uwsm
         waybar
         wireplumber
+	xdg-desktop-portal-hyprland
         zsh
         zsh-completions
 )
