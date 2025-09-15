@@ -1,0 +1,7 @@
+# See https://wiki.hypr.land/Configuring/Environment-variables/
+
+#
+# All environment vars starting with HYPR* and AQ_*
+# MUST be defined here
+#
+
