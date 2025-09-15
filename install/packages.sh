@@ -22,6 +22,8 @@ pkgs=(
 	pipewire
 	pipewire-jack
 	pipewire-pulse
+	pipewire-alsa
+	wireplumber
 	greetd
 	greetd-tuigreet
 	swww
@@ -31,6 +33,7 @@ pkgs=(
 	dbus
 	openssl
 	sqlite
+	waybar
 )
 
 sudo pacman -S --noconfirm --needed "${pkgs[@]}"
