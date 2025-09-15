@@ -34,6 +34,8 @@ pkgs=(
 	openssl
 	sqlite
 	waybar
+	bluez
+	bluez-utils
 )
 
 sudo pacman -S --noconfirm --needed "${pkgs[@]}"
