@@ -1,6 +1,9 @@
 # Alias
 source .config/alias/alias
 
+# Environment
+EDITOR=nvim
+
 # Starship
 eval "$(starship init zsh)"
 
