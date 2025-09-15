@@ -4,5 +4,4 @@
 # Restarts waybar instance
 #
 
-killall -9 waybar
-waybar &
+killall -SIGUSR2 waybar

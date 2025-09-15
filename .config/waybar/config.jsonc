@@ -4,7 +4,7 @@
     "layer": "top",
     "position": "top",
     "height": 32,
-    "spacing": 4,
+    "spacing": 5,
     "include": "~/.config/waybar/modules.jsonc",
     "modules-left": ["custom/archicon", "clock#time", "clock#date"],
     "modules-center": ["hyprland/workspaces"],
