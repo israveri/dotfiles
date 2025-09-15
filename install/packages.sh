@@ -44,6 +44,10 @@ pkgs=(
 	nerd-fonts
 	inter-font
 	brightnessctl
+	luarocks
+	fd
+	ripgrep
+	bat
 )
 
 sudo pacman -S --noconfirm --needed "${pkgs[@]}"
