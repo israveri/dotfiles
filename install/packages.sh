@@ -36,6 +36,13 @@ pkgs=(
 	waybar
 	bluez
 	bluez-utils
+	noto-fonts
+	noto-fonts-cjk
+	noto-fonts-emoji
+	ttf-liberation
+	ttf-dejavu
+	nerd-fonts
+	inter-font
 )
 
 sudo pacman -S --noconfirm --needed "${pkgs[@]}"
