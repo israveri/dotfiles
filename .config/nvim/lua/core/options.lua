@@ -1,6 +1,10 @@
 --
 -- Custom configurations
 --
+vim.opt.guicursor = ""                  -- Phat Cursor Boyy! S2
+vim.opt.wrap = false                    -- No wraps
+vim.opt.hlsearch = false                -- Don't keep search highlighted
+vim.opt.incsearch = true                -- Incremental search highlighting
 vim.opt.undofile = true                 -- Persists undo history between sessions
 vim.g.have_nerd_font = true             -- Declare nerd font installed and setup in terminal
 vim.opt.number = true                   -- Turn on line numbers
@@ -15,6 +19,7 @@ vim.o.scrolloff = 15                    -- Minimum ammount of lines above/below 
 vim.o.confirm = true                    -- Show confirm dialog when trying to quit before saving
 vim.o.ignorecase = true                 -- Search using case insensitive pattern
 vim.o.smartcase = true                  -- Searches using case sensitive pattern ONLY IF query has upper case characters
+vim.opt.winborder = 'rounded'           -- Rounded borders for all floating windows (required for LSP to work)
 vim.o.list = true                       -- Show special characters for whitespace indications
 vim.opt.listchars = {                   -- Define wich characters are shown for whitespaces
     tab = '» ',
