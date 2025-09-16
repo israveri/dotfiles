@@ -23,6 +23,7 @@ pkgs=(
         gtk4-layer-shell
         inter-font
         jq
+	lua-language-server
         luarocks
         mise
         neovim
