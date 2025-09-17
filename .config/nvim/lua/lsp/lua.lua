@@ -1,13 +1,13 @@
 -- This line enables lsp server
 -- Server config is located at root/lsp/ 
-vim.lsp.enable("lua")
+vim.lsp.enable("luals")
 
 -- Diagnostics
 vim.diagnostic.config({
-     virtual_lines = true,
+    -- virtual_lines = true,
 
     -- virtual_text = { current_line = true },
-    -- virtual_lines = { current_line = true },
+    virtual_lines = { current_line = true },
 })
 
 -- Code Completion
