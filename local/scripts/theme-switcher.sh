@@ -37,6 +37,7 @@ apply() {
 	set_ghostty_theme
 	set_rofi_theme
 	set_neovim_theme
+	set_hyprland_theme
     fi
 }
 
@@ -78,7 +79,6 @@ set_neovim_theme() {
     local dir=~/.config/nvim
 
     if [[ -n $SELECTED_THEME ]]; then
-	local sub="colorscheme(\"${SELECTED_THEME}\")"
 	local file="${dir}/lua/colors/init.lua"
 
 	# Here we normalize the presence/absence of the file
@@ -94,6 +94,24 @@ set_neovim_theme() {
 
 	echo "  + Neovim applied with ${SELECTED_THEME}"
     fi
+}
+
+set_hyprland_theme() {
+    local dir=~/.config/hypr
+
+    if [[ -n $SELECTED_THEME ]]; then
+	local file="${dir}/theming/current.conf"
+
+	if [[ -f $file ]]; then
+	    rm $file
+	    touch $file
+	fi
+
+	cp ~/.config/colorschemes/${SELECTED_THEME}/hypr/${SELECTED_THEME}.conf $file
+
+	echo "  + Hyprland applied with ${SELECTED_THEME}"
+    fi
+
 }
 
 select_theme && apply
