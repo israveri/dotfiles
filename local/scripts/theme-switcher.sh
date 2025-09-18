@@ -79,10 +79,21 @@ set_neovim_theme() {
 
     if [[ -n $SELECTED_THEME ]]; then
 	local sub="colorscheme(\"${SELECTED_THEME}\")"
-	sed -i "s/colorscheme(\".*\")/${sub}/" "${dir}/lua/colors/init.lua"
+	local file="${dir}/lua/colors/init.lua"
+
+	# Here we normalize the presence/absence of the file
+	#  so we can simply push the color command into an
+	#  empty one
+	if [[ -f $file ]]; then
+	    rm $file
+	else
+	    touch "${dir}/lua/colors/init.lua"
+	fi
+
+	echo "vim.cmd.colorscheme(\"${SELECTED_THEME}\")" >> $file
+
 	echo "  + Neovim applied with ${SELECTED_THEME}"
     fi
 }
-
 
 select_theme && apply
