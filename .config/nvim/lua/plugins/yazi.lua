@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd("UiEnter", {
 
 	    integrations = {
 		grep_in_directory = function(directory)
-		    require("fzf-lua").live_grep({directory})
+		    require("fzf-lua").files({ cwd = directory })
 		end,
 	    }
 	})
