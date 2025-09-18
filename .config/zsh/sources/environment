@@ -1,2 +1,1 @@
-EDITOR=nvim
-
+EDITOR=nvim                                    # Default text editor
