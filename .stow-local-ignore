@@ -7,3 +7,7 @@
 ^local$
 ^src$
 ^install[.\w]*
+
+config/ghostty/themes/colors.conf
+config/rofi/colors.rasi
+config/nvim/lua/colors/init.lua
