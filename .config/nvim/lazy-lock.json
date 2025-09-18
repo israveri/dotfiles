@@ -1,5 +1,7 @@
 {
-  "fzf-lua": { "branch": "main", "commit": "ebdf24289c1d058e41fc9eb07deba3626d55a5ce" },
+  "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
+  "fidget.nvim": { "branch": "main", "commit": "4d5858bd4c471c895060e1b9f3575f1551184dc5" },
+  "fzf-lua": { "branch": "main", "commit": "fd244f2a6e1e3b1c6fcf0361bc738f362f269ce8" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lualine.nvim": { "branch": "master", "commit": "b8c23159c0161f4b89196f74ee3a6d02cdc3a955" },
   "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
@@ -9,5 +11,5 @@
   "sort.nvim": { "branch": "main", "commit": "bb92140e1b96d62339bd5ab5b6df1eecca0d5da6" },
   "undotree": { "branch": "main", "commit": "68fb733769fed365cca72d7c97c5cc2fd3d31055" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
-  "yazi.nvim": { "branch": "main", "commit": "ecb88a97210a3774bfee3db93e96ae7bf5c09663" }
+  "yazi.nvim": { "branch": "main", "commit": "2d7d0e8f9f5fbe3b637b251c6928e6ca348da580" }
 }
