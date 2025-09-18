@@ -24,6 +24,8 @@ export XDG_CURRENT_DESKTOP="Hyprland"
 export XDG_SESSION_DESKTOP="Hyprland"
 export XDG_SESSION_TYPE="wayland"
 
+export XDG_PICTURES_DIR="Pictures/"
+
 # Use XCompose file
 export XCOMPOSEFILE="~/.XCompose"
 
