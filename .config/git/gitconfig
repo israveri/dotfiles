@@ -1,30 +1,47 @@
 [user]
-  name		= Israel Ribeiro
-  email 	= israveri@gmail.com
+    name            = Israel Ribeiro
+    email           = israveri@gmail.com
 
 [core]
-  editor	= nvim
-  excludesfile  = ~/.config/git/gitignore
+    editor          = nvim
+    excludesfile    = ~/.config/git/gitignore
 
 [push]
-  default	= simple
+    default         = simple
 
 [color]
-  branch	= auto
-  diff		= auto
-  status	= auto
-  ui		= auto
+    branch          = auto
+    diff            = auto
+    status          = auto
+    ui              = auto
 
 [color "status"]
-  added		= green bold
-  changed	= yellow bold
-  untracked	= red bold
+    added           = green bold
+    changed         = yellow bold
+    untracked       = red bold
 
 [pull]
-  rebase	= true
+    rebase          = true
 
 [merge]
-  ff		= true
+    ff              = true
+    tool            = nvimdiff
+
+[mergetool]
+    prompt          = true
+
+[mergetool "nvimdiff"]
+    cmd             = "nvim -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
+
+[diff]
+    tool            = nvimdiff
+
+[difftool]
+    prompt          = false
+
+[difftool "nvimdiff"]
+    cmd             = "nvim -d \"$LOCAL\" \"$REMOTE\""
+
 
 [init]
-  defaultBranch = main
+    defaultBranch   = main
