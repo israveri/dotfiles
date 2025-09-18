@@ -1,4 +1,5 @@
 {
+  "conform.nvim": { "branch": "master", "commit": "b4aab989db276993ea5dcb78872be494ce546521" },
   "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
   "fidget.nvim": { "branch": "main", "commit": "4d5858bd4c471c895060e1b9f3575f1551184dc5" },
   "fzf-lua": { "branch": "main", "commit": "fd244f2a6e1e3b1c6fcf0361bc738f362f269ce8" },
@@ -11,5 +12,5 @@
   "sort.nvim": { "branch": "main", "commit": "bb92140e1b96d62339bd5ab5b6df1eecca0d5da6" },
   "undotree": { "branch": "main", "commit": "68fb733769fed365cca72d7c97c5cc2fd3d31055" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
-  "yazi.nvim": { "branch": "main", "commit": "2d7d0e8f9f5fbe3b637b251c6928e6ca348da580" }
+  "yazi.nvim": { "branch": "main", "commit": "acd50311d83e0332dad4a2c172de00359b647d6a" }
 }
