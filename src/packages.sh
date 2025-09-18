@@ -44,6 +44,7 @@ pkgs=(
     pipewire-pulse
     polkit
     ripgrep
+    rofi
     ruby-lsp
     rust
     sqlite
