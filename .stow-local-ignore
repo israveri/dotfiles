@@ -1,8 +1,7 @@
 \.git
 \.gitignore
-\.gitmodules
 
-^/README.*
+README[.\w]*
 
-^/install
-\.sh
+src
+install[.\w]*
