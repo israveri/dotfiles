@@ -36,6 +36,7 @@ apply() {
 
 	set_ghostty_theme
 	set_rofi_theme
+	set_neovim_theme
     fi
 }
 
@@ -71,6 +72,16 @@ set_rofi_theme() {
     echo "@theme \"${dir}/colors.rasi\"" >> ${dir}/config.rasi
 
     echo "  + Rofi applied with ${SELECTED_THEME}"
+}
+
+set_neovim_theme() {
+    local dir=~/.config/nvim
+
+    if [[ -n $SELECTED_THEME ]]; then
+	local sub="colorscheme(\"${SELECTED_THEME}\")"
+	sed -i "s/colorscheme(\".*\")/${sub}/" "${dir}/lua/colors/init.lua"
+	echo "  + Neovim applied with ${SELECTED_THEME}"
+    fi
 }
 
 
