@@ -15,6 +15,7 @@ pkgs=(
     btop
     dbus
     eza
+    fastfetch
     fd
     fzf
     git
@@ -22,14 +23,17 @@ pkgs=(
     greetd-tuigreet
     gtk4
     gtk4-layer-shell
+    hyprpicker
+    hyprshot
     inter-font
     jq
+    libffi
+    libyaml
     lua-language-server
     luarocks
     mise
     neovim
     nerd-fonts
-    noto-fonts
     noto-fonts
     noto-fonts-cjk
     noto-fonts-emoji
@@ -40,17 +44,21 @@ pkgs=(
     pipewire-pulse
     polkit
     ripgrep
+    ruby-lsp
+    rust
     sqlite
     starship
+    stylua
     swww
-    tree
     tree-sitter
     ttf-dejavu
     ttf-liberation
     uwsm
     waybar
     wireplumber
+    wl-clipboard
     xdg-desktop-portal-hyprland
+    zlib
     zsh
     zsh-completions
 )
