@@ -1,95 +1,95 @@
 // -*- mode: jsonc -*-
 {
-  "custom/archicon": {
-    "format": "󰣇 ",
-    "tooltip": false,
-    "on-click": "uwsm app -- sherlock"
-  },
+    "custom/archicon": {
+	"format": "󰣇 ",
+	"tooltip": false,
+	"on-click": "uwsm app -- sherlock"
+    },
 
-  "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": { "active": "", "default": "" },
-    "persistent-workspaces": { "*": 3 },
-    "disable_scroll": true,
-    "show-special": true,
-    "all-outputs": true
-  },
+    "hyprland/workspaces": {
+	"format": "{icon}",
+	"format-icons": { "active": "", "default": "" },
+	"persistent-workspaces": { "*": 3 },
+	"disable_scroll": true,
+	"show-special": true,
+	"all-outputs": true
+    },
 
-  "idle_inhibitor": {
-    "tooltip": false,
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "󰶞 ",
-      "deactivated": "󰅶 "
-    }
-  },
+    "hyprland/window": {
+	"format": "{title}"
+    },
 
-  "wireplumber#out": {
-    "format": "{volume}% {icon}",
-    "format-muted": "󰸈 ",
-    "format-icons": ["", " ", " "],
-    "tooltip": false
-  },
+    "idle_inhibitor": {
+	"tooltip": false,
+	"format": "{icon}",
+	"format-icons": {
+	    "activated": "󰶞 ",
+	    "deactivated": "󰅶 "
+	}
+    },
 
-  "wireplumber#in": {
-    "node-type": "Audio/Source",
-    "format": "{volume}% 󰍬",
-    "format-muted": "󰍭 ",
-    "tooltip": false
-  },
-
-    "clock#time": {
-        "timezone": "America/Sao_Paulo",
-        "format": "{:%R 󰅐 }",
-	"interval": 60,
+    "wireplumber#out": {
+	"format": "{volume}% {icon}",
+	"format-muted": "󰸈 ",
+	"format-icons": ["", " ", " "],
 	"tooltip": false
     },
 
-    "clock#date": {
-      "format": "{:%d %b 󰸗 }",
-      "tooltip-format": "<tt><big>{calendar}</big></tt>",
-      "calendar": {
-        "mode": "month",
-	"format": {
-          "days":	"<b>{}</b>",
-          "weeks":	"<b>{}</b>",
-          "months":	"<b>{}</b>",
-          "weekdays":	"<b>{}</b>",
-          "today":	"<b><u>{}</u></b>"
+    "wireplumber#in": {
+	"node-type": "Audio/Source",
+	"format": "{volume}% 󰍬",
+	"format-muted": "󰍭 ",
+	"tooltip": false
+    },
+
+    "clock": {
+	"timezone": "America/Sao_Paulo",
+	"format": "{:%a %R}",
+	"interval": 60,
+	"tooltip": true,
+	"tooltip-format": "<tt><big>{calendar}</big></tt>",
+	"calendar": {
+	    "mode": "month",
+	    "format": {
+		"days": "<b>{}</b>",
+		"weeks": "<b>{}</b>",
+		"months": "<b>{}</b>",
+		"weekdays": "<b>{}</b>",
+		"today": "<b><u>{}</u></b>"
+	    }
 	}
-      }
     },
 
     "backlight": {
 	"tooltip": false,
-        "format": "{percent}% {icon}",
-        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "]
+	"format": "{percent}% {icon}",
+	"format-icons": ["󰃞 ", "󰃟 ", "󰃠 "]
     },
 
     "battery": {
-        "states": { "critical": 10, "warning": 20 },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰂄",
-        "format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"],
+	"states": { "critical": 10, "warning": 20 },
+	"format": "{capacity}% {icon}",
+	"format-charging": "{capacity}% 󰂄",
+	"format-icons": ["󰂎", "󱊡", "󱊢", "󱊣"],
 	"tooltip-format": "Discharging: {time}",
 	"tooltip-format-charging": "Charging: {time}",
 	"events": {
-          //"on-discharging-warning": "",
-          //"on-discharging-warning": "",
-          //"on-charging-95": ""
+	  //"on-discharging-warning": "",
+	  //"on-discharging-warning": "",
+	  //"on-charging-95": ""
 	}
     },
 
     "network": {
-        "format-wifi": "󰖩 ",
-        "format-ethernet": "󰈀 ",
-        "format-disconnected": "󱛅 ",
-        "format-disabled": "󱚿 ",
-        "format-linked": "{ifname} (No IP) 󱚵 ",
-        "tooltip-format-wifi": "{essid} | {frequency}GHz | {signaldBm}dBm | {ipaddr}",
-        "tooltip-format-ethernet": "{ipaddr}",
-        "tooltip-format-disconnected": "Disconnected",
-        "tooltip-format-disabled": "Interface Disabled"
+	"format-wifi": "󰖩 ",
+	"format-ethernet": "󰈀 ",
+	"format-disconnected": "󱛅 ",
+	"format-disabled": "󱚿 ",
+	"format-linked": "{ifname} (No IP) 󱚵 ",
+	"tooltip-format-wifi": "{essid} | {frequency}GHz | {signaldBm}dBm | {ipaddr}",
+	"tooltip-format-ethernet": "{ipaddr}",
+	"tooltip-format-disconnected": "Disconnected",
+	"tooltip-format-disabled": "Interface Disabled"
     },
 
     "bluetooth": {

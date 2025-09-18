@@ -6,7 +6,7 @@
     "height": 32,
     "spacing": 5,
     "include": "~/.config/waybar/modules.jsonc",
-    "modules-left": ["custom/archicon", "clock#time", "clock#date"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["custom/archicon", "hyprland/workspaces"],
+    "modules-center": ["clock"],
     "modules-right": ["idle_inhibitor", "network", "bluetooth", "backlight", "wireplumber#out", "wireplumber#in", "battery", "custom/power"]
 }
