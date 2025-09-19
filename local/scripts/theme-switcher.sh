@@ -38,6 +38,7 @@ apply() {
 	set_rofi_theme
 	set_neovim_theme
 	set_hyprland_theme
+	set_waybar_theme
     fi
 }
 
@@ -104,7 +105,6 @@ set_hyprland_theme() {
 
 	if [[ -f $file ]]; then
 	    rm $file
-	    touch $file
 	fi
 
 	cp ~/.config/colorschemes/${SELECTED_THEME}/hypr/${SELECTED_THEME}.conf $file
@@ -112,6 +112,23 @@ set_hyprland_theme() {
 	echo "  + Hyprland applied with ${SELECTED_THEME}"
     fi
 
+}
+
+set_waybar_theme() {
+    local dir=~/.config/waybar
+
+    if [[ -n $SELECTED_THEME ]]; then
+	local file=~/.config/waybar/theme.css
+
+	if [[ -f $file ]]; then
+	    rm  $file
+	fi
+
+	cp ~/.config/colorschemes/${SELECTED_THEME}/waybar/${SELECTED_THEME}.css $file
+	killall -SIGUSR2 waybar
+
+	echo "  + Waybar applied with ${SELECTED_THEME}"
+    fi
 }
 
 select_theme && apply
