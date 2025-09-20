@@ -1,0 +1,8 @@
+alias ...="cd ../.."
+alias ..="cd .."
+alias cat="bat"
+alias grep="grep --color=always"
+alias ls="eza --header --long --git --classify --group-directories-first --color=always"
+alias lsa="ls --all"
+alias lst="ls --tree --level=2"
+alias lsta="lst --all"

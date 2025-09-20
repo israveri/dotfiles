@@ -1,1 +1,15 @@
+export ZDOTDIR=$HOME
 export PATH="$PATH:$HOME/.local/scripts"
+
+export EDITOR=nvim
+export VISUAL=nvim
+
+export MANPAGER='nvim +Man!'
+
+export HISTFILE=$XDG_CONFIG_HOME/zsh/.zhistory
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+export HISTCONTROL=ignoreboth
+
+export FZF_DEFAULT_OPTS="--style=minimal --layout=reverse --info=hidden --no-sort --no-preview --prompt='' --input-border=sharp --input-label='reverse-i-search' --input-label-pos=3 --cycle --list-border=sharp --list-label=History --list-label-pos=3 --gap=1 --scrollbar='▌'"
+export FZF_CTRL_R_OPTS="--style minimal --info inline --no-sort --no-preview --prompt '' --input-border sharp --input-label reverse-i-search --input-label-pos 3 --cycle --list-border sharp --list-label History --list-label-pos 3 --gap 1 --scrollbar='▌'"

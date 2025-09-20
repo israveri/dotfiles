@@ -1,10 +1,26 @@
 # Dotfiles
 
-This is a collection of dotfiles and application configs that I use on my personal notebook. I'm currently running an Arch Linux with Hyprland setup and managing the configurations using Stow.
+Collection of config files, scripts and other stuff that I use on my devices.
 
-### Usage
+## Warning
 
-To setup all configuration simply run:
+Don't run `./install` as it has absolutelly no protections and it assumes it's running in on of my devices. It willl probably mess up your machine.
+
+## Usage
+
+1. Install packages
+
+`$ ./src/packages.sh`
+
+2. Initialize the git submodules
+
+`$ git submodule init`
+
+3. Update the submodules
+
+`$ git submodule update`
+
+4. Install all configuration
 
 `$ stow .`
 
