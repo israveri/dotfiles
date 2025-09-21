@@ -1,14 +1,14 @@
 // -*- mode: jsonc -*-
 {
-    "custom/archicon": {
-	"format": "󰣇 ",
+    "custom/menu": {
+	"format": "",
 	"tooltip": false,
 	"on-click": "uwsm app -- sherlock"
     },
 
     "hyprland/workspaces": {
 	"format": "{icon}",
-	"format-icons": { "active": "", "default": "" },
+	"format-icons": { "active": "" },
 	"persistent-workspaces": { "*": 3 },
 	"disable_scroll": true,
 	"show-special": true,
