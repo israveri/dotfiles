@@ -39,6 +39,7 @@ apply() {
 		set_neovim_theme
 		set_hyprland_theme
 		set_waybar_theme
+		set_starship_theme
 	fi
 }
 
@@ -128,6 +129,15 @@ set_waybar_theme() {
 		killall -SIGUSR2 waybar
 
 		echo "  + Waybar applied with ${SELECTED_THEME}"
+	fi
+}
+
+set_starship_theme() {
+	if [[ -n $SELECTED_THEME ]]; then
+		local file=~/.config/starship/config.toml
+
+		sed -i "s/palette = .*/palette = \"${SELECTED_THEME}\"/" $file
+		echo "  + Starship applied with ${SELECTED_THEME}"
 	fi
 }
 
