@@ -19,10 +19,10 @@ zstyle ":completion:*:*:-command-:*:*" group-order alias builtins functions comm
 zstyle ":completion:*:default" list-colors ${(s.:.)LS_COLORS}
 
 # Module Zsh-Completions
-fpath=($XDG_CONFIG_HOME/zsh/modules/completions/src $fpath)
+fpath=($XDG_CONFIG_HOME/zsh/submodules/completions/src $fpath)
 
 # Module Zsh-Autosuggestions
-source $XDG_CONFIG_HOME/zsh/modules/autosuggestions/zsh-autosuggestions.zsh
+source $XDG_CONFIG_HOME/zsh/submodules/autosuggestions/zsh-autosuggestions.zsh
 
 # Module Zsh-Syntax_highlighting
-source $XDG_CONFIG_HOME/zsh/modules/highlighting/zsh-syntax-highlighting.zsh
+source $XDG_CONFIG_HOME/zsh/submodules/highlighting/zsh-syntax-highlighting.zsh

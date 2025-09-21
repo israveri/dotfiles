@@ -5,3 +5,5 @@ config\/rofi\/colors.rasi
 config\/nvim\/lua\/colors\/init.lua
 config\/hypr\/theming\/current.conf
 config\/waybar\/theme.css
+
+.zhistory
