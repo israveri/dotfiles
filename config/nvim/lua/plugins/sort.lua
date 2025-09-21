@@ -1,4 +1,4 @@
 return {
-  'sQVe/sort.nvim',
-  opts = {}
+	"sQVe/sort.nvim",
+	opts = {},
 }

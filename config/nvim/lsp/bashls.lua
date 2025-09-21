@@ -3,7 +3,7 @@ return {
 
 	cmd = { "bash-language-server", "start" },
 
-	root_markers = {},
+	root_markers = { ".git" },
 
 	settings = {},
 }
