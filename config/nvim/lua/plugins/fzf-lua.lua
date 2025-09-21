@@ -27,6 +27,11 @@ return {
     },
     opts = {
 	files = { hidden = true },
-	grep = { hidden = true }
+	grep = { hidden = true },
+	file_ignore_patterns = {
+	    ".git/",
+	    "node_modules/",
+	    "submodules/",
+	},
     },
 }
