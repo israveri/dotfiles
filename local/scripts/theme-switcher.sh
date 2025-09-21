@@ -14,121 +14,121 @@ SELECTED_THEME=""
 #  a theme. The chosen theme is stored in a global
 #  variable to be referenced in other functions
 select_theme() {
-    echo "> Selecting Theme"
+	echo "> Selecting Theme"
 
-    local choice=$(ls ~/.config/colorschemes | rofi -dmenu)
+	local choice=$(ls ~/.config/colorschemes | rofi -dmenu)
 
-    if [[ -n $choice ]]; then
-	SELECTED_THEME=$choice
-	echo "  + $SELECTED_THEME selected"
-	echo ""
-    else
-	echo "  - No theme was selected"
-	echo ""
-    fi
+	if [[ -n $choice ]]; then
+		SELECTED_THEME=$choice
+		echo "  + $SELECTED_THEME selected"
+		echo ""
+	else
+		echo "  - No theme was selected"
+		echo ""
+	fi
 }
 
 # In case the global variable with the chosen theme
 #  is valued, we apply the theme to each application
 apply() {
-    if [[ -n $SELECTED_THEME ]]; then
-	echo "> Applying theme to applications"
+	if [[ -n $SELECTED_THEME ]]; then
+		echo "> Applying theme to applications"
 
-	set_ghostty_theme
-	set_rofi_theme
-	set_neovim_theme
-	set_hyprland_theme
-	set_waybar_theme
-    fi
+		set_ghostty_theme
+		set_rofi_theme
+		set_neovim_theme
+		set_hyprland_theme
+		set_waybar_theme
+	fi
 }
 
 ######################
 # APPLYING FUNCTIONS
 ######################
 set_ghostty_theme() {
-    local dir=~/.config/ghostty/themes
+	local dir=~/.config/ghostty/themes
 
-    mkdir -p $dir
+	mkdir -p $dir
 
-    cp ~/.config/colorschemes/${SELECTED_THEME}/ghostty/${SELECTED_THEME}.conf "${dir}/colors.conf"
+	cp ~/.config/colorschemes/${SELECTED_THEME}/ghostty/${SELECTED_THEME}.conf "${dir}/colors.conf"
 
-    echo "  + Ghostty applied with ${SELECTED_THEME}"
+	echo "  + Ghostty applied with ${SELECTED_THEME}"
 }
 
 set_rofi_theme() {
-    local dir=~/.config/rofi
+	local dir=~/.config/rofi
 
-    mkdir -p $dir
+	mkdir -p $dir
 
-    cp ~/.config/colorschemes/${SELECTED_THEME}/rofi/${SELECTED_THEME}.rasi "${dir}/colors.rasi"
+	cp ~/.config/colorschemes/${SELECTED_THEME}/rofi/${SELECTED_THEME}.rasi "${dir}/colors.rasi"
 
-    # After placing the theme file in the right place, we must edit the config
-    #  file to ensure it references the theme file
-    #
-    # `tac` prints the file in reverse order for performance
-    # `grep` filter out empty lines and return the first non-empty
-    # `sed` matches the @theme line in the config file and removes it
-    # `echo` add a pristine line in its place
-    local last_line=$(tac "${dir}/config.rasi" | grep -m 1 ".")
-    sed -i "/^@theme .*$/d" "${dir}/config.rasi"
-    echo "@theme \"${dir}/colors.rasi\"" >> ${dir}/config.rasi
+	# After placing the theme file in the right place, we must edit the config
+	#  file to ensure it references the theme file
+	#
+	# `tac` prints the file in reverse order for performance
+	# `grep` filter out empty lines and return the first non-empty
+	# `sed` matches the @theme line in the config file and removes it
+	# `echo` add a pristine line in its place
+	local last_line=$(tac "${dir}/config.rasi" | grep -m 1 ".")
+	sed -i "/^@theme .*$/d" "${dir}/config.rasi"
+	echo "@theme \"${dir}/colors.rasi\"" >>${dir}/config.rasi
 
-    echo "  + Rofi applied with ${SELECTED_THEME}"
+	echo "  + Rofi applied with ${SELECTED_THEME}"
 }
 
 set_neovim_theme() {
-    local dir=~/.config/nvim
+	local dir=~/.config/nvim
 
-    if [[ -n $SELECTED_THEME ]]; then
-	local file="${dir}/lua/colors/init.lua"
+	if [[ -n $SELECTED_THEME ]]; then
+		local file="${dir}/lua/colors/init.lua"
 
-	# Here we normalize the presence/absence of the file
-	#  so we can simply push the color command into an
-	#  empty one
-	if [[ -f $file ]]; then
-	    rm $file
-	else
-	    touch "${dir}/lua/colors/init.lua"
+		# Here we normalize the presence/absence of the file
+		#  so we can simply push the color command into an
+		#  empty one
+		if [[ -f $file ]]; then
+			rm $file
+		else
+			touch "${dir}/lua/colors/init.lua"
+		fi
+
+		echo "vim.cmd.colorscheme(\"${SELECTED_THEME}\")" >>$file
+
+		echo "  + Neovim applied with ${SELECTED_THEME}"
 	fi
-
-	echo "vim.cmd.colorscheme(\"${SELECTED_THEME}\")" >> $file
-
-	echo "  + Neovim applied with ${SELECTED_THEME}"
-    fi
 }
 
 set_hyprland_theme() {
-    local dir=~/.config/hypr
+	local dir=~/.config/hypr
 
-    if [[ -n $SELECTED_THEME ]]; then
-	local file="${dir}/theming/current.conf"
+	if [[ -n $SELECTED_THEME ]]; then
+		local file="${dir}/theming/current.conf"
 
-	if [[ -f $file ]]; then
-	    rm $file
+		if [[ -f $file ]]; then
+			rm $file
+		fi
+
+		cp ~/.config/colorschemes/${SELECTED_THEME}/hypr/${SELECTED_THEME}.conf $file
+
+		echo "  + Hyprland applied with ${SELECTED_THEME}"
 	fi
-
-	cp ~/.config/colorschemes/${SELECTED_THEME}/hypr/${SELECTED_THEME}.conf $file
-
-	echo "  + Hyprland applied with ${SELECTED_THEME}"
-    fi
 
 }
 
 set_waybar_theme() {
-    local dir=~/.config/waybar
+	local dir=~/.config/waybar
 
-    if [[ -n $SELECTED_THEME ]]; then
-	local file=~/.config/waybar/theme.css
+	if [[ -n $SELECTED_THEME ]]; then
+		local file=~/.config/waybar/theme.css
 
-	if [[ -f $file ]]; then
-	    rm  $file
+		if [[ -f $file ]]; then
+			rm $file
+		fi
+
+		cp ~/.config/colorschemes/${SELECTED_THEME}/waybar/${SELECTED_THEME}.css $file
+		killall -SIGUSR2 waybar
+
+		echo "  + Waybar applied with ${SELECTED_THEME}"
 	fi
-
-	cp ~/.config/colorschemes/${SELECTED_THEME}/waybar/${SELECTED_THEME}.css $file
-	killall -SIGUSR2 waybar
-
-	echo "  + Waybar applied with ${SELECTED_THEME}"
-    fi
 }
 
 select_theme && apply

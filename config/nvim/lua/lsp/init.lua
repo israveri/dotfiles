@@ -1,5 +1,6 @@
 require("lsp.lua")
 require("lsp.ruby")
+require("lsp.bash")
 
 -- Diagnostics
 vim.diagnostic.config({

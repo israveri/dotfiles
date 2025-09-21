@@ -13,5 +13,5 @@
   "sort.nvim": { "branch": "main", "commit": "bb92140e1b96d62339bd5ab5b6df1eecca0d5da6" },
   "undotree": { "branch": "main", "commit": "511984f0f2528a53dc27044feb2f63023b7b0027" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
-  "yazi.nvim": { "branch": "main", "commit": "1769efadc505c297873c34e384b6630d4e06ab45" }
+  "yazi.nvim": { "branch": "main", "commit": "acaa305ce150d426a7fa8aa3064213d17f8af69f" }
 }

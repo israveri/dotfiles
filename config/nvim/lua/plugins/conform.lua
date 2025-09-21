@@ -2,7 +2,7 @@ return {
 	"stevearc/conform.nvim",
 	keys = {
 		{
-			"<leader><C-f>",
+			"<leader>cf",
 			function()
 				require("conform").format()
 			end,
@@ -15,7 +15,10 @@ return {
 			lsp_format = "fallback",
 		},
 		formatters_by_ft = {
+			bash = { "shfmt" },
 			lua = { "stylua" },
+			ruby = {},
+			sh = { "shfmt" },
 		},
 	},
 }
