@@ -8,28 +8,28 @@
 }
 
 #waybar {
-    background-color: @base;
-    color: @text;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background-color: @base;
+  color: @text;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
 label.module {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 .modules-left {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .modules-right {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .modules-left > :first-child > label {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .modules-right > :last-child > label {
-    margin-right: 0;
+  margin-right: 0;
 }

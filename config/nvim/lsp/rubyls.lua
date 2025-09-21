@@ -12,6 +12,7 @@ return {
 			["Ruby LSP Rails"] = {
 				enablePendingMigrationsPrompt = false,
 			},
+			["standardrb"] = { "--lsp" }
 		},
 	},
 }

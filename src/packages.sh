@@ -7,7 +7,6 @@
 pkgs=(
 	base
 	base-devel
-	bash-language-server
 	bat
 	bluez
 	bluez-utils
@@ -29,8 +28,6 @@ pkgs=(
 	jq
 	libffi
 	libyaml
-	lua-language-server
-	luarocks
 	mise
 	neovim
 	nerd-fonts
@@ -45,12 +42,9 @@ pkgs=(
 	polkit
 	ripgrep
 	rofi
-	ruby-lsp
 	rust
-	shfmt
 	sqlite
 	starship
-	stylua
 	swww
 	tree-sitter
 	ttf-dejavu

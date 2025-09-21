@@ -1,7 +1,7 @@
 return {
 	filetypes = { "lua" },
 
-	cmd = { "lua-language-server" },
+	cmd = { "emmylua_ls" },
 
 	root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
 
