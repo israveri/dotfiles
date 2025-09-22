@@ -26,13 +26,13 @@ return {
 		},
 		
 		formatters = {
-			emmylua_ls = {
-				command = function()
-					return function(bufnr)
-						vim.lsp.buf.format({ bufnr = bufnr })
-					end
-				end
-			},
+			-- emmylua_ls = {
+			-- 	command = function()
+			-- 		return function(bufnr)
+			-- 			vim.lsp.buf.format({ bufnr = bufnr })
+			-- 		end
+			-- 	end
+			-- },
 		},
 	},
 }
