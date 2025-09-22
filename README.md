@@ -8,7 +8,7 @@ Don't run `./install` as it has absolutelly no protections and it assumes it's r
 
 ## Usage
 
-1. Install packages
+1. Install packages (skip this step if you don't know exactly what you are doing)
 
 `$ ./src/packages.sh`
 
