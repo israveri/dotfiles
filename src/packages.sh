@@ -46,6 +46,7 @@ pkgs=(
 	sqlite
 	starship
 	swww
+	tmux
 	tree-sitter
 	ttf-dejavu
 	ttf-liberation
