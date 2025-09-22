@@ -30,6 +30,6 @@ return {
 	keys = {
 		{ mode = { "n", "v" }, "-", "<cmd>Yazi<cr>", desc = "Open Yazi at the current file" },
 		{ mode = "n", "<leader>cw", "<cmd>Yazi cwd<cr>", desc = "Open Yazi in nvim's current working directory" },
-		{ mode = "n", "<c-Up>", "<cmd>Yazi toggle<cr>", desc = "Resume last Yazi session" },
+		{ mode = "n", "<leader>cr", "<cmd>Yazi toggle<cr>", desc = "Resume last Yazi session" },
 	},
 }

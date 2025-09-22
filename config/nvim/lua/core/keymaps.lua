@@ -1,9 +1,35 @@
----
---- Navigation
---- ----------
+--- ---------- ---
+--- Navigation ---
+--- ---------- ---
+
+-- Navigating with ctrl + Arrows
+-- Seemlessly move into tmux windows
+vim.keymap.set("n", "<C-Up>", function() require("smart-splits").move_cursor_up({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<C-Down>", function() require("smart-splits").move_cursor_down({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<C-Left>", function() require("smart-splits").move_cursor_left({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<C-Right>", function() require("smart-splits").move_cursor_right({ at_edge = "stop" }) end)
+vim.keymap.set('n', '<C-\\>', function() require('smart-splits').move_cursor_previous({ at_edge = "stop" }) end)
+
+-- Resising panes with alt + arrow
+vim.keymap.set('n', '<A-Up>', function() require('smart-splits').resize_left() end)
+vim.keymap.set('n', '<A-Down>', function() require('smart-splits').resize_down() end)
+vim.keymap.set('n', '<A-Left>', function() require('smart-splits').resize_up() end)
+vim.keymap.set('n', '<A-Right>', function() require('smart-splits').resize_right() end)
+
+-- Swaps buffers between windows
+vim.keymap.set('n', '<leader><C-Up>', function() require('smart-splits').swap_buf_up({ move_cursor = true }) end)
+vim.keymap.set('n', '<leader><C-Down>', function() require('smart-splits').swap_buf_down({ move_cursor = true }) end)
+vim.keymap.set('n', '<leader><C-Left>', function() require('smart-splits').swap_buf_left({ move_cursor = true }) end)
+vim.keymap.set('n', '<leader><C-Right>', function() require('smart-splits').swap_buf_right({ move_cursor = true }) end)
+
+
+-- Splitting panes
+vim.keymap.set("n", "<C-w>h", ":split<cr>")
+vim.keymap.set("n", "<C-w>v", ":vsplit<cr>")
+
 -- Keep cursor centered while moving
-vim.keymap.set("n", "<C-Up>", "<C-u>zz")
-vim.keymap.set("n", "<C-Down>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
 
 -- Keep search result centered while moving to next
 vim.keymap.set("n", "n", "nzzzv")
@@ -12,9 +38,11 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Keep cursor in place when appending line below to current
 vim.keymap.set("n", "J", "mzJ`z")
 
----
---- File Manipulation
---- -----------------
+
+--- ----------------- ---
+--- File Manipulation ---
+--- ----------------- ---
+
 -- Indent File
 vim.keymap.set("n", "<leader>if", "gg=G", { desc = "Forces [i]ndent whole [f]ile" })
 
