@@ -11,14 +11,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end
 })
 
--- Terminal
--- vim.api.nvim_create_autocmd("TermOpen", {
---     group = vim.api.nvim_create_augroup("terminal-open", { clear = true}),
---     callback = function()
--- 	vim.opt.number = false
--- 	vim.opt.relativenumber = false
---     end
--- })
+-- Terminal customization
+vim.api.nvim_create_autocmd("TermOpen", {
+    group = vim.api.nvim_create_augroup("terminal-open", { clear = true}),
+    callback = function()
+	vim.opt.number = false
+	vim.opt.relativenumber = false
+    end
+})
 
 -- Code Completion
 vim.api.nvim_create_autocmd("LspAttach", {

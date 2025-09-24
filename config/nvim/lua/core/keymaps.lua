@@ -35,8 +35,8 @@ vim.keymap.set('n', '<leader><C-Right>', function() require('smart-splits').swap
 
 
 -- Splitting panes
-vim.keymap.set("n", "<C-w>h", ":split<cr>")
-vim.keymap.set("n", "<C-w>v", ":vsplit<cr>")
+vim.keymap.set("n", "<C-w>-", ":split<cr>")
+vim.keymap.set("n", "<C-w>\\", ":vsplit<cr>")
 
 -- Keep cursor centered while moving
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -79,3 +79,13 @@ vim.keymap.set("v", "<leader>s", "y:%s/<C-r>\"/<C-r>\"/g<Left><Left>")
 vim.keymap.set("v", "<M-Up>", ":m '<-2<cr>gv=gv")
 vim.keymap.set("v", "<M-Down>", ":m '>+1<cr>gv=gv")
 
+--- -------- ---
+--- Terminal ---
+--- -------- ---
+vim.keymap.set("n", "<leader>st", function()
+    vim.cmd.vnew()
+    vim.cmd.wincmd("J")
+    vim.api.nvim_win_set_height(0, 20)
+    vim.cmd.term()
+    vim.cmd.startinsert()
+end)
