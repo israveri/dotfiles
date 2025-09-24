@@ -3,7 +3,7 @@ return {
 
 	cmd = { "emmylua_ls" },
 
-	root_markers = { { ".luarc.json", ".luarc.jsonc" }, ".git" },
+	root_markers = { ".luarc.json", ".luarc.jsonc", ".emmyrc.json", ".git" },
 
 	settings = {
 		Lua = {
