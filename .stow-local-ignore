@@ -1,5 +1,6 @@
 ^\.git
 ^\.gitignore
+^.ruby-lsp
 
 ^README[.\w]*
 
@@ -7,6 +8,7 @@
 ^local$
 ^src$
 ^install[.\w]*
+
 
 config\/ghostty\/themes\/colors.conf
 config\/hypr\/theming\/current.conf

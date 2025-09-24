@@ -7,3 +7,4 @@ config\/hypr\/theming\/current.conf
 config\/waybar\/theme.css
 
 .zhistory
+.ruby-lsp
