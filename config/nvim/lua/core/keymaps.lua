@@ -14,14 +14,14 @@ vim.keymap.set("n", "<A-Left>", function() require("smart-splits").move_cursor_l
 vim.keymap.set("n", "<A-Right>", function() require("smart-splits").move_cursor_right({ at_edge = "stop" }) end)
 
 -- Resising panes
--- vim.keymap.set('n', '<A-h>', function() require('smart-splits').resize_left() end)
--- vim.keymap.set('n', '<A-j>', function() require('smart-splits').resize_down() end)
--- vim.keymap.set('n', '<A-k>', function() require('smart-splits').resize_up() end)
--- vim.keymap.set('n', '<A-l>', function() require('smart-splits').resize_right() end)
--- vim.keymap.set('n', '<A-Up>', function() require('smart-splits').resize_left() end)
--- vim.keymap.set('n', '<A-Down>', function() require('smart-splits').resize_down() end)
--- vim.keymap.set('n', '<A-Left>', function() require('smart-splits').resize_up() end)
--- vim.keymap.set('n', '<A-Right>', function() require('smart-splits').resize_right() end)
+vim.keymap.set('n', '<C-S-h>', function() require('smart-splits').resize_left() end)
+vim.keymap.set('n', '<C-S-j>', function() require('smart-splits').resize_down() end)
+vim.keymap.set('n', '<C-S-k>', function() require('smart-splits').resize_up() end)
+vim.keymap.set('n', '<C-S-l>', function() require('smart-splits').resize_right() end)
+vim.keymap.set('n', '<C-S-Up>', function() require('smart-splits').resize_up() end)
+vim.keymap.set('n', '<C-S-Down>', function() require('smart-splits').resize_down() end)
+vim.keymap.set('n', '<C-S-Left>', function() require('smart-splits').resize_left() end)
+vim.keymap.set('n', '<C-S-Right>', function() require('smart-splits').resize_right() end)
 
 -- Swaps buffers between windows
 vim.keymap.set('n', '<leader><C-k>', function() require('smart-splits').swap_buf_up({ move_cursor = true }) end)
@@ -76,8 +76,8 @@ vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("v", "<leader>s", "y:%s/<C-r>\"/<C-r>\"/g<Left><Left>")
 
 -- Move selection up and down
-vim.keymap.set("v", "<M-Up>", ":m '<-2<cr>gv=gv")
-vim.keymap.set("v", "<M-Down>", ":m '>+1<cr>gv=gv")
+vim.keymap.set("v", "<C-M-Up>", ":m '<-2<cr>gv=gv")
+vim.keymap.set("v", "<C-M-Down>", ":m '>+1<cr>gv=gv")
 
 --- -------- ---
 --- Terminal ---
