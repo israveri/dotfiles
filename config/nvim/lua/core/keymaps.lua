@@ -4,24 +4,24 @@
 
 -- Navigating with Ctrl + hjkl or Arrows
 -- Seemlessly move into tmux windows
-vim.keymap.set("n", "<C-k>", function() require("smart-splits").move_cursor_up({ at_edge = "stop" }) end)
-vim.keymap.set("n", "<C-j>", function() require("smart-splits").move_cursor_down({ at_edge = "stop" }) end)
-vim.keymap.set("n", "<C-h>", function() require("smart-splits").move_cursor_left({ at_edge = "stop" }) end)
-vim.keymap.set("n", "<C-l>", function() require("smart-splits").move_cursor_right({ at_edge = "stop" }) end)
-vim.keymap.set("n", "<C-Up>", function() require("smart-splits").move_cursor_up({ at_edge = "stop" }) end)
-vim.keymap.set("n", "<C-Down>", function() require("smart-splits").move_cursor_down({ at_edge = "stop" }) end)
-vim.keymap.set("n", "<C-Left>", function() require("smart-splits").move_cursor_left({ at_edge = "stop" }) end)
-vim.keymap.set("n", "<C-Right>", function() require("smart-splits").move_cursor_right({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<A-k>", function() require("smart-splits").move_cursor_up({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<A-j>", function() require("smart-splits").move_cursor_down({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<A-h>", function() require("smart-splits").move_cursor_left({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<A-l>", function() require("smart-splits").move_cursor_right({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<A-Up>", function() require("smart-splits").move_cursor_up({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<A-Down>", function() require("smart-splits").move_cursor_down({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<A-Left>", function() require("smart-splits").move_cursor_left({ at_edge = "stop" }) end)
+vim.keymap.set("n", "<A-Right>", function() require("smart-splits").move_cursor_right({ at_edge = "stop" }) end)
 
 -- Resising panes
-vim.keymap.set('n', '<A-h>', function() require('smart-splits').resize_left() end)
-vim.keymap.set('n', '<A-j>', function() require('smart-splits').resize_down() end)
-vim.keymap.set('n', '<A-k>', function() require('smart-splits').resize_up() end)
-vim.keymap.set('n', '<A-l>', function() require('smart-splits').resize_right() end)
-vim.keymap.set('n', '<A-Up>', function() require('smart-splits').resize_left() end)
-vim.keymap.set('n', '<A-Down>', function() require('smart-splits').resize_down() end)
-vim.keymap.set('n', '<A-Left>', function() require('smart-splits').resize_up() end)
-vim.keymap.set('n', '<A-Right>', function() require('smart-splits').resize_right() end)
+-- vim.keymap.set('n', '<A-h>', function() require('smart-splits').resize_left() end)
+-- vim.keymap.set('n', '<A-j>', function() require('smart-splits').resize_down() end)
+-- vim.keymap.set('n', '<A-k>', function() require('smart-splits').resize_up() end)
+-- vim.keymap.set('n', '<A-l>', function() require('smart-splits').resize_right() end)
+-- vim.keymap.set('n', '<A-Up>', function() require('smart-splits').resize_left() end)
+-- vim.keymap.set('n', '<A-Down>', function() require('smart-splits').resize_down() end)
+-- vim.keymap.set('n', '<A-Left>', function() require('smart-splits').resize_up() end)
+-- vim.keymap.set('n', '<A-Right>', function() require('smart-splits').resize_right() end)
 
 -- Swaps buffers between windows
 vim.keymap.set('n', '<leader><C-k>', function() require('smart-splits').swap_buf_up({ move_cursor = true }) end)
