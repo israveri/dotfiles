@@ -15,6 +15,7 @@ pkgs=(
 	dbus
 	eza
 	fastfetch
+	fcitx5
 	fd
 	fzf
 	git
