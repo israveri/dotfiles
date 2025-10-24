@@ -5,6 +5,9 @@
 # must be defined here
 #
 
+# Adds custom scripts to PATH
+export PATH="$PATH:$HOME/.local/scripts"
+
 # Wayland stuff
 export GDK_BACKEND="wayland,x11,*"
 export SDL_VIDEODRIVER="wayland"
@@ -21,7 +24,7 @@ export XDG_SESSION="wayland"
 
 # Input Method configuration
 export GTK_IM_MODULE="fcitx"
-export QT_IM_MODULE="fcitx"
+export GTK_IM_MODULE="fcitx"
 
 # Allow better screen sharing support (Meet, Zoom, Discord, etc)
 export XDG_CURRENT_DESKTOP="Hyprland"

@@ -4,6 +4,7 @@
 # Variables
 #############
 SELECTED_THEME=""
+SELECTOR_COMMAND="fuzzel --dmenu"
 
 ###################
 # SETUP FUNCTIONS
@@ -16,7 +17,7 @@ SELECTED_THEME=""
 select_theme() {
 	echo "> Selecting Theme"
 
-	local choice=$(ls ~/.config/colorschemes | rofi -dmenu)
+	local choice=$(ls ~/.config/colorschemes | $SELECTOR_COMMAND)
 
 	if [[ -n $choice ]]; then
 		SELECTED_THEME=$choice

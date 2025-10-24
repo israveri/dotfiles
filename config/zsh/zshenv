@@ -1,5 +1,4 @@
 export ZDOTDIR=$HOME
-export PATH="$PATH:$HOME/.local/scripts"
 
 export EDITOR=nvim
 export VISUAL=nvim
