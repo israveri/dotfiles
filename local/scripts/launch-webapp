@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+if [[ -n "$1" ]]; then
+    exec setsid uwsm-app -- chromium --app="$1" "${@:2}"
+else
+    echo "No webapp url given"
+fi
+
