@@ -17,6 +17,7 @@ pkgs=(
 	fastfetch
 	fcitx5
 	fd
+	fuzzel
 	fzf
 	git
 	greetd
@@ -46,6 +47,7 @@ pkgs=(
 	rust
 	sqlite
 	starship
+	swaync
 	swww
 	tmux
 	tree-sitter

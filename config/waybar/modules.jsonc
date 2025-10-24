@@ -3,7 +3,7 @@
     "custom/menu": {
 	"format": "",
 	"tooltip": false,
-	"on-click": "uwsm app -- sherlock"
+	"on-click": "uwsm app -- fuzzel"
     },
 
     "hyprland/workspaces": {
