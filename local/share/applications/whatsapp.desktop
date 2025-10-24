@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Whatsapp
+Comment=Whatsapp
+Exec=launch-webapp https://web.whatsapp.com/
+Terminal=false
+Type=Application
+Icon=/home/israel/.local/share/applications/icons/whatsapp.png
+StartupNotify=true
+Categories=Communication;
