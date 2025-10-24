@@ -1,9 +1,11 @@
 \.git
 
 config\/ghostty\/themes\/colors.conf
-config\/rofi\/colors.rasi
-config\/nvim\/lua\/colors\/init.lua
 config\/hypr\/theming\/current.conf
+config\/nvim\/lua\/colors\/init.lua
+config\/rofi\/colors.rasi
+config\/tmux\/plugins
+!config\/tmux\/plugins/tpm
 config\/waybar\/theme.css
 
 .zhistory
