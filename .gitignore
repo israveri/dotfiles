@@ -2,6 +2,7 @@
 
 config\/ghostty\/themes\/colors.conf
 config\/hypr\/theming\/current.conf
+config\/nvim\/lazy-lock.json
 config\/nvim\/lua\/colors\/init.lua
 config\/rofi\/colors.rasi
 config\/tmux\/plugins
