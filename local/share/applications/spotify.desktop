@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Spotify
+Comment=Spotify
+Exec=launch-webapp https://open.spotify.com
+Terminal=false
+Type=Application
+Icon=/home/israel/.local/share/applications/icons/spotify.png
+StartupNotify=true
+Categories=Entertainment;
