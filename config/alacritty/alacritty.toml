@@ -1,0 +1,15 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/catppuccin-mocha.toml"
+]
+
+[window]
+decorations = "None"
+padding = { x = 10, y = 0 }
+
+[font]
+normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular" }
+size = 10
+
+[cursor]
+style = { shape = "Block", blinking = "Off" }
