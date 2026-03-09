@@ -15,17 +15,17 @@ pkgs=(
 	dbus
 	eza
 	fastfetch
-	fcitx5
+	#fcitx5
 	fd
 	fuzzel
 	fzf
 	git
-	greetd
-	greetd-tuigreet
+	#greetd
+	#greetd-tuigreet
 	gtk4
 	gtk4-layer-shell
-	hyprpicker
-	hyprshot
+	#hyprpicker
+	#hyprshot
 	inter-font
 	jq
 	libffi
@@ -41,23 +41,23 @@ pkgs=(
 	pipewire-alsa
 	pipewire-jack
 	pipewire-pulse
-	polkit
+	#polkit
 	ripgrep
-	rofi
+	#rofi
 	rust
 	sqlite
 	starship
-	swaync
-	swww
+	#swaync
+	#swww
 	tmux
 	tree-sitter
 	ttf-dejavu
 	ttf-liberation
-	uwsm
-	waybar
+	#uwsm
+	#waybar
 	wireplumber
-	wl-clipboard
-	xdg-desktop-portal-hyprland
+	#wl-clipboard
+	#xdg-desktop-portal-hyprland
 	zlib
 	zsh
 	zsh-completions

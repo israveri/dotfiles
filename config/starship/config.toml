@@ -2,7 +2,7 @@
 # Pipes ╰─ ╭─
 
 add_newline = true
-palette = "catppuccin-latte"
+palette = "catppuccin-mocha"
 
 format="""\
     [╭─](bg:base fg:text bold)\
