@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Bitwarden
+Comment=Bitwarden
+Exec=launch-webapp https://vault.bitwarden.com/#/vault
+Terminal=false
+Type=Application
+Icon=/home/israel/.local/share/applications/icons/bitwarden.png
+StartupNotify=true
+Categories=Password Manager;

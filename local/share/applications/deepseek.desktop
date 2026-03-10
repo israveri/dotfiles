@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Deepseek AI
+Comment=Deepseek AI
+Exec=launch-webapp https://chat.deepseek.com
+Terminal=false
+Type=Application
+Icon=/home/israel/.local/share/applications/icons/deepseek.png
+StartupNotify=true
+Categories=Artificial Inteligence;

@@ -5,11 +5,11 @@ import = [
 
 [window]
 decorations = "None"
-padding = { x = 10, y = 0 }
+padding = { x = 10, y = 10 }
 
 [font]
 normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular" }
-size = 10
+size = 11
 
 [cursor]
 style = { shape = "Block", blinking = "Off" }

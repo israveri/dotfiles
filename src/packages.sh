@@ -5,6 +5,7 @@
 #
 
 pkgs=(
+	adw-gtk-theme
 	base
 	base-devel
 	bat
@@ -15,50 +16,47 @@ pkgs=(
 	dbus
 	eza
 	fastfetch
-	fcitx5
 	fd
-	fuzzel
 	fzf
 	git
-	greetd
-	greetd-tuigreet
+	grim
 	gtk4
 	gtk4-layer-shell
-	hyprpicker
-	hyprshot
 	inter-font
 	jq
+	kitty
 	libffi
 	libyaml
 	mise
 	neovim
 	nerd-fonts
+	nwg-look
 	noto-fonts
 	noto-fonts-cjk
 	noto-fonts-emoji
+	obs-studio-browser
 	openssl
 	pipewire
 	pipewire-alsa
-	pipewire-jack
 	pipewire-pulse
-	polkit
+	qt6-wayland
 	ripgrep
 	rofi
 	rust
+	slurp
 	sqlite
 	starship
-	swaync
-	swww
+	swappy
 	tmux
 	tree-sitter
 	ttf-dejavu
 	ttf-liberation
 	uwsm
-	waybar
 	wireplumber
-	wl-clipboard
 	xdg-desktop-portal-hyprland
-	zlib
+	xdg-desktop-portal-gtk
+	yazi
+	zoxide
 	zsh
 	zsh-completions
 )
