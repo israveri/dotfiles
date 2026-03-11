@@ -4,23 +4,14 @@ Collection of config files, scripts and other stuff that I use on my devices.
 
 ## Warning
 
-Don't run `./install` as it has absolutelly no protections and it assumes it's running in on of my devices. It willl probably mess up your machine.
+If you're not me don't run this blindly as it has absolutelly no protections and it assumes it's running on an Arch based distro and sets everything up as to how I use things. It will probably mess you machine up. Look around the repository and modify anything as you see fit.
 
 ## Usage
 
-1. Install packages (skip this step if you don't know exactly what you are doing)
+You can eighter run
 
-`$ ./src/packages.sh`
+`curl -L https://raw.githubusercontent.com/israveri/dotfiles/refs/heads/main/install | sh`
 
-2. Initialize the git submodules
+Or clone the repository locally and run the install script manually
 
-`$ git submodule init`
-
-3. Update the submodules
-
-`$ git submodule update`
-
-4. Install all configuration
-
-`$ stow .`
-
+`./install`
