@@ -25,6 +25,11 @@ fi
 echo "===> Done."
 echo ""
 
+echo "===> Setting up git submodules..."
+git -C "$dotdir" submodule update --init --recursive
+echo "===> Done."
+echo ""
+
 echo "===> Installing packages from packages.txt manifest..."
 sudo pacman -S --noconfirm --needed - < "$dotdir/src/packages.txt"
 echo "===> Done."
@@ -32,6 +37,11 @@ echo ""
 
 echo "===> Stowing dotfiles..."
 cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
+echo "===> Done."
+echo ""
+
+echo "===> Reloading Hyprland"
+hyprctl reload
 echo "===> Done."
 echo ""
 
