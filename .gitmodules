@@ -1,12 +1,12 @@
-[submodule "zsh-syntax-highlighting"]
+[submodule "stow/zsh/dot-config/zsh/submodules/highlighting"]
 	path = stow/zsh/dot-config/zsh/submodules/highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting
-[submodule "zsh-completions"]
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "stow/zsh/dot-config/zsh/submodules/completions"]
 	path = stow/zsh/dot-config/zsh/submodules/completions
-	url = https://github.com/zsh-users/zsh-completions
-[submodule "zsh-autosuggestions"]
+	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "stow/zsh/dot-config/zsh/submodules/autosuggestions"]
 	path = stow/zsh/dot-config/zsh/submodules/autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "tmux-tpm"]
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "stow/tmux/dot-config/tmux/plugins/tpm"]
 	path = stow/tmux/dot-config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
