@@ -238,12 +238,12 @@
         ]
     },
     "colorSchemes": {
-        "darkMode": true,
+        "darkMode": false,
         "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Catppuccin",
+        "predefinedScheme": "Rose Pine",
         "schedulingMode": "location",
         "useWallpaperColors": false
     },
@@ -283,12 +283,6 @@
                 },
                 {
                     "id": "Bluetooth"
-                },
-                {
-                    "defaultSettings": {
-                        "iconColor": "none"
-                    },
-                    "id": "plugin:color-scheme-creator"
                 },
                 {
                     "id": "WallpaperSelector"
@@ -644,10 +638,6 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "kitty"
-            },
-            {
-                "enabled": true,
                 "id": "btop"
             },
             {
@@ -669,6 +659,10 @@
             {
                 "enabled": true,
                 "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "kitty"
             }
         ],
         "enableUserTheming": true

@@ -3,6 +3,8 @@ export ZDOTDIR=$HOME
 export EDITOR=nvim
 export VISUAL=nvim
 
+export TERM=xterm-256color
+
 export MANPAGER='nvim +Man!'
 
 export HISTFILE=$XDG_CONFIG_HOME/zsh/.zhistory

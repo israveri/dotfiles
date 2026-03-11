@@ -13,6 +13,8 @@
 config\/ambxst\/presets\/active_preset
 config\/ghostty\/themes\/colors.conf
 config\/hypr\/theming\/current.conf
+config\/kitty\/current-theme.conf
+config\/kitty\/themes
 config\/nvim\/lua\/colors\/init.lua
 config\/rofi\/colors.rasi
 config\/waybar\/theme.css
