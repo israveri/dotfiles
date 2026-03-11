@@ -1,9 +1,38 @@
-#!/usr/bin/bash
+#!/bin/bash
+set -e
 
-# Exit if a command finished with non-zero status
-set -eE
+# Forces password prompt
+sudo -v
 
-readonly script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+dotdir="$HOME/.dotfiles"
 
-# Foundations
-source "$script_dir"/src/packages.sh
+echo "===> Dotfiles"
+echo ""
+
+echo "===> Updating system and ensuring \`git\` installation..."
+sudo pacman -Syu
+sudo pacman -S --noconfirm --needed git
+echo "===> Done."
+echo ""
+
+echo "===> Setting up dotfiles repository..."
+if [ ! -d "$dotdir" ]; then
+    git clone https://github.com/israveri/dotfiles "$dotdir"
+else
+    echo "Repository already present. Skipping clone."
+fi
+echo "===> Done."
+echo ""
+
+echo "===> Installing packages from packages.txt manifest..."
+sudo pacman -S --noconfirm --needed - < "$dotdir/src/packages.txt"
+echo "===> Done."
+echo ""
+
+echo "===> Stowing dotfiles..."
+cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
+echo "===> Done."
+echo ""
+
+echo ""
+echo "✅ Installation complete"

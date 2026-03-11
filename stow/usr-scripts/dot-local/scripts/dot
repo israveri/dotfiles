@@ -1,0 +1,56 @@
+#!/usr/bin/bash
+
+STOW_DIR="$HOME/.dotfiles/stow"
+TARGET_DIR="$HOME"
+
+get_packages() {
+    local packages=()
+    for p in "$STOW_DIR"/*/; do
+	packages+=("$(basename "${p}")")
+    done
+    echo "${packages[@]}"
+}
+
+apply_dotfiles() {
+    local packages=$(get_packages)
+
+    stow --dotfiles --dir="$STOW_DIR" --target="$TARGET_DIR" "${packages[@]}" -v1
+}
+
+remove_dotfiles() {
+    local packages=($(get_packages))
+
+    stow --dotfiles --dir="$STOW_DIR" --target="$TARGET_DIR" --delete "${packages[@]}" -v1
+}
+
+print_help() {
+    if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+	echo "A stow wrapper for my dotfiles"
+	echo ""
+	echo "USAGE:"
+	echo ""
+	echo "  dot COMMAND [PACKAGES]"
+	echo ""
+	echo "COMMANDS:"
+	echo ""
+	echo "  list	    List all packages in stow directory"
+	echo "  up	    Applies dotfiles"
+	echo "  down	    Remove dotfiles"
+    fi
+}
+
+dot() {
+    # handles parameters
+    local command="$1"
+    shift
+
+    case "$command" in
+	list|l)		    get_packages ;;
+	up|u)		    apply_dotfiles "$@" ;;
+	down|d)		    remove_dotfiles "$@" ;;
+	help|h|-h|--help)   print_help ;;
+	*)		    echo "Unknown command, try help" ;;
+    esac
+}
+
+dot "$@"
