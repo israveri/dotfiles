@@ -1,4 +1,5 @@
 adw-gtk-theme
+ark
 base
 base-devel
 bat
@@ -19,6 +20,8 @@ gtk4-layer-shell
 hyprland
 inter-font
 jq
+kio
+kio-extras
 kitty
 libffi
 libyaml
@@ -31,6 +34,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 nwg-look
 obs-studio-browser
+okular
 openssl
 paru
 pipewire
@@ -40,6 +44,7 @@ podman
 podman-compose
 qemu-desktop
 qt6-wayland
+qt6ct-kde
 ripgrep
 rofi
 rust
