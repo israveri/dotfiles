@@ -10,6 +10,7 @@ dbus
 eza
 fastfetch
 fd
+freerdp
 fzf
 git
 grim
@@ -35,6 +36,9 @@ paru
 pipewire
 pipewire-alsa
 pipewire-pulse
+podman
+podman-compose
+qemu-desktop
 qt6-wayland
 ripgrep
 rofi
@@ -48,6 +52,7 @@ tree-sitter
 ttf-dejavu
 ttf-liberation
 uwsm
+winboat-bin
 wireplumber
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland

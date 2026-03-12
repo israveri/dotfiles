@@ -10,7 +10,7 @@ echo "===> Dotfiles"
 echo ""
 
 echo "===> Updating system and installing dependencies..."
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 sudo pacman -S --noconfirm --needed git paru
 echo "===> Done."
 echo ""
