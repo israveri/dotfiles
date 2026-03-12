@@ -9,9 +9,9 @@ dotdir="$HOME/.dotfiles"
 echo "===> Dotfiles"
 echo ""
 
-echo "===> Updating system and ensuring \`git\` installation..."
+echo "===> Updating system and installing dependencies..."
 sudo pacman -Syu
-sudo pacman -S --noconfirm --needed git
+sudo pacman -S --noconfirm --needed git paru
 echo "===> Done."
 echo ""
 
@@ -31,7 +31,7 @@ echo "===> Done."
 echo ""
 
 echo "===> Installing packages from packages.txt manifest..."
-sudo pacman -S --noconfirm --needed - < "$dotdir/src/packages.txt"
+paru -S --noconfirm --needed - < "$dotdir/src/packages.txt"
 echo "===> Done."
 echo ""
 
