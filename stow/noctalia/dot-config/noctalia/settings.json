@@ -70,7 +70,7 @@
         "rightClickFollowMouse": true,
         "screenOverrides": [
         ],
-        "showCapsule": true,
+        "showCapsule": false,
         "showOnWorkspaceSwitch": true,
         "showOutline": false,
         "useSeparateOpacity": true,
@@ -597,15 +597,15 @@
             },
             {
                 "enabled": true,
-                "id": "pywalfox"
-            },
-            {
-                "enabled": true,
                 "id": "kitty"
             },
             {
                 "enabled": true,
                 "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "yazi"
             }
         ],
         "enableUserTheming": true
