@@ -4,11 +4,15 @@ Collection of config files, scripts and other stuff that I use on my devices.
 
 ## Warning
 
-Don't run this blindly as it has absolutelly no protections and it assumes it's running on an Arch based distro with Noctalia and sets everything up as to how I use things. It will probably mess you machine up. Look around the repository and modify anything as you see fit.
+This repo is meant to remote archival only. Don't run this script. This was made for me to run on my machines and it makes a series of assumptiions about the system that will almost certainly not match what you use. Rumage through and steal whatever you like.
+
+## Requirements
+
+Only requirement other than a bare system is `curl` to run remotely or `git` if you want to clone the repo first. Everything else will be installed and configured by the script.
 
 ## Usage
 
-You can eighter run
+To install run
 
 `curl -L https://raw.githubusercontent.com/israveri/dotfiles/refs/heads/main/install | sh`
 
