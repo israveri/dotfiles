@@ -6,6 +6,6 @@ input_path = "~/.dotfiles/noctalia-colorscheme-cheatsheet-template.txt"
 output_path = "~/.dotfiles/noctalia-colorscheme-cheatsheet.txt"
 
 [templates.nvim-base16]
-input_path = "~/.config/nvim/lua/colors/matugen-template.lua"
-output_path = "~/.config/nvim/lua/colors/matugen.lua"
+input_path = "~/.config/noctalia/templates/nvim-template.lua"
+output_path = "~/.config/nvim/lua/colors/noctalia.lua"
 post_hook = 'pkill -SIGUSR1 nvim'

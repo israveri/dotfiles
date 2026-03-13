@@ -1,0 +1,70 @@
+===============================================================================================================================
+NOCTALIA FULL COLOR CHEATSHEET (48 DIRECTIVES)
+schema = directive | description
+===============================================================================================================================
+
+-- PRIMARY ACCENTS -- Main brand/action colors
+primary                     = {{colors.primary.default.hex}}                        | Primary brand color
+on_primary                  = {{colors.on_primary.default.hex}}                     | Text/Icons on top of primary
+primary_container           = {{colors.primary_container.default.hex}}              | Less prominent primary elements
+on_primary_container        = {{colors.on_primary_container.default.hex}}           | Text on primary_container
+primary_fixed               = {{colors.primary_fixed.default.hex}}                  | High-vibrancy primary (non-dynamic)
+primary_fixed_dim           = {{colors.primary_fixed_dim.default.hex}}              | Muted fixed primary
+on_primary_fixed            = {{colors.on_primary_fixed.default.hex}}               | Text on primary_fixed
+on_primary_fixed_variant    = {{colors.on_primary_fixed_variant.default.hex}}       | Lower-priority text on primary_fixed
+
+-- SECONDARY ACCENTS -- Less prominent UI elements
+secondary                   = {{colors.secondary.default.hex}}                      | Secondary actions/highlights
+on_secondary                = {{colors.on_secondary.default.hex}}                   | Text on secondary
+secondary_container         = {{colors.secondary_container.default.hex}}            | Low-priority secondary containers
+on_secondary_container      = {{colors.on_secondary_container.default.hex}}         | Text on secondary_container
+secondary_fixed             = {{colors.secondary_fixed.default.hex}}                | High-vibrancy secondary
+secondary_fixed_dim         = {{colors.secondary_fixed_dim.default.hex}}            | Muted fixed secondary
+on_secondary_fixed          = {{colors.on_secondary_fixed.default.hex}}             | Text on secondary_fixed
+on_secondary_fixed_variant  = {{colors.on_secondary_fixed_variant.default.hex}}     | Lower-priority text on secondary_fixed
+
+-- TERTIARY ACCENTS -- Contrasting accents/warnings
+tertiary                    = {{colors.tertiary.default.hex}}                       | Contrast/Accent color
+on_tertiary                 = {{colors.on_tertiary.default.hex}}                    | Text on tertiary
+tertiary_container          = {{colors.tertiary_container.default.hex}}             | Backgrounds for tertiary accents
+on_tertiary_container       = {{colors.on_tertiary_container.default.hex}}          | Text on tertiary_container
+tertiary_fixed              = {{colors.tertiary_fixed.default.hex}}                 | High-vibrancy tertiary
+tertiary_fixed_dim          = {{colors.tertiary_fixed_dim.default.hex}}             | Muted fixed tertiary
+on_tertiary_fixed           = {{colors.on_tertiary_fixed.default.hex}}              | Text on tertiary_fixed
+on_tertiary_fixed_variant   = {{colors.on_tertiary_fixed_variant.default.hex}}      | Lower-priority text on tertiary_fixed
+
+-- ERROR ROLES -- Semantic colors for errors/danger
+error                       = {{colors.error.default.hex}}                          | Error state color
+on_error                    = {{colors.on_error.default.hex}}                       | Text on error color
+error_container             = {{colors.error_container.default.hex}}                | Background for error messages
+on_error_container          = {{colors.on_error_container.default.hex}}             | Text on error_container
+
+-- SURFACE & BACKGROUND -- The canvas of your UI
+background                  = {{colors.background.default.hex}}                     | Default app/window background
+on_background               = {{colors.on_background.default.hex}}                  | Main text/foreground
+surface                     = {{colors.surface.default.hex}}                        | Generic surface color
+on_surface                  = {{colors.on_surface.default.hex}}                     | Text on surface
+surface_variant             = {{colors.surface_variant.default.hex}}                | Lower-priority surface
+on_surface_variant          = {{colors.on_surface_variant.default.hex}}             | Lower-priority text on surface
+
+-- SURFACE CONTAINERS -- For bars, cards, and sidebars (Crucial for Starship)
+surface_container_lowest    = {{colors.surface_container_lowest.default.hex}}       | Lowest elevation surface
+surface_container_low       = {{colors.surface_container_low.default.hex}}          | Low elevation (Bar base)
+surface_container           = {{colors.surface_container.default.hex}}              | Standard elevation
+surface_container_high      = {{colors.surface_container_high.default.hex}}         | High elevation (Active tabs)
+surface_container_highest   = {{colors.surface_container_highest.default.hex}}      | Highest elevation (Popups)
+
+-- SURFACE UTILITIES -- Specific lighting states
+surface_bright              = {{colors.surface_bright.default.hex}}                 | Extra-bright surface
+surface_dim                 = {{colors.surface_dim.default.hex}}                    | Extra-dimmed surface
+
+-- OUTLINES & SHADOWS -- Borders and depth
+outline                     = {{colors.outline.default.hex}}                        | Hard borders/separators
+outline_variant             = {{colors.outline_variant.default.hex}}                | Subtle borders/dividers
+shadow                      = {{colors.shadow.default.hex}}                         | Drop shadows
+scrim                       = {{colors.scrim.default.hex}}                          | Modal/Overlay masking
+
+[INVERSE ROLES] - For high-contrast "Dark on Light" needs
+inverse_surface             = {{colors.inverse_surface.default.hex}}                | Inverted surface (Snackbar/Toasts)
+inverse_on_surface          = {{colors.inverse_on_surface.default.hex}}             | Inverted text
+inverse_primary             = {{colors.inverse_primary.default.hex}}                | Primary color for use on inverted surface
