@@ -31,8 +31,8 @@ local signal = vim.uv.new_signal()
 signal:start(
   'sigusr1',
   vim.schedule_wrap(function()
-    package.loaded['colors.matugen'] = nil
-    require('colors.matugen').setup()
+    package.loaded['colors.noctalia'] = nil
+    require('colors.noctalia').setup()
   end)
 )
 

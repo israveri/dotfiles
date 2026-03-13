@@ -2,7 +2,7 @@
 
 [templates]
 [templates.cheatsheet]
-input_path = "~/.dotfiles/noctalia-colorscheme-cheatsheet-template.txt"
+input_path = "~/.config/noctalia/templates/noctalia-colorscheme-cheatsheet-template.txt"
 output_path = "~/.dotfiles/noctalia-colorscheme-cheatsheet.txt"
 
 [templates.nvim-base16]

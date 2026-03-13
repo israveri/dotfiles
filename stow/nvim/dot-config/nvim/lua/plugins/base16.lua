@@ -1,6 +1,6 @@
 return {
   'RRethy/base16-nvim',
   config = function()
-    require('colors.matugen').setup()
+    require('colors.noctalia').setup()
   end,
 }
