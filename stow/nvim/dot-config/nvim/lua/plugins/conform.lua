@@ -1,13 +1,7 @@
 return {
     "stevearc/conform.nvim",
     keys = {
-	{
-	    "<leader>cf",
-	    function()
-		require("conform").format()
-	    end,
-	    desc = "Conform: [F]ormat file",
-	},
+	{ "<leader>cf", function() require("conform").format() end, desc = "Conform: [F]ormat file" },
     },
     opts = {
 	format_on_save = {

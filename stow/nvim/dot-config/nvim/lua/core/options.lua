@@ -45,6 +45,6 @@ vim.opt.splitbelow = true               -- Always split below in horizontal spli
 
 -- Clipboard: Sync OS and Neovim clipboards
 vim.schedule(function()
-    vim.o.clipboard = 'unnamedplus'
+  vim.o.clipboard = 'unnamedplus'
 end)
 

@@ -1,6 +1,6 @@
 return {
-  'RRethy/base16-nvim',
-  config = function()
-    require('colors.noctalia').setup()
-  end,
+    'RRethy/base16-nvim',
+    config = function()
+	require('colors.noctalia').setup()
+    end,
 }
