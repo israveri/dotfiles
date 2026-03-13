@@ -10,6 +10,7 @@ btop
 dbus
 eza
 fastfetch
+fcitx5-im
 fd
 freerdp
 fzf
@@ -36,6 +37,7 @@ nwg-look
 obs-studio-browser
 okular
 openssl
+overmind
 paru
 pipewire
 pipewire-alsa
@@ -43,11 +45,11 @@ pipewire-pulse
 podman
 podman-compose
 qemu-desktop
-qt6-wayland
+qt6
 qt6ct-kde
 ripgrep
-rofi
 rust
+sddm
 slurp
 sqlite
 starship

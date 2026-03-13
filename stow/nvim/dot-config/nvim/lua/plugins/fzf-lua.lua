@@ -8,7 +8,7 @@ return {
 		{
 			"<C-p>",
 			function()
-				require("fzf-lua").files()
+				require("fzf-lua").files({ cwd = vim.fn.expand("%:p:h") })
 			end,
 			desc = "Search and [f]ind [f]ile",
 		},

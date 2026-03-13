@@ -11,5 +11,9 @@ config\/tmux\/plugins
 config\/tmux\/plugins/tpm
 config\/waybar\/theme.css
 
+noctalia-colorscheme-cheatsheet.txt
+
+**\/*\/nvim\/lazy-lock.json
+
 .zhistory
 .ruby-lsp

@@ -11,6 +11,14 @@
 # post_hook = "myapp --reload-theme"
 
 [templates.nvim-base16]
-input_path = "~/.dotfiles/config/nvim/lua/colors/matugen-template.lua"
+input_path = "~/.config/nvim/lua/colors/matugen-template.lua"
 output_path = "~/.config/nvim/lua/colors/matugen.lua"
 post_hook = 'pkill -SIGUSR1 nvim'
+
+[templates.starship]
+input_path = "~/.config/starship/template.toml"
+output_path = "~/.config/starship/config.toml"
+
+[templates.cheatsheet]
+input_path = "~/.dotfiles/noctalia-colorscheme-cheatsheet-template.txt"
+output_path = "~/.dotfiles/noctalia-colorscheme-cheatsheet.txt"

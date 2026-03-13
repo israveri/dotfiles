@@ -40,6 +40,11 @@ cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 *
 echo "===> Done."
 echo ""
 
+echo "===> Setting up SDDM..."
+sudo ln -s "$dotdir/src/custom/sddm/sddm.conf" /etc/sddm.conf
+echo "===> Done."
+echo ""
+
 echo "===> Reloading Hyprland"
 hyprctl reload
 echo "===> Done."
