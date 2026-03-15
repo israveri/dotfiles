@@ -1,6 +1,16 @@
 #!/bin/bash
 set -e
 
+run_task() {
+    local title="$1"
+    shift
+
+    echo "===> $title"
+    "$@"
+    echo "===> Done."
+    echo ""
+}
+
 # Forces password prompt
 sudo -v
 
@@ -9,46 +19,48 @@ dotdir="$HOME/.dotfiles"
 echo "===> Dotfiles"
 echo ""
 
-echo "===> Updating system and installing dependencies..."
-sudo pacman -Syu --noconfirm
-sudo pacman -S --noconfirm --needed git paru
-echo "===> Done."
-echo ""
+run_task "Updating system and installing dependencies..." \
+    bash -c "
+	sudo pacman -Syu --noconfirm
+	sudo pacman -S --noconfirm --needed git paru
+    "
 
-echo "===> Setting up dotfiles repository..."
-if [ ! -d "$dotdir" ]; then
-    git clone https://github.com/israveri/dotfiles "$dotdir"
-    git -C "$dotdir" remote set-url origin git@github.com:israveri/dotfiles.git
-else
-    echo "===> Repository already present. Skipping clone."
-fi
-echo "===> Done."
-echo ""
+run_task "Setting up dotfiles repository..." \
+    bash -c "
+	if [ ! -d \"$dotdir\" ]; then
+	    git clone https://github.com/israveri/dotfiles \"$dotdir\"
+	    git -C \"$dotdir\" remote set-url origin git@github.com:israveri/dotfiles.git
+	    git -C \"$dotdir\" remote rename origin github
+	fi
+    "
 
-echo "===> Setting up git submodules..."
-git -C "$dotdir" submodule update --init
-echo "===> Done."
-echo ""
+run_task "Setting up git submodules..." \
+    git -C "$dotdir" submodule update --init
 
-echo "===> Installing packages from packages.txt manifest..."
-paru -S --noconfirm --needed - < "$dotdir/src/packages.txt"
-echo "===> Done."
-echo ""
+run_task "Installing packages from packages.txt manifest..." \
+    paru -S --noconfirm --needed - < "$dotdir/src/packages.txt"
 
-echo "===> Stowing dotfiles..."
-cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
-echo "===> Done."
-echo ""
+run_task "Installing Screenshot utility" \
+    bash -c "
+	if [ ! -d \"$HOME/Workspace/humbleshot\" ]; then
+	    mkdir -p \"$HOME/Workspace/\"
+	    git clone https://github.com/israveri/humbleshot \"$HOME/Workspace/humbleshot\"
+	    git -C \"$HOME/Workspace/humbleshot\" remote set-url origin git@github.com:israveri/humbleshot.git
+	    git -C \"$HOME/Workspace/humbleshot\" remote rename origin github
+	else
+	    echo \"Repo already exists. Skipping.\"
+	fi
+	ln -sf \"$HOME/Workspace/humbleshot/humbleshot\" \"$dotdir/stow/usr-scripts/dot-local/scripts/humbleshot\"
+    "
 
-echo "===> Setting up SDDM..."
-sudo ln -s "$dotdir/src/custom/sddm/sddm.conf" /etc/sddm.conf
-echo "===> Done."
-echo ""
+run_task "Stowing dotfiles..." \
+    cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
 
-echo "===> Reloading Hyprland"
-hyprctl reload
-echo "===> Done."
-echo ""
+run_task "Setting up SDDM..." \
+    sudo ln -sf "$dotdir/src/custom/sddm/sddm.conf" /etc/sddm.conf
+
+run_task "Reloading Hyprland" \
+    hyprctl reload
 
 echo ""
 echo "✅ Installation complete"

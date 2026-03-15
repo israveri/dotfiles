@@ -89,15 +89,6 @@
             ],
             "left": [
                 {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
-                },
-                {
                     "characterCount": 7,
                     "colorizeIcons": true,
                     "emptyColor": "primary",
@@ -210,7 +201,7 @@
                     "unreadBadgeColor": "primary"
                 },
                 {
-                    "iconColor": "error",
+                    "iconColor": "none",
                     "id": "SessionMenu"
                 }
             ]

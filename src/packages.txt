@@ -26,6 +26,7 @@ jq
 kitty
 libffi
 libyaml
+loupe
 mise
 neovim
 nerd-fonts
@@ -49,11 +50,11 @@ qt6
 qt6ct-kde
 ripgrep
 rust
+satty
 sddm
 slurp
 sqlite
 starship
-swappy
 tmux
 tree-sitter
 ttf-dejavu

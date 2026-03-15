@@ -13,6 +13,8 @@ config\/waybar\/theme.css
 
 noctalia-colorscheme-cheatsheet.txt
 
+stow/usr-scripts/dot-local/scripts/humbleshot
+
 **\/*\/nvim\/lazy-lock.json
 
 .zhistory
