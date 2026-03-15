@@ -23,8 +23,6 @@ gtk4-layer-shell
 hyprland
 inter-font
 jq
-kio
-kio-extras
 kitty
 libffi
 libyaml
