@@ -111,7 +111,7 @@
                 },
                 {
                     "compactMode": false,
-                    "hideMode": "hidden",
+                    "hideMode": "idle",
                     "hideWhenIdle": false,
                     "id": "MediaMini",
                     "maxWidth": 300,
@@ -643,10 +643,6 @@
             {
                 "enabled": true,
                 "id": "qt"
-            },
-            {
-                "enabled": true,
-                "id": "yazi"
             }
         ],
         "enableUserTheming": true

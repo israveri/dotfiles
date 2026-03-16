@@ -29,6 +29,3 @@ export XDG_SESSION_TYPE="wayland"
 # Use XCompose file
 export XCOMPOSEFILE="~/.XCompose"
 
-# AUR pager for Aurutils
-export AUR_PAGER="yazi"
-

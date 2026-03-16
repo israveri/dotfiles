@@ -64,7 +64,6 @@ winboat-bin
 wireplumber
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
-yazi
 zoxide
 zsh
 zsh-completions
