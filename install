@@ -57,7 +57,11 @@ run_task "Stowing dotfiles..." \
     cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
 
 run_task "Setting up SDDM..." \
-    sudo ln -sf "$dotdir/src/custom/sddm/sddm.conf" /etc/sddm.conf
+    bash -c "
+	sudo ln -sf "$dotdir/src/custom/sddm/sddm.conf" /etc/sddm.conf
+	setfacl -m u:sddm:x "$HOME"
+	setfacl -m u:sddm:r "$HOME/.face.icon"
+    "
 
 run_task "Reloading Hyprland" \
     hyprctl reload
