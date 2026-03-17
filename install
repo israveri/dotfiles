@@ -58,9 +58,11 @@ run_task "Stowing dotfiles..." \
 
 run_task "Setting up SDDM..." \
     bash -c "
-	sudo ln -sf "$dotdir/src/custom/sddm/sddm.conf" /etc/sddm.conf
+	sudo mkdir -p /etc/sddm.conf.d
+	sudo ln -sf "$dotdir/src/custom/sddm/custom.conf" /etc/sddm.conf.d/custom.conf
 	setfacl -m u:sddm:x "$HOME"
 	setfacl -m u:sddm:r "$HOME/.face.icon"
+	sudo cp "$dotdir/src/custom/sddm/hyprland*" /usr/share/wayland-sessions/
     "
 
 run_task "Reloading Hyprland" \
