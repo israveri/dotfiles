@@ -1,6 +1,6 @@
 local M = {}
 
--- Helper to determine if a hex color is "light" or "dark"
+-- Helper function to find if colorschme is "ligh" or "dark" mode
 local function bg_mode()
     local hex = '#282828'
 
@@ -9,7 +9,7 @@ local function bg_mode()
     local g = tonumber(rgb:sub(3, 4), 16)
     local b = tonumber(rgb:sub(5, 6), 16)
 
-    -- Perceived brightness formula
+    -- HSP Perceived Brightness formula
     local brightness = math.sqrt(0.299 * r^2 + 0.587 * g^2 + 0.114 * b^2)
     if brightness > 127 then
 	return "light"
