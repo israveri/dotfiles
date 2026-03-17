@@ -57,6 +57,7 @@ ripgrep
 rust
 satty
 sddm
+sddm-silent-theme
 slurp
 sqlite
 starship
@@ -65,6 +66,7 @@ tmux
 tree-sitter
 ttf-dejavu
 ttf-liberation
+usage
 uwsm
 winboat-bin
 wireplumber
