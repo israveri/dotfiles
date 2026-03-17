@@ -9,7 +9,7 @@ return {
 	    show_buffer_icons = true,
 	    show_buffer_tabs = true,
 	    show_close_icon = true,
-	    separator_style = "thin", -- thin, slant, slope
+	    separator_style = "slant", -- thin, slant, slope
 	    diagnostics = "nvim_lsp",
 	    offsets = {
 		{
@@ -24,40 +24,6 @@ return {
 	    },
 	},
 	highlights = {
-		--    fill = {
-		-- bg = { attribute = "bg", highlight = "Normal" },
-		--    },
-		--
-		--    background = {
-		-- fg = { attribute = "fg", highlight = "Normal" },
-		-- bg = { attribute = "bg", highlight = "Normal" },
-		--    },
-		--
-		--    buffer_visible = {
-		-- fg = { attribute = "fg", highlight = "Comment" },
-		-- bg = { attribute = "bg", highlight = "Normal" },
-		--    },
-		--
-		--    buffer_selected = {
-		-- bold = true,
-		-- fg = { attribute = "fg", highlight = "Normal" },
-		-- bg = { attribute = "bg", highlight = "Normal" },
-		--    },
-		--
-		--    indicator_selected = {
-		-- fg = { attribute = "fg", highlight = "Keyword" },
-		-- bg = { attribute = "bg", highlight = "Normal" },
-		--    },
-		--
-		--    separator = {
-		-- fg = { attribute = "bg", highlight = "Normal" },
-		-- bg = { attribute = "bg", highlight = "Normal" },
-		--    },
-		--
-		--    separator_selected = {
-		-- fg = { attribute = "bg", highlight = "Normal" },
-		-- bg = { attribute = "bg", highlight = "Normal" },
-		--    },
 	},
     },
     config = function(_, opts)
