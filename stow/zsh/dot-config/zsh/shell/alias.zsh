@@ -1,5 +1,6 @@
-safesource alias/core.zsh
-safesource alias/unix.zsh
-safesource alias/misc.zsh
-safesource alias/applications/git.zsh
-safesource alias/applications/neovim.zsh
+source ~/.config/zsh/shell/alias/core.zsh
+source ~/.config/zsh/shell/alias/unix.zsh
+
+for f in ~/.config/zsh/shell/alias/applications/*.zsh; do
+  source "$f"
+done
