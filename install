@@ -54,7 +54,10 @@ run_task "Installing Screenshot utility" \
     "
 
 run_task "Stowing dotfiles..." \
-    cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
+    bash -c "
+	rm "$HOME/.zshrc"
+	cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
+    "
 
 run_task "Setting up SDDM..." \
     bash -c "
