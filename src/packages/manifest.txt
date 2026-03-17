@@ -9,6 +9,7 @@ brightnessctl
 btop
 cachyos-gaming-applications
 cachyos-gaming-meta
+chromium
 dbus
 eza
 fastfetch
@@ -29,6 +30,7 @@ libffi
 libyaml
 loupe
 mise
+nautilus
 neovim
 nerd-fonts
 networkmanager
@@ -39,6 +41,7 @@ noto-fonts-emoji
 nwg-look
 obs-studio-browser
 okular
+opencode
 openssl
 overmind
 paru
@@ -57,6 +60,7 @@ sddm
 slurp
 sqlite
 starship
+stow
 tmux
 tree-sitter
 ttf-dejavu
