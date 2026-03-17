@@ -65,6 +65,9 @@ run_task "Setting up SDDM..." \
 	sudo cp "$dotdir/src/applications/sddm/hyprland*" /usr/share/wayland-sessions/
     "
 
+run_task "Enabling service units..." \
+    sudo systemctl enable $(cat "$dotdir/src/services/manifest.txt")
+
 run_task "Reloading Hyprland" \
     hyprctl reload
 
