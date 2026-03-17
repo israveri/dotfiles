@@ -38,7 +38,7 @@ run_task "Setting up git submodules..." \
     git -C "$dotdir" submodule update --init
 
 run_task "Installing packages from packages.txt manifest..." \
-    paru -S --noconfirm --needed - < "$dotdir/src/packages.txt"
+    paru -S --noconfirm --needed - < "$dotdir/src/packages/manifest.txt"
 
 run_task "Installing Screenshot utility" \
     bash -c "
