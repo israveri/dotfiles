@@ -16,7 +16,3 @@ eval "$(zoxide init zsh)"
 # Mise
 eval "$(mise activate zsh)"
 
-# Start Tmux
-# if [ "$TMUX" = "" ]; then
-#     tmux new-session -As main
-# fi
