@@ -237,7 +237,7 @@
         "manualSunset": "18:30",
         "monitorForColors": "",
         "predefinedScheme": "Gruvbox",
-        "schedulingMode": "location",
+        "schedulingMode": "off",
         "useWallpaperColors": false
     },
     "controlCenter": {
