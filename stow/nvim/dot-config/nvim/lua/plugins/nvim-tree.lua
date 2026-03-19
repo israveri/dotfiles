@@ -37,6 +37,6 @@ return {
     end,
     keys = {
 	{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggles file explorer" },
-	{ "<leader>fe", "<cmd>NvimTreeFindFile<cr>", desc = "Find file in tree" },
+	{ "-", "<cmd>NvimTreeFindFile<cr>", desc = "Find file in tree" },
     },
 }
