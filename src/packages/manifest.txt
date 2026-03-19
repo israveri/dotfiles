@@ -18,6 +18,8 @@ fd
 freerdp
 fzf
 git
+godot
+godot-mono
 grim
 gtk4
 gtk4-layer-shell
@@ -40,6 +42,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 nwg-look
 obs-studio-browser
+obsidian
 okular
 opencode
 openssl
