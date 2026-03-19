@@ -9,19 +9,19 @@
         "density": "comfortable",
         "enableClipPreview": true,
         "enableClipboardChips": true,
-        "enableClipboardHistory": false,
+        "enableClipboardHistory": true,
         "enableClipboardSmartIcons": true,
         "enableSessionSearch": false,
         "enableSettingsSearch": false,
         "enableWindowsSearch": false,
-        "iconMode": "tabler",
-        "ignoreMouseInput": true,
+        "iconMode": "native",
+        "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
-        "showCategories": false,
+        "showCategories": true,
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
@@ -32,7 +32,7 @@
         ],
         "preferredPlayer": "",
         "spectrumFrameRate": 30,
-        "visualizerType": "linear",
+        "visualizerType": "mirrored",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
         "volumeOverdrive": false,
@@ -45,12 +45,12 @@
         "barType": "floating",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
-        "contentPadding": 20,
-        "density": "default",
+        "contentPadding": 5,
+        "density": "mini",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
         "floating": true,
-        "fontScale": 1.25,
+        "fontScale": 1.2,
         "frameRadius": 12,
         "frameThickness": 8,
         "hideOnOverview": false,
@@ -86,15 +86,18 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
+                },
+                {
+                    "id": "plugin:weekly-calendar"
                 }
             ],
             "left": [
                 {
                     "characterCount": 7,
                     "colorizeIcons": true,
-                    "emptyColor": "primary",
+                    "emptyColor": "tertiary",
                     "enableScrollWheel": false,
-                    "focusedColor": "tertiary",
+                    "focusedColor": "secondary",
                     "followFocusedScreen": false,
                     "fontWeight": "bold",
                     "groupedBorderOpacity": 1,
@@ -102,8 +105,8 @@
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "index",
-                    "occupiedColor": "primary",
-                    "pillSize": 0.6,
+                    "occupiedColor": "tertiary",
+                    "pillSize": 0.8,
                     "showApplications": false,
                     "showApplicationsHover": false,
                     "showBadge": true,
@@ -154,6 +157,17 @@
                     "iconColor": "none",
                     "id": "KeepAwake",
                     "textColor": "none"
+                },
+                {
+                    "defaultSettings": {
+                        "autoStartBreaks": false,
+                        "autoStartWork": false,
+                        "longBreakDuration": 15,
+                        "sessionsBeforeLongBreak": 4,
+                        "shortBreakDuration": 5,
+                        "workDuration": 25
+                    },
+                    "id": "plugin:pomodoro"
                 },
                 {
                     "defaultSettings": {
@@ -356,7 +370,7 @@
         "clockFormat": "hh\\nmm",
         "clockStyle": "custom",
         "compactLockScreen": false,
-        "dimmerOpacity": 0.4,
+        "dimmerOpacity": 0.35000000000000003,
         "enableBlurBehind": true,
         "enableLockScreenCountdown": false,
         "enableLockScreenMediaControls": false,
@@ -398,7 +412,7 @@
         "passwordChars": true,
         "radiusRatio": 0,
         "reverseScroll": false,
-        "scaleRatio": 1.1500000000000001,
+        "scaleRatio": 1.1,
         "screenRadiusRatio": 1,
         "shadowDirection": "bottom_right",
         "shadowOffsetX": 2,
@@ -669,6 +683,11 @@
         "fillMode": "crop",
         "hideWallpaperFilenames": true,
         "monitorDirectories": [
+            {
+                "directory": "/home/israel/Pictures/Wallpapers",
+                "name": "DP-3",
+                "wallpaper": ""
+            }
         ],
         "overviewBlur": 0.4,
         "overviewEnabled": false,

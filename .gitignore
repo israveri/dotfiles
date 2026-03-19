@@ -19,3 +19,5 @@ stow/usr-scripts/dot-local/scripts/humbleshot
 
 .zhistory
 .ruby-lsp
+
+src\/assets\/apikeys
