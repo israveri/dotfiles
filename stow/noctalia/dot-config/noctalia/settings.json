@@ -165,14 +165,6 @@
                     "id": "plugin:timer"
                 },
                 {
-                    "defaultSettings": {
-                        "enableCross": true,
-                        "enableWindowsSelection": true,
-                        "screenshotEditor": "swappy"
-                    },
-                    "id": "plugin:screen-shot-and-record"
-                },
-                {
                     "id": "plugin:sticky-notes"
                 },
                 {
@@ -181,7 +173,7 @@
                     "id": "plugin:kde-connect"
                 },
                 {
-                    "displayMode": "onhover",
+                    "displayMode": "alwaysHide",
                     "iconColor": "none",
                     "id": "Network",
                     "textColor": "none"
