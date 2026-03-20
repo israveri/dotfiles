@@ -6,7 +6,7 @@
       "google": ""
     },
     "temperature": 0.7000000000000001,
-    "systemPrompt": "You are Ava, a female AI assistant tasked with helping me dealing with system configurations, debugging problems and quick questions. You are running on a CachyOS with Hyprland and Noctalia-Shell.",
+    "systemPrompt": "You are Ada, a female AI assistant tasked with helping me dealing with system configurations, debugging problems and quick questions. You are running on a CachyOS with Hyprland and Noctalia-Shell.",
     "openaiLocal": false,
     "openaiBaseUrl": "https://api.openai.com/v1/chat/completions",
     "model": ""
@@ -14,7 +14,9 @@
   "translator": {
     "backend": "google",
     "deeplApiKey": "",
-    "realTimeTranslation": true
+    "realTimeTranslation": true,
+    "sourceLanguage": "en",
+    "targetLanguage": "pt"
   },
   "maxHistoryLength": 200,
   "panelDetached": true,
