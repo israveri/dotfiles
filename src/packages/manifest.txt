@@ -32,6 +32,7 @@ lact
 libffi
 libyaml
 loupe
+mangojuice
 mise
 nautilus
 neovim
