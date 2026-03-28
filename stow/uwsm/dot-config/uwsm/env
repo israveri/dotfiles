@@ -37,5 +37,10 @@ export PROTON_USE_NTSYNC=1
 export PROTON_LOCAL_SHADER_CACHE=1
 export ENABLE_LAYER_MESA_ANTI_LAG=1
 
+# Allows game metrics universally (for Vulkan games)
+# Might have to run mangohud directly on Steam/Lutris for OpenGL
+# SHIFT_R + F12 to toggle overlay
+export MANGOHUD=1
+
 # AI API keys
 export NOCTALIA_AP_GOOGLE_API_KEY=$(head -n 1 ~/.dotfiles/src/assets/apikeys/gemini.txt | xargs)
