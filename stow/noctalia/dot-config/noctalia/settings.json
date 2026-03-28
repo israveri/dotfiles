@@ -32,6 +32,7 @@
         ],
         "preferredPlayer": "",
         "spectrumFrameRate": 30,
+        "spectrumMirrored": true,
         "visualizerType": "mirrored",
         "volumeFeedback": false,
         "volumeFeedbackSoundFile": "",
@@ -49,7 +50,6 @@
         "density": "mini",
         "displayMode": "always_visible",
         "enableExclusionZoneInset": true,
-        "floating": true,
         "fontScale": 1.2,
         "frameRadius": 12,
         "frameThickness": 8,
@@ -179,12 +179,13 @@
                     "id": "plugin:timer"
                 },
                 {
-                    "id": "plugin:sticky-notes"
-                },
-                {
                     "defaultSettings": {
+                        "githubGistId": "",
+                        "githubToken": "",
+                        "notes": "[]",
+                        "syncEnabled": false
                     },
-                    "id": "plugin:kde-connect"
+                    "id": "plugin:sticky-notes"
                 },
                 {
                     "displayMode": "alwaysHide",
@@ -472,8 +473,7 @@
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "grid",
-        "wifiEnabled": true
+        "wifiDetailsViewMode": "grid"
     },
     "nightLight": {
         "autoSchedule": true,
@@ -709,19 +709,20 @@
             "pixelate",
             "honeycomb"
         ],
+        "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
         "viewMode": "browse",
         "wallhavenApiKey": "",
-        "wallhavenCategories": "111",
+        "wallhavenCategories": "100",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "letter",
+        "wallhavenQuery": "",
         "wallhavenRatios": "16x9",
-        "wallhavenResolutionHeight": "1440",
+        "wallhavenResolutionHeight": "1080",
         "wallhavenResolutionMode": "atleast",
-        "wallhavenResolutionWidth": "2560",
-        "wallhavenSorting": "relevance",
+        "wallhavenResolutionWidth": "1920",
+        "wallhavenSorting": "views",
         "wallpaperChangeMode": "random"
     }
 }
