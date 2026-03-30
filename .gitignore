@@ -1,20 +1,18 @@
 \.git
 
-config\/hypr\/theming\/current.conf
-config\/kitty\/current-theme.conf
-config\/kitty\/themes
-config\/nvim\/lazy-lock.json
-config\/nvim\/lua\/colors\/init.lua
-config\/tmux\/plugins
-config\/tmux\/plugins/tpm
-
+# Specific Files
+.zhistory
+gamelist.xml
+lazy-lock.json
 noctalia-colorscheme-cheatsheet.txt
 
-stow/usr-scripts/dot-local/scripts/humbleshot
-
-**\/*\/nvim\/lazy-lock.json
-
-.zhistory
-.ruby-lsp
-
+# Whole Directories
 src\/assets\/apikeys
+
+# Patterns
+*.bak
+
+**\/humbleshot
+**\/logs
+**\/themes
+

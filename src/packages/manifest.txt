@@ -11,6 +11,7 @@ cachyos-gaming-applications
 cachyos-gaming-meta
 chromium
 dbus
+emulationstation-de
 eza
 fastfetch
 fcitx5-im
