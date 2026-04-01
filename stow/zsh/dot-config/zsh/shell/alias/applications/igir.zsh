@@ -1,0 +1,70 @@
+_run_igir() {
+    local mode="$1" # sort | resort
+
+    local dats_root="$HOME/Emulation/DATs"
+    local roms_root="$HOME/Emulation/Roms"
+
+    local unsorted_roms_path="$roms_root/unsorted"
+    local sorted_roms_path="$roms_root/sorted"
+    local backup_roms_path="$roms_root/removed"
+    local cache_path="$HOME/.cache/igir/igir.cache"
+
+    echo "====> Sorting roms collection ================================="
+    echo ""
+    echo "  Mode:          $mode"
+    echo "  Dats Path:     $dats_root"
+    echo "  Unsorted Roms: $unsorted_roms_path"
+    echo "  Sorted Roms:   $sorted_roms_path"
+    echo "  Removed Roms:  $backup_roms_path"
+    echo ""
+    echo "==============================================================="
+
+    case "$mode" in
+	"sort")
+	    igir move test report \
+		--dat "$dats_root" \
+		--input "$unsorted_roms_path" \
+		--output "$sorted_roms_path" \
+		--cache-path "$cache_path" \
+		--input-checksum-min "SHA1" \
+		--single \
+		--no-bios \
+		--no-device \
+		--no-unlicensed \
+		--prefer-language "EN" \
+		--prefer-region "USA" \
+		--move-delete-dirs "always" \
+		--dir-dat-mirror \
+		-vv
+	;;
+	"resort")
+	    igir move test clean \
+		--dat "$dats_root" \
+		--input "$unsorted_roms_path" \
+		--input "$sorted_roms_path" \
+		--output "$sorted_roms_path" \
+		--cache-path "$cache_path" \
+		--input-checksum-min "SHA1" \
+		--single \
+		--no-bios \
+		--no-device \
+		--no-unlicensed \
+		--prefer-language "EN" \
+		--prefer-region "USA" \
+		--move-delete-dirs "always" \
+		--dir-dat-mirror \
+		--clean-exclude "$sorted_roms_path/.stfolder/**" \
+		--clean-exclude "$sorted_roms_path/.stversions/**" \
+		--clean-exclude "$sorted_roms_path/.stignore" \
+		--clean-backup "$backup_roms_path" \
+		-vv
+	;;
+	*)
+	    echo ""
+	    echo "Error: Unknown run mode '$mode'"
+	;;
+    esac
+}
+
+sort_roms() { _run_igir "sort" }
+resort_roms() { _run_igir "resort" }

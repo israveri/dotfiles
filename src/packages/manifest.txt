@@ -61,6 +61,8 @@ protonhax
 qemu-desktop
 qt6
 qt6ct-kde
+retroarch
+retroarch-assets-ozone
 ripgrep
 rust
 satty
@@ -70,6 +72,7 @@ slurp
 sqlite
 starship
 stow
+syncthing
 television
 tmux
 tree-sitter
