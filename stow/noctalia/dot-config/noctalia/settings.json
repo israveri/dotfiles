@@ -246,6 +246,7 @@
         "monitorForColors": "",
         "predefinedScheme": "Gruvbox",
         "schedulingMode": "off",
+        "syncGsettings": true,
         "useWallpaperColors": false
     },
     "controlCenter": {
@@ -349,8 +350,8 @@
             "steam",
             "kitty",
             "firefox",
-            "chrome-web.whatsapp.com__-Webapp",
             "chrome-discord.com__app-Webapp",
+            "chrome-web.whatsapp.com__-Webapp",
             "chrome-open.spotify.com__-Webapp"
         ],
         "pinnedStatic": false,
@@ -422,6 +423,7 @@
         "showHibernateOnLockScreen": false,
         "showScreenCorners": false,
         "showSessionButtonsOnLockScreen": true,
+        "smoothScrollEnabled": true,
         "telemetryEnabled": true
     },
     "hooks": {
@@ -438,7 +440,7 @@
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": true,
+        "enabled": false,
         "fadeDuration": 5,
         "lockCommand": "",
         "lockTimeout": 60,
@@ -465,7 +467,6 @@
         "weatherShowEffects": true
     },
     "network": {
-        "airplaneModeEnabled": false,
         "bluetoothAutoConnect": true,
         "bluetoothDetailsViewMode": "grid",
         "bluetoothHideUnnamedDevices": false,
@@ -473,7 +474,7 @@
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
         "networkPanelView": "wifi",
-        "wifiDetailsViewMode": "grid"
+        "wifiDetailsViewMode": "list"
     },
     "nightLight": {
         "autoSchedule": true,
@@ -682,6 +683,7 @@
         "fillColor": "#000000",
         "fillMode": "crop",
         "hideWallpaperFilenames": true,
+        "linkLightAndDarkWallpapers": false,
         "monitorDirectories": [
             {
                 "directory": "/home/israel/Pictures/Wallpapers",
