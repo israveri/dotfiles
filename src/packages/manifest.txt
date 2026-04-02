@@ -9,8 +9,11 @@ brightnessctl
 btop
 cachyos-gaming-applications
 cachyos-gaming-meta
+calibre
 chromium
 dbus
+deluge
+deluge-gtk
 emulationstation-de
 eza
 fastfetch
@@ -36,6 +39,7 @@ libyaml
 loupe
 mangojuice
 mise
+mission-center
 nautilus
 neovim
 nerd-fonts
