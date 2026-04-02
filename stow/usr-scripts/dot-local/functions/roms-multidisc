@@ -1,0 +1,40 @@
+#!/usr/bin/bash
+# Functions to manage roms collection
+
+_ROMS_ROOT="$HOME/Emulation/Roms/sorted"
+_DISC_DETECT_REGEX="*(Disc [0-9]*)*"
+_MULTIDISC_DIR=".multidisc"
+
+_detect_unhandled_multidisc() {
+    for system in "$_ROMS_ROOT"/*; do
+	# If file not a directory, skip
+	[ -d "$system" ] || continue
+
+	# This loop:
+	#
+	# 1. Finds multi disc names with regex:
+	#   Ex:
+	#     Legend of Dragoon, The (USA, Canada) (Disc 1).chd
+	#     Legend of Dragoon, The (USA, Canada) (Disc 2).chd
+	#     Xenogears (Disc 1).chd
+	#
+	# 2. Strips the disc info and file extension from the name
+	# 3. Creates (or do nothing if already created) a multidisc folder for the game
+	# 4. Move game into that folder
+	#
+	# Doing it this way, different discs od the same game will be bundled under the
+	# same directory, due to file naming conventions
+	find "$system" -maxdepth 1 -type f -name "$_DISC_DETECT_REGEX" | while read -r filepath; do
+	    filename=$(basename "$filepath")
+	    gamename=$(echo "$filename" | sed -E 's/ \(Disc.*//')
+
+	    echo "Found $filename at $(basename "$system")"
+
+	    targetdir="$system/$_MULTIDISC_DIR/$gamename"
+
+	    mkdir -p "$targetdir"
+	    mv "$filepath" "$targetdir/"
+	done
+    done
+}
+

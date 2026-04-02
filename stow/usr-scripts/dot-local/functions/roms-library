@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 _run_igir() {
     local mode="$1" # sort | resort
 
@@ -34,6 +36,7 @@ _run_igir() {
 		--prefer-language "EN" \
 		--prefer-region "USA" \
 		--move-delete-dirs "always" \
+		--dat-ignore-parent-clone \
 		--dir-dat-mirror \
 		-vv
 	;;
