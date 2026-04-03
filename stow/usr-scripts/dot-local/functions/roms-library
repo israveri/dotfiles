@@ -36,6 +36,7 @@ _run_igir() {
 		--prefer-language "EN" \
 		--prefer-region "USA" \
 		--move-delete-dirs "always" \
+		--merge-roms "fullnonmerged" \
 		--dat-ignore-parent-clone \
 		--dir-dat-mirror \
 		-vv
