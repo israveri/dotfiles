@@ -23,6 +23,7 @@ freerdp
 fzf
 gimp
 git
+gnome-font-viewer
 godot
 godot-mono
 grim
