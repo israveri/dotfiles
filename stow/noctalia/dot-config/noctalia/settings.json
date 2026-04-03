@@ -140,10 +140,10 @@
                     "showCpuFreq": false,
                     "showCpuTemp": true,
                     "showCpuUsage": true,
-                    "showDiskAvailable": false,
-                    "showDiskUsage": false,
+                    "showDiskAvailable": true,
+                    "showDiskUsage": true,
                     "showDiskUsageAsPercent": false,
-                    "showGpuTemp": false,
+                    "showGpuTemp": true,
                     "showLoadAverage": false,
                     "showMemoryAsPercent": false,
                     "showMemoryUsage": true,
@@ -151,7 +151,18 @@
                     "showSwapUsage": false,
                     "textColor": "none",
                     "useMonospaceFont": true,
-                    "usePadding": false
+                    "usePadding": true
+                },
+                {
+                    "blacklist": [
+                    ],
+                    "chevronColor": "none",
+                    "colorizeIcons": false,
+                    "drawerEnabled": true,
+                    "hidePassive": true,
+                    "id": "Tray",
+                    "pinned": [
+                    ]
                 },
                 {
                     "iconColor": "none",
@@ -168,15 +179,6 @@
                         "workDuration": 25
                     },
                     "id": "plugin:pomodoro"
-                },
-                {
-                    "defaultSettings": {
-                        "compactMode": false,
-                        "defaultDuration": 0,
-                        "iconColor": "none",
-                        "textColor": "none"
-                    },
-                    "id": "plugin:timer"
                 },
                 {
                     "defaultSettings": {
@@ -324,13 +326,13 @@
     },
     "dock": {
         "animationSpeed": 1,
-        "backgroundOpacity": 0.93,
-        "colorizeIcons": false,
+        "backgroundOpacity": 1,
+        "colorizeIcons": true,
         "deadOpacity": 0.5,
-        "displayMode": "auto_hide",
+        "displayMode": "exclusive",
         "dockType": "floating",
-        "enabled": true,
-        "floatingRatio": 0.5,
+        "enabled": false,
+        "floatingRatio": 0.15,
         "groupApps": true,
         "groupClickAction": "list",
         "groupContextMenuMode": "list",
@@ -339,9 +341,9 @@
         "indicatorColor": "primary",
         "indicatorOpacity": 0.6,
         "indicatorThickness": 6,
-        "launcherIcon": "",
+        "launcherIcon": "layout-grid-filled",
         "launcherIconColor": "none",
-        "launcherPosition": "end",
+        "launcherPosition": "start",
         "launcherUseDistroLogo": false,
         "monitors": [
         ],
@@ -354,12 +356,12 @@
             "chrome-web.whatsapp.com__-Webapp",
             "chrome-open.spotify.com__-Webapp"
         ],
-        "pinnedStatic": false,
-        "position": "left",
+        "pinnedStatic": true,
+        "position": "bottom",
         "showDockIndicator": false,
-        "showLauncherIcon": false,
+        "showLauncherIcon": true,
         "sitOnFrame": false,
-        "size": 1
+        "size": 0.2
     },
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
@@ -454,6 +456,7 @@
     },
     "location": {
         "analogClockInCalendar": false,
+        "autoLocate": false,
         "firstDayOfWeek": -1,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
@@ -464,7 +467,8 @@
         "use12hourFormat": false,
         "useFahrenheit": false,
         "weatherEnabled": true,
-        "weatherShowEffects": true
+        "weatherShowEffects": true,
+        "weatherTaliaMascotAlways": false
     },
     "network": {
         "bluetoothAutoConnect": true,
@@ -617,7 +621,7 @@
         "diskAvailWarningThreshold": 20,
         "diskCriticalThreshold": 90,
         "diskWarningThreshold": 80,
-        "enableDgpuMonitoring": false,
+        "enableDgpuMonitoring": true,
         "externalMonitor": "resources || missioncenter || jdsystemmonitor || corestats || system-monitoring-center || gnome-system-monitor || plasma-systemmonitor || mate-system-monitor || ukui-system-monitor || deepin-system-monitor || pantheon-system-monitor",
         "gpuCriticalThreshold": 90,
         "gpuWarningThreshold": 80,
