@@ -14,6 +14,8 @@ chromium
 dbus
 deluge
 deluge-gtk
+dnsmasq
+edk2-ovmf
 emulationstation-de
 eza
 fastfetch
@@ -36,6 +38,7 @@ jq
 kitty
 lact
 libffi
+libvirt
 libyaml
 loupe
 mangojuice
@@ -64,6 +67,8 @@ podman
 podman-compose
 protonhax
 qemu-desktop
+qemu-full
+qemu-img
 qt6
 qt6ct-kde
 retroarch
@@ -77,6 +82,7 @@ slurp
 sqlite
 starship
 stow
+swtpm
 syncthing
 television
 tmux
@@ -85,6 +91,8 @@ ttf-dejavu
 ttf-liberation
 usage
 uwsm
+virt-manager
+virt-viewer
 winboat-bin
 wireplumber
 wl-clipboard
