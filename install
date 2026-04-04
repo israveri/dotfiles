@@ -1,6 +1,25 @@
 #!/bin/bash
 set -e
 
+dotdir="$HOME/.dotfiles"
+default_shell="/bin/zsh"
+
+keepalive() {
+    # Forces password prompt
+    sudo -v
+
+    # Run a loop in the background that refreshed sudo every 30 seconds
+    # to avoid the permission expiring in the middle of the instalation
+    (while true; do sudo -n true; sleep 30; kill -0 "$$" || exit; done) &
+
+    # We get the PID of the loop we just started
+    local keepalive_pid=$!
+
+    # Traps and kill the look as soon as the main script is finished to
+    # avoid having it running when it shouldn't
+    trap "kill $keepalive_pid 2>/dev/null" EXIT
+}
+
 run_task() {
     local title="$1"
     shift
@@ -11,13 +30,10 @@ run_task() {
     echo ""
 }
 
-# Forces password prompt
-sudo -v
-
-dotdir="$HOME/.dotfiles"
-
 echo "===> Dotfiles"
 echo ""
+
+keepalive
 
 run_task "Updating system and installing dependencies..." \
     bash -c "
@@ -69,7 +85,7 @@ run_task "Setting up SDDM..." \
     "
 
 run_task "Setting up Zsh..." \
-    chsh -s $(which zsh) $(whoami)
+    chsh -s "$default_shell" $(whoami)
 
 run_task "Setting up Neovim plugins..." \
     nvim --headless "+Lazy! sync" +qa
