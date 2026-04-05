@@ -7,8 +7,9 @@ defaultShell="/bin/zsh"
 _header() {
     local title="$1"
 
-    echo "===> $title"
     echo ""
+    echo ""
+    echo "===== $title ===================="
 }
 
 _keepalive() {
@@ -26,19 +27,6 @@ _keepalive() {
     # avoid having it running when it shouldn't
     trap "kill $keepalive_pid 2>/dev/null" EXIT
 }
-
-###############################
-# DELETE
-_run_task() {
-    local title="$1"
-    shift
-
-    echo "===> $title"
-    "$@"
-    echo "===> Done."
-    echo ""
-}
-################################
 
 _prepare() {
     _header "Dotfiles"
@@ -148,9 +136,10 @@ _config_mounts() {
 }
 
 _config_deluged() {
+    local sourcedir="$dotdir/src/applications/systemd/deluged.service.d"
     local targetdir="/etc/systemd/system/deluged.service.d"
     sudo mkdir -p "$targetdir"
-    sudo install -m 644 "$dotdir/src/applications/deluge/override.conf" "$targetdir/override.conf"
+    sudo install -m 644 "$sourcedir/override.conf" "$targetdir/override.conf"
 }
 
 _restart_daemons() {
