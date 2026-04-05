@@ -85,7 +85,7 @@ run_task "Setting up SDDM..." \
     "
 
 run_task "Setting up Zsh..." \
-    chsh -s "$default_shell" $(whoami)
+    sudo chsh -s "$default_shell" $(whoami)
 
 run_task "Setting up Neovim plugins..." \
     nvim --headless "+Lazy! sync" +qa
