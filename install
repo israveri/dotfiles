@@ -4,7 +4,7 @@ set -e
 dotdir="$HOME/.dotfiles"
 default_shell="/bin/zsh"
 
-keepalive() {
+_keepalive() {
     # Forces password prompt
     sudo -v
 
@@ -20,7 +20,14 @@ keepalive() {
     trap "kill $keepalive_pid 2>/dev/null" EXIT
 }
 
-run_task() {
+_header() {
+    local title="$1"
+
+    echo "===> $title"
+    echo ""
+}
+
+_run_task() {
     local title="$1"
     shift
 
@@ -30,18 +37,50 @@ run_task() {
     echo ""
 }
 
+_config_mounts() {
+    local unitName="run-media-israel-EMDRIVE.mount"
+    local mountUnitPath="$dotdir/src/applications/systemd/system/$unitName"
+    local targetDir="/etc/systemd/system"
+
+    sudo install -m 644 "$mountUnitPath" "$targetDir/$unitName"
+}
+
+_config_deluged() {
+    local targetdir="/etc/systemd/system/deluged.service.d"
+    sudo mkdir -p "$targetdir"
+    sudo install -m 644 "$dotdir/src/applications/deluge/override.conf" "$targetdir/override.conf"
+}
+
+_restart_daemons() {
+    sudo systemctl daemon-reload
+}
+
+_enable_units() {
+    sudo systemctl enable --now "run-media-israel-EMDRIVE.mount"
+}
+
+_config_systemd() {
+    _header "Configuring Systemd"
+
+    _config_mounts
+    _config_deluged
+    _restart_daemons
+
+    _enable_units
+}
+
 echo "===> Dotfiles"
 echo ""
 
-keepalive
+_keepalive
 
-run_task "Updating system and installing dependencies..." \
+_run_task "Updating system and installing dependencies..." \
     bash -c "
 	sudo pacman -Syu --noconfirm
 	sudo pacman -S --noconfirm --needed git paru
     "
 
-run_task "Setting up dotfiles repository..." \
+_run_task "Setting up dotfiles repository..." \
     bash -c "
 	if [ ! -d \"$dotdir\" ]; then
 	    git clone https://github.com/israveri/dotfiles \"$dotdir\"
@@ -50,13 +89,13 @@ run_task "Setting up dotfiles repository..." \
 	fi
     "
 
-run_task "Setting up git submodules..." \
+_run_task "Setting up git submodules..." \
     git -C "$dotdir" submodule update --init
 
-run_task "Installing packages from packages.txt manifest..." \
+_run_task "Installing packages from packages.txt manifest..." \
     paru -S --noconfirm --needed - < "$dotdir/src/packages/manifest.txt"
 
-run_task "Installing Screenshot utility" \
+_run_task "Installing Screenshot utility" \
     bash -c "
 	if [ ! -d \"$HOME/Workspace/humbleshot\" ]; then
 	    mkdir -p \"$HOME/Workspace/\"
@@ -69,13 +108,13 @@ run_task "Installing Screenshot utility" \
 	ln -sf \"$HOME/Workspace/humbleshot/humbleshot\" \"$dotdir/stow/usr-scripts/dot-local/scripts/humbleshot\"
     "
 
-run_task "Stowing dotfiles..." \
+_run_task "Stowing dotfiles..." \
     bash -c "
 	rm "$HOME/.zshrc"
 	cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
     "
 
-run_task "Setting up SDDM..." \
+_run_task "Setting up SDDM..." \
     bash -c "
 	sudo mkdir -p /etc/sddm.conf.d
 	sudo ln -sf "$dotdir/src/applications/sddm/custom.conf" /etc/sddm.conf.d/custom.conf
@@ -84,19 +123,22 @@ run_task "Setting up SDDM..." \
 	sudo cp "$dotdir/src/applications/sddm/hyprland*" /usr/share/wayland-sessions/
     "
 
-run_task "Setting up Zsh..." \
+_run_task "Setting up Zsh..." \
     sudo chsh -s "$default_shell" $(whoami)
 
-run_task "Setting up Neovim plugins..." \
+_run_task "Setting up Neovim plugins..." \
     nvim --headless "+Lazy! sync" +qa
 
-run_task "Installing programming languages..." \
+_run_task "Installing programming languages..." \
     mise install
 
-run_task "Enabling service units..." \
+_run_task "Enabling service units..." \
     sudo systemctl enable $(cat "$dotdir/src/services/manifest.txt")
 
-run_task "Reloading Hyprland" \
+_setup_deluged
+_restart_daemons
+
+_run_task "Reloading Hyprland" \
     hyprctl reload
 
 echo ""

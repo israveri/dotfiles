@@ -1,0 +1,12 @@
+[Unit]
+Description="External NTFS Backup and Torrent Seeding Drive"
+Before=deluged.service
+
+[Mount]
+What=/dev/disk/by-uuid/BEB039F4B039B42D
+Where=/run/media/israel/EMDRIVE
+Type=ntfs3
+Options=defaults,uid=1000,gid=1000,umask=000,nofail,noatime
+
+[Install]
+WantedBy=multi-user.target
