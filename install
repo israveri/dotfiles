@@ -2,7 +2,14 @@
 set -e
 
 dotdir="$HOME/.dotfiles"
-default_shell="/bin/zsh"
+defaultShell="/bin/zsh"
+
+_header() {
+    local title="$1"
+
+    echo "===> $title"
+    echo ""
+}
 
 _keepalive() {
     # Forces password prompt
@@ -20,13 +27,8 @@ _keepalive() {
     trap "kill $keepalive_pid 2>/dev/null" EXIT
 }
 
-_header() {
-    local title="$1"
-
-    echo "===> $title"
-    echo ""
-}
-
+###############################
+# DELETE
 _run_task() {
     local title="$1"
     shift
@@ -35,6 +37,106 @@ _run_task() {
     "$@"
     echo "===> Done."
     echo ""
+}
+################################
+
+_prepare() {
+    _header "Dotfiles"
+    _keepalive
+}
+
+_resolve_dependencies() {
+    _header "Installing dependencies"
+
+    sudo pacman -Syu --noconfirm
+    sudo pacman -S --noconfirm --needed git paru
+}
+
+_clone_self() {
+    _header "Cloning dotfiles repository"
+
+    local repoHttps="https://github.com/israveri/dotfiles"
+    local repoGit="git@github.com:israveri/dotfiles.git"
+
+    if [ ! -d "$dotdir" ]; then
+	git clone "$repoHttps" "$dotdir"
+	git -C "$dotdir" remote set-url origin $repoGit
+	git -C "$dotdir" remote rename origin github
+    fi
+}
+
+_install_git_submodules() {
+    _header "Installing git submodules"
+
+    git -C "$dotdir" submodule update --init
+}
+
+_install_packages() {
+    local manifestPath="$dotdir/src/packages/manifest.txt"
+
+    _header "Installing packages from manifest"
+
+    paru -S --noconfirm --needed - < "$manifestPath"
+}
+
+_install_humbleshot() {
+    local targetDir="$HOME/Workspace/humbleshot"
+
+    _header "Installing screenshot tool"
+
+    if [ ! -d "$targetDir" ]; then
+	mkdir -p "$HOME/Workspace/"
+	git clone "https://github.com/israveri/humbleshot" "$targetDir"
+	git -C "$targetDir" remote set-url origin "git@github.com:israveri/humbleshot"
+	git -C "$targetDir" remote rename origin github
+    else
+	echo "Repo already exists. Skipping."
+    fi
+
+    ln -sf "$targetDir/humbleshot" "$dotdir/stow/usr-scripts/dot-local/scripts/humbleshot"
+}
+
+_install_dotfiles() {
+    _header "Stowing dotfiles"
+
+    [ -f "$HOME/.zshrc" ] && rm "$HOME/.zshrc"
+    cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
+}
+
+_customize_sddm() {
+    _header "Customizing SDDM"
+
+    sudo mkdir -p "/etc/sddm.conf.d"
+
+    sudo install -m 644 "$dotdir/src/applications/sddm/custom.conf" "/etc/sddm.conf.d/custom.conf"
+    sudo install -m 644 "$dotdir/src/applications/sddm/hyprland.desktop" "/usr/share/wayland-sessions/hyprland.desktop"
+    sudo install -m 644 "$dotdir/src/applications/sddm/hyprland-uwsm.desktop" "/usr/share/wayland-sessions/hyprland-uwsm.desktop"
+
+    setfacl -m u:sddm:x "$HOME"
+    setfacl -m u:sddm:r "$HOME/.face.icon"
+}
+
+_change_default_shell() {
+    _header "Changing default shell"
+
+    sudo chsh -s "$defaultShell" "$(whoami)"
+}
+
+_install_neovim_plugins() {
+    _header "Installing Neovim plugins"
+
+    nvim --headless "+Lazy! sync" +qa
+}
+
+_install_devenv() {
+    _header "Installing dev env"
+
+    mise install
+}
+
+_enable_systemd_units() {
+    _header "Enabling service units"
+    sudo systemctl enable $(cat "$dotdir/src/services/manifest.txt")
 }
 
 _config_mounts() {
@@ -55,91 +157,59 @@ _restart_daemons() {
     sudo systemctl daemon-reload
 }
 
-_enable_units() {
+_enable_mount_units() {
     sudo systemctl enable --now "run-media-israel-EMDRIVE.mount"
 }
 
-_config_systemd() {
+_customize_systemd_units() {
     _header "Configuring Systemd"
 
     _config_mounts
     _config_deluged
     _restart_daemons
 
-    _enable_units
+    _enable_mount_units
 }
 
-echo "===> Dotfiles"
-echo ""
+_reload_hyprland() {
+    _header "Restarting Hyprland"
 
-_keepalive
+    if [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
+	hyprctl reload
+    else
+	echo "Hyprland not running. Skipping."
+    fi
 
-_run_task "Updating system and installing dependencies..." \
-    bash -c "
-	sudo pacman -Syu --noconfirm
-	sudo pacman -S --noconfirm --needed git paru
-    "
+}
 
-_run_task "Setting up dotfiles repository..." \
-    bash -c "
-	if [ ! -d \"$dotdir\" ]; then
-	    git clone https://github.com/israveri/dotfiles \"$dotdir\"
-	    git -C \"$dotdir\" remote set-url origin git@github.com:israveri/dotfiles.git
-	    git -C \"$dotdir\" remote rename origin github
-	fi
-    "
+_finish() {
+    echo ""
+    echo "✅ Installation complete"
+}
 
-_run_task "Setting up git submodules..." \
-    git -C "$dotdir" submodule update --init
+_main() {
+    # Preparation phase
+    _prepare
+    _resolve_dependencies
+    _clone_self 
+    _install_git_submodules
 
-_run_task "Installing packages from packages.txt manifest..." \
-    paru -S --noconfirm --needed - < "$dotdir/src/packages/manifest.txt"
+    # Main installations
+    _install_packages 
+    _install_humbleshot
+    _install_dotfiles
+    _install_neovim_plugins
+    _install_devenv
 
-_run_task "Installing Screenshot utility" \
-    bash -c "
-	if [ ! -d \"$HOME/Workspace/humbleshot\" ]; then
-	    mkdir -p \"$HOME/Workspace/\"
-	    git clone https://github.com/israveri/humbleshot \"$HOME/Workspace/humbleshot\"
-	    git -C \"$HOME/Workspace/humbleshot\" remote set-url origin git@github.com:israveri/humbleshot.git
-	    git -C \"$HOME/Workspace/humbleshot\" remote rename origin github
-	else
-	    echo \"Repo already exists. Skipping.\"
-	fi
-	ln -sf \"$HOME/Workspace/humbleshot/humbleshot\" \"$dotdir/stow/usr-scripts/dot-local/scripts/humbleshot\"
-    "
+    # Programs customizations and adjustments
+    _customize_sddm
+    _change_default_shell
+    _enable_systemd_units
+    _customize_systemd_units
 
-_run_task "Stowing dotfiles..." \
-    bash -c "
-	rm "$HOME/.zshrc"
-	cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
-    "
+    # Cleanup
+    _reload_hyprland
+    _finish
+}
 
-_run_task "Setting up SDDM..." \
-    bash -c "
-	sudo mkdir -p /etc/sddm.conf.d
-	sudo ln -sf "$dotdir/src/applications/sddm/custom.conf" /etc/sddm.conf.d/custom.conf
-	setfacl -m u:sddm:x "$HOME"
-	setfacl -m u:sddm:r "$HOME/.face.icon"
-	sudo cp "$dotdir/src/applications/sddm/hyprland*" /usr/share/wayland-sessions/
-    "
-
-_run_task "Setting up Zsh..." \
-    sudo chsh -s "$default_shell" $(whoami)
-
-_run_task "Setting up Neovim plugins..." \
-    nvim --headless "+Lazy! sync" +qa
-
-_run_task "Installing programming languages..." \
-    mise install
-
-_run_task "Enabling service units..." \
-    sudo systemctl enable $(cat "$dotdir/src/services/manifest.txt")
-
-_setup_deluged
-_restart_daemons
-
-_run_task "Reloading Hyprland" \
-    hyprctl reload
-
-echo ""
-echo "✅ Installation complete"
+_main
