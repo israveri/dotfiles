@@ -16,3 +16,5 @@ eval "$(zoxide init zsh)"
 # Mise
 eval "$(mise activate zsh)"
 
+# Fastfetch
+fastfetch
