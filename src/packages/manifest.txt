@@ -71,6 +71,7 @@ qemu-full
 qemu-img
 qt6
 qt6ct-kde
+quickshell-overview-git
 retroarch
 retroarch-assets-ozone
 ripgrep
