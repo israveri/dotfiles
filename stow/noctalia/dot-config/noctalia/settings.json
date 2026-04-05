@@ -86,32 +86,29 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
-                },
-                {
-                    "id": "plugin:weekly-calendar"
                 }
             ],
             "left": [
                 {
-                    "characterCount": 7,
+                    "characterCount": 10,
                     "colorizeIcons": true,
                     "emptyColor": "tertiary",
                     "enableScrollWheel": false,
                     "focusedColor": "secondary",
                     "followFocusedScreen": false,
-                    "fontWeight": "bold",
-                    "groupedBorderOpacity": 1,
-                    "hideUnoccupied": true,
+                    "fontWeight": "regular",
+                    "groupedBorderOpacity": 0,
+                    "hideUnoccupied": false,
                     "iconScale": 0.8,
                     "id": "Workspace",
                     "labelMode": "index",
                     "occupiedColor": "tertiary",
                     "pillSize": 0.8,
                     "showApplications": false,
-                    "showApplicationsHover": false,
+                    "showApplicationsHover": true,
                     "showBadge": true,
-                    "showLabelsOnlyWhenOccupied": true,
-                    "unfocusedIconsOpacity": 1
+                    "showLabelsOnlyWhenOccupied": false,
+                    "unfocusedIconsOpacity": 0.8
                 },
                 {
                     "compactMode": false,
@@ -120,7 +117,7 @@
                     "id": "MediaMini",
                     "maxWidth": 300,
                     "panelShowAlbumArt": true,
-                    "scrollingMode": "never",
+                    "scrollingMode": "hover",
                     "showAlbumArt": true,
                     "showArtistFirst": true,
                     "showProgressRing": true,
@@ -188,6 +185,17 @@
                         "syncEnabled": false
                     },
                     "id": "plugin:sticky-notes"
+                },
+                {
+                    "defaultSettings": {
+                    },
+                    "id": "plugin:kde-connect"
+                },
+                {
+                    "displayMode": "onhover",
+                    "iconColor": "none",
+                    "id": "Bluetooth",
+                    "textColor": "none"
                 },
                 {
                     "displayMode": "alwaysHide",
@@ -405,7 +413,7 @@
                 "Up"
             ]
         },
-        "language": "",
+        "language": "en",
         "lockOnSuspend": true,
         "lockScreenAnimations": false,
         "lockScreenBlur": 0,
@@ -497,10 +505,10 @@
         "backgroundOpacity": 1,
         "clearDismissed": true,
         "criticalUrgencyDuration": 20,
-        "density": "default",
+        "density": "compact",
         "enableBatteryToast": true,
         "enableKeyboardLayoutToast": true,
-        "enableMarkdown": false,
+        "enableMarkdown": true,
         "enableMediaToast": false,
         "enabled": true,
         "location": "top_right",
