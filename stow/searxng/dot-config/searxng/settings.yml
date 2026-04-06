@@ -1,0 +1,21 @@
+use_default_settings: true
+
+general:
+  instance_name: "MOTHERSHIP Search"
+  debug: false
+
+server:
+  bind_address: "0.0.0.0"
+  port: 8080
+  method: "GET"
+
+ui:
+  default_theme: simple
+  center_alignment: true
+  hotkeys: vim
+
+search:
+  safe_search: 0
+  autocomplete: "duckduckgo"
+  faviconresolver: "duckduckgo"
+  default_lang: "en-US"

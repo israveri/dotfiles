@@ -11,6 +11,7 @@ src\/assets\/apikeys
 
 # Patterns
 *.bak
+*.env
 
 **\/humbleshot
 **\/logs
