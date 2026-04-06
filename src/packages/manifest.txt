@@ -10,7 +10,6 @@ btop
 cachyos-gaming-applications
 cachyos-gaming-meta
 calibre
-chromium
 dbus
 deluge
 deluge-gtk
@@ -90,6 +89,7 @@ tmux
 tree-sitter
 ttf-dejavu
 ttf-liberation
+ungoogled-chromium-bin
 usage
 uwsm
 virt-manager
