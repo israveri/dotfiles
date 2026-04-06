@@ -1,0 +1,12 @@
+{
+    pki {
+	ca local {
+	    name "MOTHERSHIP CA"
+	}
+    }
+}
+
+search.mothership {
+    tls internal
+    reverse_proxy searxng:8080
+}

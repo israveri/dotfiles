@@ -1,0 +1,25 @@
+[Unit]
+Description=Caddy Reverse Proxy
+After=network-online.target
+
+[Container]
+Image=docker.io/library/caddy:alpine
+ContainerName=caddy
+PublishPort=80:80
+PublishPort=443:443
+UserNS=keep-id
+AutoUpdate=registry
+
+# Network
+Network=bridge.network
+
+# Volumes
+Volume=%h/.config/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+Volume=%h/.local/share/caddy:/data
+Volume=%h/.config/caddy/config:/config
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
