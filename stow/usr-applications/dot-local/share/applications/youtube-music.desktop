@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Youtube Music
+Comment=Music streaming from Youtube
+Exec=launch-webapp https://music.youtube.com
+Terminal=false
+Type=Application
+Icon=/home/israel/.local/share/applications/icons/youtube-music.png
+StartupNotify=true
+Categories=Entertainment;
