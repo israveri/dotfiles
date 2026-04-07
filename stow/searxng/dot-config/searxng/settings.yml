@@ -12,7 +12,6 @@ server:
 
 ui:
   default_theme: simple
-  center_alignment: true
   results_on_new_tab: true
 
 search:
@@ -25,10 +24,12 @@ outgoing:
   request_timeout: 3
 
 engines:
+  - name: aol
+    disabled: true
   - name: bing
-    disabled: false
+    disabled: true
   - name: brave
-    disabled: false
+    disabled: true
   - name: duckduckgo
     disabled: false
   - name: google

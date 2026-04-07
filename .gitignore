@@ -1,6 +1,6 @@
 \.git
 
-# Specific Files
+# Files
 .zhistory
 gamelist.xml
 lazy-lock.json
@@ -10,14 +10,13 @@ faviconcache.db
 faviconcache.db-shm
 faviconcache.db-wal
 
-# Whole Directories
+# Directories
 src\/assets\/apikeys
-
-# Patterns
-*.bak
-*.env
-
 **\/humbleshot
 **\/logs
-**\/themes
+**\/ES-DE\/themes
+
+# Extensions
+*.bak
+*.env
 
