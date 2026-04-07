@@ -94,7 +94,6 @@ usage
 uwsm
 virt-manager
 virt-viewer
-winboat-bin
 wireplumber
 wl-clipboard
 xdg-desktop-portal-gtk
