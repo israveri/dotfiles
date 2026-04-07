@@ -3,6 +3,7 @@ ark
 base
 base-devel
 bat
+blender
 bluez
 bluez-utils
 brightnessctl
@@ -30,6 +31,8 @@ godot-mono
 grim
 gtk4
 gtk4-layer-shell
+hip-runtime-amd
+hiprt
 hyprland
 hyprpolkitagent
 inter-font
