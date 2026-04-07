@@ -1,0 +1,24 @@
+[Unit]
+Description=SearXNG metasearch engine
+After=search-pod.service search-valkey.service
+Requires=search-pod.service search-valkey.service
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Restart=always
+
+[Container]
+Image=docker.io/searxng/searxng:latest
+ContainerName=searxng
+AutoUpdate=registry
+
+# Env
+EnvironmentFile=%h/.config/searxng/searxng.env
+Environment=SEARXNG_VALKEY_URL=valkey://localhost:6379/0
+
+# Volumes
+Volume=%h/.config/searxng/:/etc/searxng/:rw
+
+Pod=search.pod

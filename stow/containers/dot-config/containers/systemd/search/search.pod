@@ -1,0 +1,9 @@
+[Unit]
+Description=Local search container pod
+
+[Install]
+WantedBy=default.target
+
+[Pod]
+PodName=search
+Network=search.network

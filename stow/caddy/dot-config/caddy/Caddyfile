@@ -6,7 +6,13 @@
     }
 }
 
+http://mothership {
+    root * /certs
+    rewrite /mothership-ca.crt /root.crt
+    file_server
+}
+
 search.mothership {
     tls internal
-    reverse_proxy searxng:8080
+    reverse_proxy search:8080
 }

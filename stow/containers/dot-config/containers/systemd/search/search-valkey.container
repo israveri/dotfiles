@@ -1,0 +1,20 @@
+[Unit]
+Description=Valkey Cache for SearXNG
+After=search-pod.service
+Requires=search-pod.service
+
+[Install]
+WantedBy=default.target search-searxng.service
+
+[Service]
+Restart=always
+
+[Container]
+Image=docker.io/valkey/valkey:alpine
+ContainerName=search-valkey
+AutoUpdate=registry
+Exec=valkey-server --supervised systemd
+
+Volume=search-valkey.volume:/data
+
+Pod=search.pod
