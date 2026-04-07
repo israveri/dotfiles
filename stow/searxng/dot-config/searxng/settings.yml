@@ -1,21 +1,57 @@
 use_default_settings: true
 
 general:
-  instance_name: "MOTHERSHIP Search"
+  instance_name: "Mothership Search"
   debug: false
 
 server:
   bind_address: "0.0.0.0"
   port: 8080
   method: "GET"
+  image_proxy: true
 
 ui:
   default_theme: simple
   center_alignment: true
-  hotkeys: vim
+  results_on_new_tab: true
 
 search:
-  safe_search: 0
-  autocomplete: "duckduckgo"
-  faviconresolver: "duckduckgo"
   default_lang: "en-US"
+  favicon_resolver: "duckduckgo"
+  autocomplete: "duckduckgo"
+  autocomplete_min: 3
+
+outgoing:
+  request_timeout: 3
+
+engines:
+  - name: bing
+    disabled: false
+  - name: brave
+    disabled: false
+  - name: duckduckgo
+    disabled: false
+  - name: google
+    disabled: false
+  - name: wikipedia
+    disabled: false
+  - name: karmasearch
+    disabled: true
+  - name: karmasearch videos
+    disabled: true
+  - name: startpage
+    disabled: true
+
+categories_as_tabs:
+  general:
+  images:
+  videos:
+  news:
+  map:
+  it:
+  science:
+  files:
+
+plugins:
+  searx.plugins.oa_doi_rewrite.SXNGPlugin:
+    active: true

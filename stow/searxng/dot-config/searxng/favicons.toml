@@ -1,0 +1,7 @@
+[favicons]
+cfg_schema = 1
+
+[favicons.cache]
+db_url = "/etc/searxng/faviconcache.db"    # default: "/tmp/faviconcache.db"
+LIMIT_TOTAL_BYTES = 2147483648             # 2 GB / default: 50 MB
+

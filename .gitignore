@@ -6,6 +6,9 @@ gamelist.xml
 lazy-lock.json
 noctalia-colorscheme-cheatsheet.txt
 autosave.json
+faviconcache.db
+faviconcache.db-shm
+faviconcache.db-wal
 
 # Whole Directories
 src\/assets\/apikeys

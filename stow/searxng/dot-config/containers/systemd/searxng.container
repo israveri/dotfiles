@@ -5,12 +5,14 @@ After=network-online.target
 [Container]
 Image=ghcr.io/searxng/searxng:latest
 ContainerName=searxng
-Volume=%h/.config/searxng:/etc/searxng:ro
 UserNS=keep-id
 EnvironmentFile=%h/.config/searxng/searxng.env
 AutoUpdate=registry
 
 Network=bridge.network
+
+# Volumes
+Volume=%h/.config/searxng/:/etc/searxng/:rw
 
 [Service]
 Restart=always
