@@ -10,12 +10,13 @@ return {
 	},
 	formatters_by_ft = {
 	    bash = { "shfmt" },
-	    lua = { "emmylua_ls" },
+	    css = { "prettierd" },
+	    go = { "goimports" },
+	    html = { "prettierd" },
+	    javascript = { "prettierd" },
+	    lua = { "stylua" },
 	    ruby = { "standardrb" },
 	    sh = { "shfmt" },
-	    html = { "prettierd" },
-	    css = { "prettierd" },
-	    javascript = { "prettierd" },
 	    typescript = { "prettierd" },
 	},
     }

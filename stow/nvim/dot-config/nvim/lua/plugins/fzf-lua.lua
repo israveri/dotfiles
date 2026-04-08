@@ -25,12 +25,13 @@ return {
 	{ "<leader>/", function() require("fzf-lua").lgrep_curbuf() end, desc = "Search and find in current buffer" },
     },
     opts = {
-	files = { hidden = true },
-	grep = { hidden = true },
-	file_ignore_patterns = {
-	    ".git/",
-	    "node_modules/",
-	    "submodules/",
+	files = {
+	    hidden = true,
+	    fd_opts = "--exclude .git --exclude node_modules --exclude submodules",
+	},
+	grep = {
+	    hidden = true,
+	    rg_opts = "--glob '!.git' --glob '!node_modules' --glob '!submodules'",
 	},
     },
 }

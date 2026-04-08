@@ -28,6 +28,9 @@ return {
 	    vim.keymap.set("n", "<CR>", api.node.open.edit, opts("Expand/Open"))
 	    vim.keymap.set("n", "<C-CR>", api.node.open.vertical, opts("Open in vertical split"))
 	    vim.keymap.set("n", "<S-CR>", api.node.open.horizontal, opts("Open in horizontal split"))
+
+	    -- Disables "-" inside nvim-tree
+	    vim.keymap.set("n", "-", "<Nop>", opts("Disabled"))
 	end,
     },
     config = function(_, opts)

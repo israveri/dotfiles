@@ -33,7 +33,6 @@ vim.keymap.set('n', '<leader><C-Down>', function() require('smart-splits').swap_
 vim.keymap.set('n', '<leader><C-Left>', function() require('smart-splits').swap_buf_left({ move_cursor = true }) end)
 vim.keymap.set('n', '<leader><C-Right>', function() require('smart-splits').swap_buf_right({ move_cursor = true }) end)
 
-
 -- Splitting panes
 vim.keymap.set("n", "<C-w>-", ":split<cr>")
 vim.keymap.set("n", "<C-w>\\", ":vsplit<cr>")
@@ -78,6 +77,16 @@ vim.keymap.set("v", "<leader>s", "y:%s/<C-r>\"/<C-r>\"/g<Left><Left>")
 -- Move selection up and down
 vim.keymap.set("v", "<C-M-Up>", ":m '<-2<cr>gv=gv")
 vim.keymap.set("v", "<C-M-Down>", ":m '>+1<cr>gv=gv")
+
+--- -------- ---
+--- Undotree ---
+--- -------- ---
+vim.cmd("packadd nvim.undotree")
+vim.keymap.set("n", "<leader>u", function()
+    require("undotree").open({
+	command = math.floor(vim.api.nvim_win_get_width(0) / 5) .. "vnew"
+    })
+end, { desc = "[U]ndotree toggle" })
 
 --- -------- ---
 --- Terminal ---

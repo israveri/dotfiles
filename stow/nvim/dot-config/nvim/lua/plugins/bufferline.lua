@@ -31,10 +31,10 @@ return {
 	require("bufferline").setup(opts)
 
 	-- Keymaps
-	vim.keymap.set("n", "<C-Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Cycles to the next buffer" })
-	vim.keymap.set("n", "<C-S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Cycles to the previous buffer" })
-	vim.keymap.set("n", "<leader>bp", "<cmd>BufferLinePick<cr>", { desc = "Pick a buffer" })
-	vim.keymap.set("n", "<leader>bq", "<cmd>BufferLinePickClose<cr>", { desc = "Pick a buffer to close" })
-	vim.keymap.set("n", "<leader>b.", "<cmd>BufferLineTogglePin<cr>", { desc = "Toggles pin on buffer" })
+	vim.keymap.set("n", "<C-Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Bufferline: Cycles to the next buffer" })
+	vim.keymap.set("n", "<C-S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Bufferline: Cycles to the previous buffer" })
+	vim.keymap.set("n", "<leader>bp", "<cmd>BufferLinePick<cr>", { desc = "Bufferline: [b]uffer [p]ick" })
+	vim.keymap.set("n", "<leader>bq", "<cmd>BufferLinePickClose<cr>", { desc = "Bufferline: [b]uffer [q]uit" })
+	vim.keymap.set("n", "<leader>b.", "<cmd>BufferLineTogglePin<cr>", { desc = "Bufferline: [b]uffer pinning" })
     end,
 }
