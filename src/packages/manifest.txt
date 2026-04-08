@@ -10,6 +10,7 @@ brightnessctl
 btop
 cachyos-gaming-applications
 cachyos-gaming-meta
+calf
 calibre
 dbus
 deluge
@@ -44,7 +45,9 @@ libffi
 libvirt
 libyaml
 loupe
+lsp-plugins
 mangojuice
+mda.lv2
 mise
 mission-center
 nautilus
@@ -102,6 +105,8 @@ wireplumber
 wl-clipboard
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
+yelp
+zam-plugins-lv2
 zoxide
 zsh
 zsh-completions
