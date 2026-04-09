@@ -44,6 +44,7 @@ lact
 libffi
 libvirt
 libyaml
+lmstudio-bin
 loupe
 lsp-plugins
 mangojuice
@@ -54,6 +55,7 @@ nautilus
 neovim
 nerd-fonts
 networkmanager
+nmap
 noctalia-shell
 noto-fonts
 noto-fonts-cjk
@@ -62,6 +64,8 @@ nwg-look
 obs-studio
 obsidian
 okular
+ollama
+ollama-rocm
 opencode
 openssl
 overmind
