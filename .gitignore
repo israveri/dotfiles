@@ -2,19 +2,20 @@
 
 # Files
 .zhistory
-gamelist.xml
-lazy-lock.json
-noctalia-colorscheme-cheatsheet.txt
 autosave.json
 faviconcache.db
 faviconcache.db-shm
 faviconcache.db-wal
+gamelist.xml
+lazy-lock.json
+noctalia-colorscheme-cheatsheet.txt
+package-lock.json
 
 # Directories
-src\/assets\/apikeys
+**\/ES-DE\/themes
 **\/humbleshot
 **\/logs
-**\/ES-DE\/themes
+src\/assets\/apikeys
 
 # Extensions
 *.bak
