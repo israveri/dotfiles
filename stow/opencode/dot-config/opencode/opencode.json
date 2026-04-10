@@ -1,24 +1,31 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "theme": "gruvbox",
-  "model": "ollama/gemma4:e4b",
-  "provider": {
-    "ollama": {
-      "models": {
-        "gemma4:26b": {
-          "_launch": true,
-          "name": "Gemma4 26b"
-        },
-        "gemma4:e4b": {
-          "name": "Gemma 4 4b"
+    "$schema": "https://opencode.ai/config.json",
+    "model": "ollama/gemma4:e26b-32k",
+    "small_model": "ollama/gemma4:e4b-64k",
+    "provider": {
+        "ollama": {
+            "models": {
+                "gemma4:e4b-64k": {
+                    "_launch": true,
+                    "name": "Gemma 4 4b",
+                    "options": {
+                        "num_ctx": 65536,
+                        "reasoningEffort": "none"
+                    }
+                },
+                "gemma4:26b-32k": {
+                    "name": "Gemma4 26b",
+                    "options": {
+                        "num_ctx": 32768,
+                        "reasoningEffort": "none"
+                    }
+                }
+            },
+            "name": "Ollama",
+            "npm": "@ai-sdk/openai-compatible",
+            "options": {
+                "baseURL": "http://127.0.0.1:11434/v1"
+            }
         }
-      },
-      "name": "Ollama",
-      "npm": "@ai-sdk/openai-compatible",
-      "options": {
-        "baseURL": "http://127.0.0.1:11434/v1"
-      }
-    }
-  },
-  "small_model": "ollama/gemma4:e4b",
+    },
 }
