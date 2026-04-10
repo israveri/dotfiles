@@ -47,9 +47,9 @@ _clone_self() {
     local repoGit="git@github.com:israveri/dotfiles.git"
 
     if [ ! -d "$dotdir" ]; then
-	git clone "$repoHttps" "$dotdir"
-	git -C "$dotdir" remote set-url origin $repoGit
-	git -C "$dotdir" remote rename origin github
+        git clone "$repoHttps" "$dotdir"
+        git -C "$dotdir" remote set-url origin $repoGit
+        git -C "$dotdir" remote rename origin github
     fi
 }
 
@@ -73,12 +73,12 @@ _install_humbleshot() {
     _header "Installing screenshot tool"
 
     if [ ! -d "$targetDir" ]; then
-	mkdir -p "$HOME/Workspace/"
-	git clone "https://github.com/israveri/humbleshot" "$targetDir"
-	git -C "$targetDir" remote set-url origin "git@github.com:israveri/humbleshot"
-	git -C "$targetDir" remote rename origin github
+        mkdir -p "$HOME/Workspace/"
+        git clone "https://github.com/israveri/humbleshot" "$targetDir"
+        git -C "$targetDir" remote set-url origin "git@github.com:israveri/humbleshot"
+        git -C "$targetDir" remote rename origin github
     else
-	echo "Repo already exists. Skipping."
+        echo "Repo already exists. Skipping."
     fi
 
     ln -sf "$targetDir/humbleshot" "$dotdir/stow/usr-scripts/dot-local/scripts/humbleshot"
@@ -164,9 +164,9 @@ _reload_hyprland() {
     _header "Restarting Hyprland"
 
     if [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
-	hyprctl reload
+        hyprctl reload
     else
-	echo "Hyprland not running. Skipping."
+        echo "Hyprland not running. Skipping."
     fi
 
 }
