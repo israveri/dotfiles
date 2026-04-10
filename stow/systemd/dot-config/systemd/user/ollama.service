@@ -1,0 +1,5 @@
+[Unit]
+Description=Ollama Server
+
+[Service]
+ExecStart=/usr/bin/ollama serve
