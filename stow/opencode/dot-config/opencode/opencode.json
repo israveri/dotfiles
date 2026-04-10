@@ -1,7 +1,8 @@
 {
     "$schema": "https://opencode.ai/config.json",
-    "model": "ollama/gemma4:e26b-32k",
+    "model": "ollama/gemma4:26b-32k",
     "small_model": "ollama/gemma4:e4b-64k",
+    "instructions": ["prompts/partner.md"],
     "provider": {
         "ollama": {
             "models": {
@@ -10,14 +11,12 @@
                     "name": "Gemma 4 4b",
                     "options": {
                         "num_ctx": 65536,
-                        "reasoningEffort": "none"
                     }
                 },
                 "gemma4:26b-32k": {
                     "name": "Gemma4 26b",
                     "options": {
                         "num_ctx": 32768,
-                        "reasoningEffort": "none"
                     }
                 }
             },
