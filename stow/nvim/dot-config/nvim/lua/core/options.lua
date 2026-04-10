@@ -22,9 +22,11 @@ vim.o.smartcase = true                  -- Searches using case sensitive pattern
 vim.opt.winborder = 'rounded'           -- Rounded borders for all floating windows (required for LSP to work)
 vim.o.list = true                       -- Show special characters for whitespace indications
 vim.opt.listchars = {                   -- Define wich characters are shown for whitespaces
-    tab = '» ',
-    trail = '·',
-    nbsp = '␣'
+    trail = '+',
+    nbsp = '␣',
+    space = ' ',
+    tab = '⇥ ',
+    leadmultispace = '·',
 }
 
 -- Identation: The correct way to set up. See:
@@ -35,7 +37,7 @@ vim.opt.listchars = {                   -- Define wich characters are shown for 
 vim.opt.tabstop = 8                     -- REAL Tab character size (It keeps the default tab char size for every editor)
 vim.opt.softtabstop = 4                 -- LOCAL Tab character size (It reads the tab sizing differently only locally)
 vim.opt.shiftwidth = 4                  -- How many spaces a <Tab> or a <BS> moves the cursor
-vim.opt.expandtab = false               -- Don't turn Tabs into Spaces with the config above
+vim.opt.expandtab = true                -- Don't turn Tabs into Spaces with the config above
 vim.opt.smartindent = true              -- Do auto indentation after some characters (eg. after '{' )
 vim.opt.autoindent = true               -- Copy indentation from current line into new line
 
@@ -45,6 +47,12 @@ vim.opt.splitbelow = true               -- Always split below in horizontal spli
 
 -- Clipboard: Sync OS and Neovim clipboards
 vim.schedule(function()
-  vim.o.clipboard = 'unnamedplus'
+    vim.o.clipboard = 'unnamedplus'
 end)
 
+-- Folding
+vim.o.foldmethod = "expr"
+vim.o.foldlevel = 99                    -- Start with all folds open
+vim.o.foldlevelstart = 99               -- ^ Same thing, but for new buffers
+vim.o.foldenable = true
+vim.o.foldcolumn = "0"

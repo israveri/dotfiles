@@ -1,0 +1,20 @@
+return {
+    "kevinhwang91/nvim-ufo",
+    dependencies = { "kevinhwang91/promise-async" },
+    event = "BufReadPost",
+    opts = {
+        provider_selector = function(bufnr, filetype, buftype) 
+            return { "treesitter", "indent"}
+        end,
+    },
+    config = function(_, opts)
+        vim.opt.fillchars:append({
+            foldopen = "",
+            foldclose = "",
+            fold = " ",
+            foldsep = "│",
+        })
+
+        require("ufo").setup(opts)
+    end,
+}
