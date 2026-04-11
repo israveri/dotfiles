@@ -37,6 +37,8 @@ hip-runtime-amd
 hiprt
 hyprland
 hyprpolkitagent
+hyprqt6engine
+hyprshutdown
 inter-font
 jq
 kitty
@@ -80,7 +82,6 @@ qemu-desktop
 qemu-full
 qemu-img
 qt6
-qt6ct-kde
 quickshell-overview-git
 retroarch
 retroarch-assets-ozone
