@@ -53,7 +53,9 @@ mangojuice
 mda.lv2
 mise
 mission-center
+mtr
 nautilus
+ncdu
 neovim
 nerd-fonts
 networkmanager
@@ -86,6 +88,8 @@ quickshell-overview-git
 retroarch
 retroarch-assets-ozone
 ripgrep
+rocm-hip-runtime
+rocm-opencl-runtime
 rust
 satty
 sddm
