@@ -1,0 +1,26 @@
+[Unit]
+Description=AnythingLLM Local LLMs
+After=homelab-network.service
+Requires=homelab-network.service
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
+
+[Container]
+Image=docker.io/mintplexlabs/anythingllm:latest
+ContainerName=anythingllm
+AutoUpdate=registry
+Network=homelab.network
+AddHost=host.containers.internal:host-gateway
+
+# Additional capabilities
+AddCapability=CAP_SYS_ADMIN
+
+# Environment customization
+Environment=STORAGE_DIR=/app/server/storage
+
+# Volumes
+Volume=llm-data.volume:/app/server/storage

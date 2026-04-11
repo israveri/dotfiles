@@ -1,6 +1,7 @@
 [Unit]
 Description=Caddy Reverse Proxy
-After=network-online.target
+After=homelab-network.service
+Requires=homelab-network.service
 
 [Service]
 Restart=always
@@ -18,6 +19,7 @@ PublishPort=80:80
 PublishPort=443:443
 
 # Networks
+Network=homelab.network
 Network=search.network
 
 # Volumes

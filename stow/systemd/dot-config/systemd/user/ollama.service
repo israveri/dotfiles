@@ -3,3 +3,4 @@ Description=Ollama Server
 
 [Service]
 ExecStart=/usr/bin/ollama serve
+Environment=OLLAMA_HOST=0.0.0.0:11434
