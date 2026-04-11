@@ -10,13 +10,13 @@
                     "_launch": true,
                     "name": "Gemma 4 4b",
                     "options": {
-                        "num_ctx": 65536,
+                        "num_ctx": 65536
                     }
                 },
                 "gemma4:26b-32k": {
                     "name": "Gemma4 26b",
                     "options": {
-                        "num_ctx": 32768,
+                        "num_ctx": 32768
                     }
                 }
             },
