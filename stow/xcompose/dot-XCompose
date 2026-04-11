@@ -44,3 +44,4 @@ include "%L"
 <dead_acute> <N> : "'N"
 <dead_acute> <M> : "'M"
 
+<dead_acute> <dead_acute> : "''"
