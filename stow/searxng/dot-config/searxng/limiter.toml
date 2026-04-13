@@ -1,16 +1,18 @@
-[botdetection]
-ipv4_prefix = 32
-ipv6_prefix = 48
-
-trusted_proxies = [
-  '127.0.0.0/8',
-  '::1',
-  '192.168.0.0/16',
-]
-
-[botdetection.ip_lists]
-pass_searxng_org = true
-
-pass_ip = []
-
-block_ip = []
+#[botdetection]
+#ipv4_prefix = 32
+#ipv6_prefix = 48
+#
+#trusted_proxies = [
+#  '127.0.0.0/8',
+#  '::1',
+#  '192.168.0.0/16',
+#  '10.89.0.0/16',
+#  '10.100.0.0/16',
+#]
+#
+#[botdetection.ip_lists]
+#pass_searxng_org = true
+#
+#pass_ip = []
+#
+#block_ip = []

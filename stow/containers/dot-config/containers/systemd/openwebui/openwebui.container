@@ -1,0 +1,19 @@
+[Unit]
+Description=Open WebUI Container
+After=homelab-network.service
+Requires=homelab-network.service
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
+
+[Container]
+Image=ghcr.io/open-webui/open-webui:main
+ContainerName=openwebui
+AutoUpdate=registry
+
+Network=homelab.network
+
+Volume=openwebui.volume:/app/backend/data

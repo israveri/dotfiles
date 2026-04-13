@@ -1,7 +1,7 @@
 [Unit]
 Description=Caddy Reverse Proxy
-After=homelab-network.service
-Requires=homelab-network.service
+After=homelab-network.service search-network.service
+Requires=homelab-network.service search-network.service
 
 [Service]
 Restart=always
@@ -24,6 +24,6 @@ Network=search.network
 
 # Volumes
 Volume=%h/.config/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
-Volume=proxy-data.volume:/data
-Volume=proxy-config.volume:/config
-Volume=%h/.local/share/containers/storage/volumes/proxy-data/_data/caddy/pki/authorities/local:/certs:ro
+Volume=caddy-data.volume:/data
+Volume=caddy-config.volume:/config
+Volume=%h/.local/share/containers/storage/volumes/caddy-data/_data/caddy/pki/authorities/local:/certs:ro

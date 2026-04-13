@@ -14,7 +14,7 @@ http://mothership {
 
 chat.mothership {
     tls internal
-    reverse_proxy anythingllm:3001
+    reverse_proxy openwebui:8080
 }
 
 search.mothership {

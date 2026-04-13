@@ -1,5 +1,6 @@
 [Unit]
-Description=Local search container pod
+Description=Local Search Container Cod
+Requires=search-network.service
 
 [Install]
 WantedBy=default.target

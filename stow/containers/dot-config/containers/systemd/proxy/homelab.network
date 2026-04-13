@@ -1,2 +1,3 @@
 [Network]
 NetworkName=homelab
+Subnet=10.100.0.0/16
