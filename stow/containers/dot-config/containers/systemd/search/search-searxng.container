@@ -14,11 +14,12 @@ Image=docker.io/searxng/searxng:latest
 ContainerName=searxng
 AutoUpdate=registry
 
-# Env
 EnvironmentFile=%h/.config/searxng/searxng.env
 Environment=SEARXNG_VALKEY_URL=valkey://localhost:6379/0
 
-# Volumes
-Volume=%h/.config/searxng/:/etc/searxng/:rw
+Volume=search-searxng.volume:/etc/searxng/:rw
+Volume=%h/.config/searxng/settings.yml:/etc/searxng/settings.yml:ro
+Volume=%h/.config/searxng/favicons.toml:/etc/searxng/favicons.toml:ro
+Volume=%h/.config/searxng/searxng.env:/etc/searxng/searxng.env:ro
 
 Pod=search.pod

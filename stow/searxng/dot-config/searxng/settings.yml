@@ -12,18 +12,35 @@ server:
 
 ui:
   default_theme: simple
-  results_on_new_tab: true
+  results_on_new_tab: false
+  center_alignment: true
 
 search:
   default_lang: "en-US"
   favicon_resolver: "duckduckgo"
   autocomplete: "duckduckgo"
   autocomplete_min: 3
-
 outgoing:
-  request_timeout: 3
+  request_timeout: 5
 
+# Which categories may appear
+categories_as_tabs:
+  general:
+  images:
+  videos:
+  news:
+  map:
+  it:
+  science:
+  files:
+
+  plugins:
+    searx.plugins.oa_doi_rewrite.SXNGPlugin:
+      active: true
+
+# Which search engines are enabled/disabled
 engines:
+  # General engines
   - name: aol
     disabled: true
   - name: bing
@@ -43,16 +60,36 @@ engines:
   - name: startpage
     disabled: true
 
-categories_as_tabs:
-  general:
-  images:
-  videos:
-  news:
-  map:
-  it:
-  science:
-  files:
+  # Image engines
+  - name: aol images
+    disabled: true
+  - name: google images
+    disabled: true
+  - name: karmasearch images
+    disabled: true
+  - name: pexels
+    disabled: true
+  - name: qwant images
+    disabled: true
+  - name: startpage images
+    disabled: true
 
-plugins:
-  searx.plugins.oa_doi_rewrite.SXNGPlugin:
-    active: true
+  # Video engines
+  - name: qwant videos
+    disabled: true
+  - name: vimeo
+    disabled: true
+
+  # News engines
+  - name: karmasearch news
+    disabled: true
+  - name: qwant news
+    disabled: true
+  - name: startpage news
+    disabled: true
+
+  # Files engines
+  - name: kickass
+    disabled: true
+  - name: solidtorrents
+    disabled: true
