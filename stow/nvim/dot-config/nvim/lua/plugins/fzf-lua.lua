@@ -8,9 +8,6 @@ return {
         { "<C-p>", function() require("fzf-lua").files() end, desc = "Search and [f]ind [f]ile" },
         { "<leader>ff", function() require("fzf-lua").files() end, desc = "Search and [f]ind [f]ile" },
 
-        -- Keymap to be able to serch neovim confi files from anywhere in the system
-        { "<leader>fc", function() require("fzf-lua").files({ cmd = vim.fn.stdpath("config") }) end, desc = "Searh and [f]ind neovim [c]onfig" },
-
         -- Other useful keymaps
         { "<leader><leader>", function() require("fzf-lua").buffers() end, desc = "Search and find opened buffers" },
         { "<leader>fl", function() require("fzf-lua").live_grep() end, desc = "Search and [f]ind with [l]ive grep" },
@@ -25,13 +22,23 @@ return {
         { "<leader>/", function() require("fzf-lua").lgrep_curbuf() end, desc = "Search and find in current buffer" },
     },
     opts = {
-        files = {
-            hidden = true,
-            --fd_opts = "--exclude .git --exclude node_modules --exclude submodules",
-        },
-        grep = {
-            hidden = true,
-            rg_opts = "--glob '!.git' --glob '!node_modules' --glob '!submodules'",
-        },
+       winopts = {
+           height = 0.95,
+           width = 0.90,
+           backdrop = 0,
+
+           preview = {
+               default = "bat",
+               layout = "vertical",
+               vertical = "down:80%",
+           },
+       },
+       files = {
+           hidden = true,
+           formatter = "path.filename_first",
+       },
+       grep = {
+           hidden = true,
+       },
     },
 }
