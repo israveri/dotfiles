@@ -80,12 +80,12 @@
             "center": [
                 {
                     "clockColor": "none",
-                    "customFont": "",
+                    "customFont": "Inter Display",
                     "formatHorizontal": "dddd, HH:mm",
                     "formatVertical": "HH mm",
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": false
+                    "useCustomFont": true
                 }
             ],
             "left": [
@@ -96,7 +96,7 @@
                     "enableScrollWheel": false,
                     "focusedColor": "secondary",
                     "followFocusedScreen": false,
-                    "fontWeight": "regular",
+                    "fontWeight": "bold",
                     "groupedBorderOpacity": 0,
                     "hideUnoccupied": false,
                     "iconScale": 0.8,
@@ -154,7 +154,7 @@
                     "blacklist": [
                     ],
                     "chevronColor": "none",
-                    "colorizeIcons": false,
+                    "colorizeIcons": true,
                     "drawerEnabled": true,
                     "hidePassive": true,
                     "id": "Tray",
