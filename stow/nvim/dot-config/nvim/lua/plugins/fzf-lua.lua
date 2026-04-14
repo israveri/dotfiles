@@ -31,7 +31,7 @@ return {
         },
         grep = {
             hidden = true,
-            --rg_opts = "--glob '!.git' --glob '!node_modules' --glob '!submodules'",
+            rg_opts = "--glob '!.git' --glob '!node_modules' --glob '!submodules'",
         },
     },
 }
