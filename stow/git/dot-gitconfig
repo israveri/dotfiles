@@ -5,6 +5,7 @@
 [core]
     editor          = nvim
     excludesfile    = ~/.config/git/gitignore
+    pager           = bat --plain --theme=ansi --paging=never
 
 [push]
     default         = simple
@@ -20,6 +21,9 @@
     changed         = yellow bold
     untracked       = red bold
 
+[pager]
+    diff            = bat --plain --theme=ansi --paging=always
+
 [pull]
     rebase          = true
 
@@ -28,7 +32,7 @@
     tool            = nvimdiff
 
 [mergetool]
-    prompt          = true
+    prompt          = false
 
 [mergetool "nvimdiff"]
     cmd             = "nvim -d \"$LOCAL\" \"$MERGED\" \"$REMOTE\""
