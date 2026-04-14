@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Gemini
+Comment=Gemini
+Exec=launch-webapp https://gemini.google.com/app
+Terminal=false
+Type=Application
+Icon=/home/israel/.local/share/applications/icons/gemini.png
+StartupNotify=true
+Categories=Artificial Inteligence;
