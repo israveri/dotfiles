@@ -12,4 +12,12 @@ bindkey '^[[4~' end-of-line                    # End key
 bindkey '^[[5~' beginning-of-line-hist-search  # Pg Up
 bindkey '^[[6~' end-of-line-hist-search        # Pg Dn
 
-bindkey '^p' autosuggest-accept # Ctrl+P accepts suggestion
+
+# Widgets for binding
+function run_zoxide_interactive {
+    BUFFER="zi"
+    zle .accept-line
+}
+zle -N run_zoxide_interactive
+
+bindkey '^p' run_zoxide_interactive
