@@ -1,14 +1,20 @@
 return {
     "folke/which-key.nvim",
     event = "VeryLazy",
-    opts = {},
     keys = {
-	{
-	    "<leader>?",
-	    function()
-		require("which-key").show({ global = false })
-	    end,
-	    desc = "Buffer Local Keymaps (which-key)",
-	},
+        {
+            "<leader>?",
+            function()
+                require("which-key").show({ global = false })
+            end,
+            desc = "Buffer Local Keymaps (which-key)",
+        },
+    },
+    opts = {
+        preset = "helix",
+        keys = {
+            scroll_up = "<C-Up>",
+            scroll_down = "<C-Down>",
+        },
     },
 }
