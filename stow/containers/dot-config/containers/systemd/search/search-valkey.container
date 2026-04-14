@@ -11,7 +11,7 @@ Restart=always
 
 [Container]
 Image=docker.io/valkey/valkey:alpine
-ContainerName=search-valkey
+ContainerName=valkey
 AutoUpdate=registry
 Exec=valkey-server --supervised systemd
 
