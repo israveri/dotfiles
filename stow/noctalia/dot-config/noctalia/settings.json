@@ -79,17 +79,6 @@
         "widgets": {
             "center": [
                 {
-                    "clockColor": "none",
-                    "customFont": "Inter Display",
-                    "formatHorizontal": "dddd, HH:mm",
-                    "formatVertical": "HH mm",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": true
-                }
-            ],
-            "left": [
-                {
                     "characterCount": 10,
                     "colorizeIcons": true,
                     "emptyColor": "tertiary",
@@ -109,25 +98,18 @@
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": false,
                     "unfocusedIconsOpacity": 0.8
-                },
-                {
-                    "compactMode": false,
-                    "hideMode": "idle",
-                    "hideWhenIdle": false,
-                    "id": "MediaMini",
-                    "maxWidth": 300,
-                    "panelShowAlbumArt": true,
-                    "scrollingMode": "hover",
-                    "showAlbumArt": true,
-                    "showArtistFirst": true,
-                    "showProgressRing": true,
-                    "showVisualizer": true,
-                    "textColor": "none",
-                    "useFixedWidth": false,
-                    "visualizerType": "linear"
                 }
             ],
-            "right": [
+            "left": [
+                {
+                    "clockColor": "none",
+                    "customFont": "Inter Display",
+                    "formatHorizontal": "dddd, HH:mm",
+                    "formatVertical": "HH mm",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "useCustomFont": true
+                },
                 {
                     "compactMode": false,
                     "diskPath": "/",
@@ -149,6 +131,24 @@
                     "textColor": "none",
                     "useMonospaceFont": true,
                     "usePadding": true
+                }
+            ],
+            "right": [
+                {
+                    "compactMode": false,
+                    "hideMode": "idle",
+                    "hideWhenIdle": false,
+                    "id": "MediaMini",
+                    "maxWidth": 300,
+                    "panelShowAlbumArt": true,
+                    "scrollingMode": "hover",
+                    "showAlbumArt": true,
+                    "showArtistFirst": true,
+                    "showProgressRing": true,
+                    "showVisualizer": true,
+                    "textColor": "none",
+                    "useFixedWidth": false,
+                    "visualizerType": "linear"
                 },
                 {
                     "blacklist": [
