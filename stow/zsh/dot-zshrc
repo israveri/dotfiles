@@ -17,4 +17,6 @@ eval "$(zoxide init zsh)"
 eval "$(mise activate zsh)"
 
 # Fastfetch
-fastfetch
+if [[ -z "$TMUX" ]]; then
+    fastfetch
+fi
