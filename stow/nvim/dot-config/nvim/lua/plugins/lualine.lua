@@ -1,10 +1,10 @@
 return {
     "nvim-lualine/lualine.nvim",
     dependencies = {
-	"nvim-tree/nvim-web-devicons",
-	"RRethy/base16-nvim",
+        "nvim-tree/nvim-web-devicons",
+        "RRethy/base16-nvim",
     },
     opts = {
-	theme = "base16"
+        theme = "base16"
     },
 }

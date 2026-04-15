@@ -85,6 +85,7 @@ qemu-full
 qemu-img
 qt6
 quickshell-overview-git
+rebar3
 retroarch
 retroarch-assets-ozone
 ripgrep
