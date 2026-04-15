@@ -122,6 +122,12 @@ _install_devenv() {
     mise install
 }
 
+_install_pi_agent() {
+    _header "Installing Pi coding agent"
+
+    mise exec npm@latest -- npm install -f @mariozechner/pi-coding-agent
+}
+
 _enable_systemd_units() {
     _header "Enabling service units"
     sudo systemctl enable $(cat "$dotdir/src/services/manifest.txt")
@@ -189,6 +195,7 @@ _main() {
     _install_dotfiles
     _install_neovim_plugins
     _install_devenv
+    _install_pi_agent
 
     # Programs customizations and adjustments
     _customize_sddm

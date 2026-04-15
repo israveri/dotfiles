@@ -1,0 +1,24 @@
+{
+    "quietStartup": false,
+    "defaultProvider": "ollama",
+    "defaultModel": "qwen3.5:9b",
+    "defaulThinkingLevel": "low",
+
+    "thinkingBudgets": {
+        "minimal": 1024,
+        "low": 4096,
+        "medium": 10240,
+        "high": 32768
+    },
+
+    "nmpCommand": [
+        "mise",
+        "exec",
+        "npm@latest",
+        "--",
+        "npm"
+    ],
+
+
+    "lastChangelogVersion": "0.67.2"
+}
