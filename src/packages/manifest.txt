@@ -33,8 +33,6 @@ godot-mono
 grim
 gtk4
 gtk4-layer-shell
-hip-runtime-amd
-hiprt
 hyprland
 hyprpolkitagent
 hyprqt6engine
@@ -68,8 +66,6 @@ nwg-look
 obs-studio
 obsidian
 okular
-ollama
-ollama-rocm
 openssl
 overmind
 paru
@@ -88,8 +84,6 @@ rebar3
 retroarch
 retroarch-assets-ozone
 ripgrep
-rocm-hip-runtime
-rocm-opencl-runtime
 rust
 satty
 sddm
