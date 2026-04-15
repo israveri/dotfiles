@@ -30,7 +30,7 @@ tdl() {
     tmux send-keys -t "$editor_pane" "$EDITOR ." C-m
 
     # Opens ai
-    tmux send-keys -t "$ai_pane" "$ai ." C-m
+    tmux send-keys -t "$ai_pane" "$ai" C-m
 
     # Focus the editor pane
     tmux select-pane -t "$editor_pane"
