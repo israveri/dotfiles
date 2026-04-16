@@ -1,3 +1,4 @@
+# /* vim: set filetype=systemd : */
 [Unit]
 Description=Local Search Container Cod
 Requires=search-network.service
