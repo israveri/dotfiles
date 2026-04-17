@@ -1,0 +1,23 @@
+# This solves no connection at boot up
+#
+# User services can't wait for system services
+# to report information, so they can't wait
+# for network-online.service.
+#
+# This breaks containers network setup at boot.
+# This is a workaround to handle this edge case.
+#
+# See more at:
+#   https://github.com/containers/podman/issues/22637#issuecomment-2101836398
+#   https://github.com/containers/podman/issues/22637
+#   https://github.com/containers/podman/issues/22197
+[Unit]
+Description=Wait for Network to be Configured
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'until ip route get 1.1.1.1 > /dev/null 2>&1; do sleep 1; done'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
