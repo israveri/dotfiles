@@ -8,6 +8,20 @@
 # Adds custom scripts to PATH
 export PATH="$PATH:$HOME/.local/scripts"
 
+# XDG Base Directory Specification Enforcement
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state/"
+export XDG_RUNTIME_DIRS="/run/user/$UID"
+#export XDG_CONFIG_DIRS=""
+#export XDG_DATA_DIRS=""
+
+# Allow better screen sharing support (Meet, Zoom, Discord, etc)
+export XDG_CURRENT_DESKTOP="Hyprland"
+export XDG_SESSION_DESKTOP="Hyprland"
+export XDG_SESSION_TYPE="wayland"
+
 # Wayland stuff
 export GDK_BACKEND="wayland,x11,*"
 export SDL_VIDEODRIVER="wayland"
@@ -21,14 +35,6 @@ export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
 export QT_QPA_PLATFORMTHEME="hyprqt6engine"
 export XDG_SESSION="wayland"
 
-# Allow better screen sharing support (Meet, Zoom, Discord, etc)
-export XDG_CURRENT_DESKTOP="Hyprland"
-export XDG_SESSION_DESKTOP="Hyprland"
-export XDG_SESSION_TYPE="wayland"
-
-# Use XCompose file
-export XCOMPOSEFILE="~/.XCompose"
-
 # Gaming optimizations
 export PROTON_FSR4_UPGRADE=1
 export PROTON_FSR4_RDNA3_UPGRADE=1
@@ -37,12 +43,15 @@ export PROTON_USE_NTSYNC=1
 export PROTON_LOCAL_SHADER_CACHE=1
 export ENABLE_LAYER_MESA_ANTI_LAG=1
 
-# Allows game metrics universally (for Vulkan games)
-# Might have to run mangohud directly on Steam/Lutris for OpenGL
+# Use XCompose file
+export XCOMPOSEFILE="~/.XCompose"
+
+# Allows game metrics universally for Vulkan games
+# Might have to run mangohud directly on Steam/Heroic for OpenGL
 # SHIFT_R + F12 to toggle overlay
 export MANGOHUD=1
 
-# Emulation Station config dir setup
+# ESDE config dir setup
 export ESDE_APPDATA_DIR="$XDG_CONFIG_HOME/ES-DE"
 
 # AI API keys
