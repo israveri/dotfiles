@@ -8,15 +8,6 @@
 # Adds custom scripts to PATH
 export PATH="$PATH:$HOME/.local/scripts"
 
-# XDG Base Directory Specification Enforcement
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_STATE_HOME="$HOME/.local/state/"
-export XDG_RUNTIME_DIRS="/run/user/$UID"
-#export XDG_CONFIG_DIRS=""
-#export XDG_DATA_DIRS=""
-
 # Allow better screen sharing support (Meet, Zoom, Discord, etc)
 export XDG_CURRENT_DESKTOP="Hyprland"
 export XDG_SESSION_DESKTOP="Hyprland"
