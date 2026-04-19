@@ -41,6 +41,7 @@ inter-font
 jq
 kitty
 lact
+lazygit
 libffi
 libvirt
 libyaml
