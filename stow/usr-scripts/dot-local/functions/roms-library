@@ -3,7 +3,7 @@
 _run_igir() {
     local mode="$1" # sort | resort
 
-    local dats_root="$HOME/Emulation/DATs"
+    local dats_root="$HOME/Emulation/DATs/retooled"
     local roms_root="$HOME/Emulation/Roms"
 
     local unsorted_roms_path="$roms_root/unsorted"
