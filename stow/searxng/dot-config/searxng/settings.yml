@@ -20,6 +20,10 @@ search:
   favicon_resolver: "duckduckgo"
   autocomplete: "duckduckgo"
   autocomplete_min: 3
+  formats:
+    - html
+    - json
+    - csv
 outgoing:
   request_timeout: 5
 
