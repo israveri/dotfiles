@@ -9,6 +9,4 @@ alias lta="lt --all"
 
 alias cat="bat"
 
-alias grep="rg -uu --smart-case --color=always"
-alias rgrep="rg --smart-case --color=always"
-alias pgrep="rg --hidden --smart-case --color=always"
+alias cd="z"
