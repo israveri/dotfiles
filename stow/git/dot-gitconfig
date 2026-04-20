@@ -5,7 +5,16 @@
 [core]
     editor          = nvim
     excludesfile    = ~/.config/git/gitignore
-    pager           = bat --plain --theme=ansi --paging=never
+    pager           = delta
+
+[interactive]
+    diffFilter      = delta --color-only
+
+[delta]
+    navigate        = true
+    side-by-side    = true
+    line-numbers    = true
+
 
 [push]
     default         = simple
@@ -21,15 +30,13 @@
     changed         = yellow bold
     untracked       = red bold
 
-[pager]
-    diff            = bat --plain --theme=ansi --paging=always
-
 [pull]
     rebase          = true
 
 [merge]
     ff              = true
     tool            = nvimdiff
+    conflictStyle   = zdiff3
 
 [mergetool]
     prompt          = false

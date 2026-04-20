@@ -27,6 +27,7 @@ freerdp
 fzf
 gimp
 git
+git-delta
 gnome-font-viewer
 godot
 godot-mono
