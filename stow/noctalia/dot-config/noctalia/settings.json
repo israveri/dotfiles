@@ -21,7 +21,7 @@
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
-        "showCategories": true,
+        "showCategories": false,
         "showIconBackground": false,
         "sortByMostUsed": true,
         "terminalCommand": "kitty -e",
@@ -79,9 +79,20 @@
         "widgets": {
             "center": [
                 {
+                    "clockColor": "none",
+                    "customFont": "Inter Display",
+                    "formatHorizontal": "dddd, HH:mm",
+                    "formatVertical": "HH mm",
+                    "id": "Clock",
+                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "useCustomFont": true
+                }
+            ],
+            "left": [
+                {
                     "characterCount": 10,
-                    "colorizeIcons": true,
-                    "emptyColor": "tertiary",
+                    "colorizeIcons": false,
+                    "emptyColor": "none",
                     "enableScrollWheel": false,
                     "focusedColor": "secondary",
                     "followFocusedScreen": false,
@@ -94,22 +105,13 @@
                     "occupiedColor": "tertiary",
                     "pillSize": 0.8,
                     "showApplications": false,
-                    "showApplicationsHover": true,
+                    "showApplicationsHover": false,
                     "showBadge": true,
                     "showLabelsOnlyWhenOccupied": false,
                     "unfocusedIconsOpacity": 0.8
                 }
             ],
-            "left": [
-                {
-                    "clockColor": "none",
-                    "customFont": "Inter Display",
-                    "formatHorizontal": "dddd, HH:mm",
-                    "formatVertical": "HH mm",
-                    "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
-                    "useCustomFont": true
-                },
+            "right": [
                 {
                     "compactMode": false,
                     "diskPath": "/",
@@ -131,9 +133,7 @@
                     "textColor": "none",
                     "useMonospaceFont": true,
                     "usePadding": true
-                }
-            ],
-            "right": [
+                },
                 {
                     "blacklist": [
                     ],
@@ -169,11 +169,6 @@
                         "syncEnabled": false
                     },
                     "id": "plugin:sticky-notes"
-                },
-                {
-                    "defaultSettings": {
-                    },
-                    "id": "plugin:kde-connect"
                 },
                 {
                     "displayMode": "onhover",
@@ -434,17 +429,17 @@
     },
     "idle": {
         "customCommands": "[]",
-        "enabled": false,
+        "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",
-        "lockTimeout": 60,
+        "lockTimeout": 0,
         "resumeLockCommand": "",
         "resumeScreenOffCommand": "",
         "resumeSuspendCommand": "",
         "screenOffCommand": "",
         "screenOffTimeout": 600,
         "suspendCommand": "",
-        "suspendTimeout": 1800
+        "suspendTimeout": 0
     },
     "location": {
         "analogClockInCalendar": false,
@@ -630,7 +625,11 @@
         "activeTemplates": [
             {
                 "enabled": true,
-                "id": "btop"
+                "id": "qt"
+            },
+            {
+                "enabled": true,
+                "id": "kitty"
             },
             {
                 "enabled": true,
@@ -646,11 +645,7 @@
             },
             {
                 "enabled": true,
-                "id": "kitty"
-            },
-            {
-                "enabled": true,
-                "id": "qt"
+                "id": "btop"
             }
         ],
         "enableUserTheming": true
@@ -676,7 +671,7 @@
         "enabled": true,
         "favorites": [
         ],
-        "fillColor": "#000000",
+        "fillColor": "#282828",
         "fillMode": "crop",
         "hideWallpaperFilenames": true,
         "linkLightAndDarkWallpapers": false,

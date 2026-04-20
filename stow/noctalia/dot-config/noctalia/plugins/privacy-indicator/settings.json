@@ -1,9 +1,0 @@
-{
-  "hideInactive": true,
-  "enableToast": false,
-  "removeMargins": true,
-  "iconSpacing": 11,
-  "activeColor": "secondary",
-  "inactiveColor": "none",
-  "micFilterRegex": ""
-}
