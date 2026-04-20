@@ -1,0 +1,3 @@
+[Network]
+NetworkName=trusted
+Subnet=10.10.0.0/16
