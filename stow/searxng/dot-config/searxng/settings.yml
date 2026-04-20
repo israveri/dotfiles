@@ -9,6 +9,7 @@ server:
   port: 8080
   method: "GET"
   image_proxy: true
+  limiter: false
 
 ui:
   default_theme: simple
