@@ -1,17 +1,3 @@
-export ZDOTDIR=$HOME
-
-export EDITOR=nvim
-export VISUAL=nvim
-
-export TERM=xterm-256color
-
-export MANPAGER='nvim +Man!'
-
-export HISTFILE=$XDG_CONFIG_HOME/zsh/.zhistory
-export HISTSIZE=1000000
-export SAVEHIST=1000000
-export HISTCONTROL=ignoreboth
-
 # XDG Base Directory Specification Enforcement
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -20,6 +6,20 @@ export XDG_STATE_HOME="$HOME/.local/state/"
 export XDG_RUNTIME_DIRS="/run/user/$UID"
 #export XDG_CONFIG_DIRS=""
 #export XDG_DATA_DIRS=""
+
+export ZDOTDIR=$HOME
+
+export HISTFILE=$XDG_CONFIG_HOME/zsh/.zhistory
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+export HISTCONTROL=ignoreboth
+
+export EDITOR=nvim
+export VISUAL=nvim
+
+export TERM=xterm-256color
+
+export MANPAGER='nvim +Man!'
 
 # Application specifics
 
