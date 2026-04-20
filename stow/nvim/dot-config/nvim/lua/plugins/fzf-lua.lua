@@ -25,17 +25,20 @@ return {
        winopts = {
            height = 0.95,
            width = 0.90,
-           backdrop = 0,
+           backdrop = 50,
 
            preview = {
                default = "bat",
-               layout = "vertical",
+               layout = "horizontal",
                vertical = "down:80%",
+               horizontal = "right:70%",
            },
        },
        files = {
            hidden = true,
            formatter = "path.filename_first",
+           fd_opts = [[--color=never --type f --type l --exclude .git --exclude .jj --exclude **/submodules/ --exclude node-modules/]],
+           rg_opts = [[--color=never --files -g "!.git" -g "!.jj" -g]],
        },
        grep = {
            hidden = true,
