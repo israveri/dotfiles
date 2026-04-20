@@ -1,0 +1,5 @@
+alias start="systemctl --user start"
+alias stop="systemctl --user stop"
+alias status="systemctl --user status"
+alias restart="systemctl --user restart"
+alias daemon-reload="systemctl --user daemon-reload"
