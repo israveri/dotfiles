@@ -6,6 +6,7 @@ autoload -U compinit && compinit
 source <(fzf --zsh)
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
+source "$XDG_CONFIG_HOME/zsh/submodules/fzf-git/fzf-git.sh"
 
 # Starship
 eval "$(starship init zsh)"

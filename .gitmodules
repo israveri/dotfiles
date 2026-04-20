@@ -19,3 +19,6 @@
 [submodule "stow/tmux/dot-config/tmux/plugins/tmux-sessionx"]
 	path = stow/tmux/dot-config/tmux/plugins/tmux-sessionx
 	url = https://https://github.com/omerxx/tmux-sessionx
+[submodule "stow/zsh/dot-config/zsh/submodules/fzf-git"]
+	path = stow/zsh/dot-config/zsh/submodules/fzf-git
+	url = https://github.com/junegunn/fzf-git.sh
