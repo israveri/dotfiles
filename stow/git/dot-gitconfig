@@ -15,7 +15,6 @@
     side-by-side    = true
     line-numbers    = true
 
-
 [push]
     default         = simple
 
@@ -53,6 +52,8 @@
 [difftool "nvimdiff"]
     cmd             = "nvim -d \"$LOCAL\" \"$REMOTE\""
 
-
 [init]
     defaultBranch   = main
+
+[include]
+    path = ~/.local/share/tinted-theming/tinty/delta-configs-file.gitconfig

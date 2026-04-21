@@ -9,6 +9,9 @@ source /usr/share/fzf/key-bindings.zsh
 source "$XDG_CONFIG_HOME/zsh/submodules/fzf-git/fzf-git.sh"
 source "$XDG_CONFIG_HOME/zsh/shell/overrides/fzf.zsh"
 
+# Tinty
+eval "$(tinty init)"
+
 # Starship
 eval "$(starship init zsh)"
 

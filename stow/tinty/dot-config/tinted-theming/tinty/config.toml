@@ -1,0 +1,39 @@
+default-scheme = "base24-gruvbox-dark"
+
+[[items]]
+name = "shell"
+path = "https://github.com/tinted-theming/tinted-shell"
+themes-dir = "scripts"
+hook = "source \"$TINTY_THEME_FILE_PATH\""
+supported_systems = ["base16", "base24"]
+
+[[items]]
+name = "tmux"
+path = "https://github.com/tinted-theming/tinted-tmux"
+themes-dir = "colors"
+hook = "tmux run 2> /dev/null && tmux source-file %f"
+
+[[items]]
+name = "neovim"
+path = "https://github.com/tinted-theming/tinted-nvim"
+themes-dir = "colors"
+supported-systems = ["base16", "base24"]
+
+[[items]]
+name = "kitty"
+path = "https://github.com/tinted-theming/tinted-terminal"
+themes-dir = "themes/kitty"
+hook = "[ -n \"$KITTY_PID\" ] && kill -USR1 \"$KITTY_PID\""
+supported-systems = ["base16", "base24"]
+
+[[items]]
+name = "fzf"
+path = "https://github.com/tinted-theming/tinted-fzf"
+themes-dir = "sh"
+supported-systems = ["base16", "base24"]
+
+[[items]]
+name = "delta"
+path = "https://github.com/tinted-theming/tinted-delta"
+themes-dir = "configs"
+supported-systems = ["base16", "base24"]

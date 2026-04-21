@@ -38,7 +38,7 @@ return {
            hidden = true,
            formatter = "path.filename_first",
            fd_opts = [[--color=never --type f --type l --exclude .git --exclude .jj --exclude **/submodules/ --exclude node-modules/]],
-           rg_opts = [[--color=never --files -g "!.git" -g "!.jj" -g]],
+           rg_opts = [[--color=never --files -g "!.git" -g "!.jj"]],
        },
        grep = {
            hidden = true,

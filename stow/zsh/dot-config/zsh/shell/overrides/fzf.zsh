@@ -22,3 +22,6 @@ _fzf_comprun() {
         *)              fzf --preview "bat -n --color=always --line-range :500 {}" "$@";;
     esac
 }
+
+# Source tinty-fzf enhanced ANSI passthrough
+source "$XDG_DATA_HOME/tinted-theming/tinty/repos/fzf/ansi/ansi.sh"

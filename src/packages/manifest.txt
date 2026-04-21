@@ -97,6 +97,7 @@ stow
 swtpm
 syncthing
 television
+tinty-git
 tmux
 tree-sitter
 ttf-dejavu
