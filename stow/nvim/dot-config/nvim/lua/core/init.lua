@@ -1,5 +1,6 @@
 require("core.base")
 require("core.lazy")
+require("core.statusline")
 require("core.options")
 require("core.lsp")
 require("core.autocommands")

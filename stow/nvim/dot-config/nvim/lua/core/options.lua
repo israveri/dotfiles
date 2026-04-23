@@ -59,3 +59,6 @@ vim.o.foldlevel = 99                    -- Start with all folds open
 vim.o.foldlevelstart = 99               -- ^ Same thing, but for new buffers
 vim.o.foldenable = true
 vim.o.foldcolumn = "1"
+
+-- Statusline
+vim.opt.statusline = "%!v:lua.require'core.statusline'.render()"

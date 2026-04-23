@@ -29,7 +29,7 @@ return {
 
            preview = {
                default = "bat",
-               layout = "horizontal",
+               layout = "vertical",
                vertical = "down:80%",
                horizontal = "right:70%",
            },
