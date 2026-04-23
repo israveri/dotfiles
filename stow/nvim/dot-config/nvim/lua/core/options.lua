@@ -22,11 +22,14 @@ vim.o.smartcase = true                  -- Searches using case sensitive pattern
 vim.opt.winborder = 'rounded'           -- Rounded borders for all floating windows (required for LSP to work)
 vim.o.list = true                       -- Show special characters for whitespace indications
 vim.opt.listchars = {                   -- Define wich characters are shown for whitespaces
-    trail = '+',
     nbsp = '␣',
     space = ' ',
-    tab = '⇥ ',
+    tab = '→ ',
     leadmultispace = '·',
+    trail = '·',
+    eol = '↲',
+    extends = '⟩',
+    precedes = '⟨',
 }
 
 -- Identation: The correct way to set up. See:
@@ -55,4 +58,4 @@ vim.o.foldmethod = "expr"
 vim.o.foldlevel = 99                    -- Start with all folds open
 vim.o.foldlevelstart = 99               -- ^ Same thing, but for new buffers
 vim.o.foldenable = true
-vim.o.foldcolumn = "0"
+vim.o.foldcolumn = "1"
