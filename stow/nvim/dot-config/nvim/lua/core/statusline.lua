@@ -1,12 +1,15 @@
 local M = {}
 
+---@class Devicons
+---@field get_icon_by_filetype fun(filetype: string, opts?: table): string|nil, string|nil
+
 -- =======================================================================================================
 -- State
 -- =======================================================================================================
 
 M._module_path = ...
-M._active_win_id = nil
 M._git_branch_cache = {}
+M._devicons = nil ---@type Devicons|nil
 
 -- =======================================================================================================
 -- Helpers
@@ -114,8 +117,8 @@ M.components = {
     },
 
     file = {
-        encoding = function(bufid)
-            local encoding = vim.api.nvim_get_option_value("fileencoding", { buf = bufid })
+        encoding = function()
+            local encoding = vim.bo.fileencoding
             return encoding:upper()
         end,
 
@@ -140,9 +143,16 @@ M.components = {
             end
         end,
 
-        type = function(bufid)
-            local filetype = vim.api.nvim_get_option_value("filetype", { buf = bufid })
-            if filetype == "" then filetype = "plain" end
+        type = function()
+            local filetype = vim.bo.filetype
+
+            if M._devicons then
+                local icon = M._devicons.get_icon_by_filetype(filetype)
+
+                if icon then
+                    return string.format("%s %s", icon, filetype)
+                end
+            end
 
             return string.format("%s", filetype)
         end
@@ -194,9 +204,7 @@ end
 local function active_line(winid)
     local bufid = vim.api.nvim_win_get_buf(winid)
 
-
     local padding = (" "):rep(M.padding)
-
     return table.concat({
         padding,
         table.concat({
@@ -208,9 +216,9 @@ local function active_line(winid)
         "%=",
 
         table.concat({
-            M.components.file.encoding(bufid),
+            M.components.file.encoding(),
             M.components.file.format(),
-            M.components.file.type(bufid),
+            M.components.file.type(),
             M.components.file.progress(),
             M.components.cursor.position(),
         }, M.icon.separator.right),
@@ -223,7 +231,7 @@ end
 -- =======================================================================================================
 
 M.setup = function(opts)
-    M.padding = 2
+    M.padding = 1
 
     M.icon = {
         file = {
@@ -247,6 +255,17 @@ M.setup = function(opts)
             M[k] = v
         end
     end
+
+    -- Seeds git branch cache for loaded buffers
+    for _,bufid in ipairs(vim.api.nvim_list_bufs()) do
+        if vim.api.nvim_buf_is_loaded(bufid) then
+            update_git_branch_cache(bufid)
+        end
+    end
+
+    -- Loads nvim-web-devicons
+    local ok, result = pcall(require, "nvim-web-devicons")
+    M._devicons = ok and result or nil
 end
 
 --- Renders the statusline contextualized to it's buffer (special, inactive, active)
@@ -258,7 +277,7 @@ M.render = function()
     local special = special_line(winid)
     if special then return special end
 
-    if M._active_win_id == winid then
+    if winid == vim.api.nvim_get_current_win() then
         return active_line(winid)
     else
         return inactive_line(winid)
@@ -272,14 +291,6 @@ end
 -- Effectively sets this statusline and hides the default mode to avoid duplication
 vim.o.showmode = false
 vim.o.statusline = string.format("%%!v:lua.require('%s').render()", M._module_path)
-
--- Track buffer focus to update the current buffer variable and force redraw
-vim.api.nvim_create_autocmd({ "WinEnter", "WinLeave", "BufEnter"}, {
-    group = vim.api.nvim_create_augroup("StatuslineRedraw", { clear = true }),
-    callback = function()
-        M._active_win_id = vim.api.nvim_get_current_win()
-    end,
-})
 
 -- Update git branch cache when entering a buffer
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost" }, {
@@ -301,14 +312,12 @@ vim.api.nvim_create_user_command("StatuslineReload", function()
     local name = M._module_path
 
     package.loaded[name] = nil
-    local success, statusline = pcall(require, name)
+    local success, result = pcall(require, name)
     if success then
-        statusline.setup()
-        statusline._active_win_id = vim.api.nvim_get_current_win()
         vim.cmd("redrawstatus!")
         print("Statusline successfully reloaded!")
     else
-        print("Error reloading statusline: " .. statusline)
+        print("Error reloading statusline: " .. result)
     end
 end, { desc = "Reloads statusline module" })
 
