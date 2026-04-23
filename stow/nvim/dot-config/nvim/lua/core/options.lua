@@ -10,7 +10,6 @@ vim.g.have_nerd_font = true             -- Declare nerd font installed and setup
 vim.opt.number = true                   -- Turn on line numbers
 vim.opt.relativenumber = true           -- Make line numbers relative
 vim.opt.mouse = 'a'                     -- Enable mouse mode
-vim.opt.showmode = false                -- Hide current mode (it's already being shown in the statusline plugin)
 vim.o.breakindent = true                -- Enables breakindent
 vim.o.inccommand = "split"              -- Show substitutions while you type
 vim.o.cursorline = true                 -- Highlight line under cursor
@@ -60,5 +59,3 @@ vim.o.foldlevelstart = 99               -- ^ Same thing, but for new buffers
 vim.o.foldenable = true
 vim.o.foldcolumn = "1"
 
--- Statusline
-vim.opt.statusline = "%!v:lua.require'core.statusline'.render()"
