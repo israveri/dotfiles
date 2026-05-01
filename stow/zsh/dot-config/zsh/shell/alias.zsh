@@ -1,6 +1,3 @@
-source ~/.config/zsh/shell/alias/core.zsh
-source ~/.config/zsh/shell/alias/unix.zsh
-
-for f in ~/.config/zsh/shell/alias/applications/*.zsh; do
+for f in ~/.config/zsh/shell/alias/**/*.zsh; do
   source "$f"
 done
