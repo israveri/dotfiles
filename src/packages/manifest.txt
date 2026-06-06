@@ -65,7 +65,8 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 nwg-look
-obs-studio-browser
+obs-studio
+obs-studio-plugin-browser
 obsidian
 okular
 openssl
