@@ -78,6 +78,7 @@ pipewire-pulse
 podman
 podman-compose
 protonhax
+protonplus
 qemu-desktop
 qemu-full
 qemu-img
