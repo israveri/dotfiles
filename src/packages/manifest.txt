@@ -46,7 +46,6 @@ lazygit
 libffi
 libvirt
 libyaml
-lmstudio-bin
 loupe
 lsp-plugins
 mangojuice
