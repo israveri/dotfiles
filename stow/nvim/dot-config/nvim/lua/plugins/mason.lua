@@ -17,21 +17,23 @@ return {
         dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
         opts = {
             ensure_installed = {
-                "basedpyright",                      -- python
-                "bash-language-server",              -- bash
-                "clangd",                            -- c/c++
-                "css-lsp",                           -- css
-                "elixir-ls",                         -- elixir
-                "erlangls",                          -- erlang
-                "eslint-lsp",                        -- esling (for user alongsige the lsp)
-                "gopls",                             -- go
-                "json-lsp",                          -- json
-                "lua-language-server",               -- lua
-                "ruby-lsp",                          -- ruby
-                "rust-analyzer",                     -- rust
-                "taplo",                             -- toml
-                "typescript-language-server",        -- typescript/javascript (but use prettier for formatting)
-                "yaml-language-server",              -- yaml
+                "basedpyright",     -- python
+                "bashls",           -- bash
+                "clangd",           -- c/c++
+                "cssls",            -- css
+                "elixirls",         -- elixir
+                "erlangls",         -- erlang
+                "eslint",           -- esling (for user alongsige the lsp)
+                "gopls",            -- go
+                "jsonls",           -- json
+                "lua_ls",           -- lua
+                "ruby_lsp",         -- ruby
+                "rust_analyzer",    -- rust
+                "systemd_lsp",      -- systemd
+                "taplo",            -- toml
+                "ts_ls",            -- typescript/javascript (but use prettier for formatting)
+                "vimls",            -- vim
+                "yamlls",           -- yaml
             }
         }
     },
