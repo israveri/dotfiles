@@ -14,6 +14,7 @@ Image=docker.io/ollama/ollama:rocm
 ContainerName=ollama
 AutoUpdate=registry
 Environment="OLLAMA_KEEP_ALIVE=-1"
+Environment="OLLAMA_CONTEXT_LENGTH=65536"
 
 AddDevice=/dev/kfd
 AddDevice=/dev/dri

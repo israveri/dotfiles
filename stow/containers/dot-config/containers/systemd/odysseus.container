@@ -1,0 +1,25 @@
+[Unit]
+Description=Odysseus AI Workspace
+After=homelab-network.service
+Requires=homelab-network.service
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
+
+[Container]
+Image=docker.io/israveri/odysseus:latest
+ContainerName=odysseus
+AutoUpdate=registry
+
+Network=homelab.network
+
+EnvironmentFile=%h/.config/containers/systemd/environments/odysseus.env
+
+Environment=OLLAMA_BASE_URL=http://ollama:11434
+Environment=LLM_HOST=ollama
+Environment=AUTH_ENABLED=true
+Environment=LOCALHOST_BYPASS=false
+Environment=ALLOWED_ORIGINS=https://chat.mothership
