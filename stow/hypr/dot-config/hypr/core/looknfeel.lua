@@ -13,7 +13,6 @@ hl.config({
 
         resize_on_border = false,
         allow_tearing    = false,
-        layout           = "dwindle",
     },
 })
 
@@ -67,20 +66,6 @@ hl.animation({ leaf = "workspaces",    enabled = true,  speed = 1.94, bezier = "
 hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 1.21, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 7,    bezier = "quick"         })
-
--- ─── Layouts ─────────────────────────────────────────────────────────────────
-hl.config({
-    dwindle = {
-        preserve_split = true,
-        force_split    = 2, -- Always split to the right
-    },
-})
-
-hl.config({
-    master = {
-        new_status = "master",
-    },
-})
 
 -- ─── Misc ─────────────────────────────────────────────────────────────────────
 hl.config({

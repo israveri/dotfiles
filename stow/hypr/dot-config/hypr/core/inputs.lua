@@ -6,21 +6,13 @@ hl.config({
         kb_options = "",
         kb_rules = "",
 
-        follow_mouse = 2,
+        follow_mouse = 0,
         repeat_rate = 35,
         repeat_delay = 200,
         sensitivity = 0.5,
-
-        touchpad = {
-            natural_scroll = true,
-            clickfinger_behavior = true,
-            scroll_factor = 0.2,
-        },
     },
-})
 
-hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace",
+    cursor = {
+        no_warps = true,
+    }
 })

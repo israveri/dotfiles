@@ -4,7 +4,7 @@
 -- Default programs. Can be referenced in any required file as Programs._key_
 Programs = {
     browser = "firefox",
-    fileManager = "dolphin",
+    fileManager = "thunar",
     menu = "hyprlauncher",
     terminal = "kitty",
 }
@@ -16,3 +16,5 @@ require("core.rules")
 require("core.inputs")
 require("core.bindings")
 require("core.looknfeel")
+require("core.layout")
+require("core.misc")
