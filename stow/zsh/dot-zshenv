@@ -24,6 +24,11 @@ export MANPAGER='nvim +Man!'
 # Custom scripts
 export PATH="$HOME/.local/scripts:$PATH"
 
+# Load environment
+fpath=("${XDG_CONFIG_HOME}/zsh/functions" $fpath)
+autoload -Uz parse_env load_env
+load_env
+
 # Application specifics
 
 # starship

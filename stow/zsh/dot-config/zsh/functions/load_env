@@ -1,0 +1,15 @@
+load_env() {
+    local env_file="${1:-${HOME}/.env}"
+    local line key value
+
+    # Create the file if it doesn't exist
+    if [[ ! -f "$env_file" ]]; then
+        touch "$env_file"
+    fi
+
+    while IFS= read -r line; do
+        key="${line%%=*}"
+        value="${line#*=}"
+        export "$key"="$value"
+    done < <(parse_env "$env_file")
+}
