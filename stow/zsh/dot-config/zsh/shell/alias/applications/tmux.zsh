@@ -24,13 +24,10 @@ tdl() {
     tmux split-window -v -p 25 -t "$editor_pane" -c "$current_dir"
 
     # Creates ai split pane with 25% screen and grab its id
-    ai_pane=$(tmux split-window -h -p 25 -t "$editor_pane" -c "$current_dir" -P -F "#{pane_id}")
+    ai_pane=$(tmux split-window -h -p 25 -t "$editor_pane" -c "$current_dir" -P -F "#{pane_id}" "exec $ai")
 
     # Opens editor
     tmux send-keys -t "$editor_pane" "$EDITOR ." C-m
-
-    # Opens ai
-    tmux send-keys -t "$ai_pane" "$ai" C-m
 
     # Focus the editor pane
     tmux select-pane -t "$editor_pane"
