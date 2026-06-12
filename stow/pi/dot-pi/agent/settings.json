@@ -1,11 +1,11 @@
 {
   "theme": "dark",
   "defaultProvider": "ollama",
-  "defaultModel": "gemma4:12b",
+  "defaultModel": "qwen3:14b",
   "quietStartup": false,
   "collapseChangelog": true,
   "hideThinkingBlock": true,
-  "defaultThinkingLevel": "medium",
+  "defaultThinkingLevel": "high",
   "thinkingBudgets": {
     "low": 1024,
     "medium": 4096,
@@ -14,8 +14,8 @@
   },
   "enabledModels": [
     "ollama/gemma4:e4b",
-    "ollama/gemma4:12b",
-    "ollama/qwen3.5:9b"
+    "ollama/qwen2.5-coder:14b",
+    "ollama/qwen3:14b"
   ],
   "skills": [
     "~/.config/agents/skills",
@@ -39,7 +39,8 @@
     "npm:pi-observational-memory",
     "git:github.com/elpapi42/pi-minimal-subagent",
     "npm:@vanillagreen/pi-caveman",
-    "npm:pi-system-prompt"
+    "npm:pi-system-prompt",
+    "npm:@amb007/deep-wiki"
   ],
   "observational-memory": {
     "observeAfterTokens": 10000,
@@ -49,8 +50,8 @@
     "observationsPoolTargetTokens": 10000,
     "agentMaxTurns": 16,
     "model": {
-      "provider": "ollama-cloud",
-      "id": "gemma4:31b",
+      "provider": "ollama",
+      "id": "qwen3:14b",
       "thinking": "low"
     },
     "passive": false,
