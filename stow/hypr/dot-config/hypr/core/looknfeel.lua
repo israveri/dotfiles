@@ -23,7 +23,7 @@ hl.config({
         rounding_power = 0, -- 0 = square corners, 2 = rounded corners
 
         active_opacity   = 1.0,
-        inactive_opacity = 0.8,
+        inactive_opacity = 1.0,
 
         shadow = {
             enabled      = true,

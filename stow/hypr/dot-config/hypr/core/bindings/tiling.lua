@@ -1,5 +1,4 @@
 -- Window management
-hl.bind("SUPER + P",           hl.dsp.exec_cmd("hyprctl dispatch pin"))
 hl.bind("SUPER + F",           hl.dsp.window.fullscreen())
 hl.bind("SUPER + V",           hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + Z",           hl.dsp.window.fullscreen({ mode = 1 }))
@@ -17,16 +16,14 @@ hl.bind("SUPER + SHIFT + up",    hl.dsp.window.move({ direction = "u" }))
 hl.bind("SUPER + SHIFT + down",  hl.dsp.window.move({ direction = "d" }))
 
 -- Workspace navigation
-hl.bind("SUPER + CTRL + left",  hl.dsp.focus({ workspace = "-1" }))
-hl.bind("SUPER + CTRL + right", hl.dsp.focus({ workspace = "+1" }))
-hl.bind("ALT + tab",            hl.dsp.focus({ window = "next" }))
-hl.bind("ALT + tab",            hl.dsp.window.bring_to_top())
+hl.bind("SUPER + CTRL + right", function() Gridwalk.walk("right") end)
+hl.bind("SUPER + CTRL + left",  function() Gridwalk.walk("left") end)
 
--- Switch workspaces (loop replaces 10 repetitive binds)
+-- Jump to workspace
 for i = 1, 9 do
-    hl.bind("SUPER + " .. i, hl.dsp.focus({ workspace = i }))
+    hl.bind("SUPER + " .. i, function() Gridwalk.jump_to(i) end)
 end
-hl.bind("SUPER + 0", hl.dsp.focus({ workspace = 10 }))
+hl.bind("SUPER + 0", function() Gridwalk.jump_to(0) end)
 
 -- Move window to workspace
 for i = 1, 9 do
@@ -34,10 +31,13 @@ for i = 1, 9 do
 end
 hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 
--- Scroll through workspaces
-hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("SUPER + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
-
 -- Move/resize with mouse
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- Toggle Workspace's scratchpad
+hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("scratchpad"))
+hl.bind("SUPER + CTRL + S", require("functions.move_window_to_workspace_scratchpad"))
+
+hl.bind("SUPER + grave", hl.dsp.workspace.toggle_special("terminal"))
+
