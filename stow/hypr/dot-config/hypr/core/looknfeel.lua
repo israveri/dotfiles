@@ -80,8 +80,10 @@ hl.config({
 -- Noctalia background blur
 hl.layer_rule({
     name         = "noctalia",
-    match        = { namespace = "noctalia-background-.*$" },
-    ignore_alpha = 0.3,
+    match        = {
+        namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd)$"
+    },
+    ignore_alpha = 0.5,
     blur         = true,
     blur_popups  = true,
 })

@@ -1,6 +1,6 @@
 hl.on("hyprland.start", function ()
     -- Starts Noctalia
-    hl.exec_cmd("uwsm app -- qs -c noctalia-shell")
+    hl.exec_cmd("uwsm app -- noctalia") -- v5
 
     -- Start clipboard history manager
     hl.exec_cmd("uwsm app -- wl-paste --watch cliphist store")
