@@ -5,7 +5,7 @@
   "quietStartup": false,
   "collapseChangelog": true,
   "hideThinkingBlock": true,
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "low",
   "thinkingBudgets": {
     "low": 1024,
     "medium": 4096,
@@ -40,7 +40,10 @@
     "git:github.com/elpapi42/pi-minimal-subagent",
     "npm:@vanillagreen/pi-caveman",
     "npm:pi-system-prompt",
-    "npm:@amb007/deep-wiki"
+    "npm:@amb007/deep-wiki",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-sandbox",
+    "npm:@aliou/pi-guardrails"
   ],
   "observational-memory": {
     "observeAfterTokens": 10000,
