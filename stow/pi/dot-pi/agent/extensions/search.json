@@ -1,0 +1,27 @@
+{
+    "defaultBackend": "tavily",
+    "backends": {
+        "brave": { "enabled": true, "apiKey": "BRAVE_API_KEY" },
+        "brave-llm": { "enabled": true, "apiKey": "BRAVE_API_KEY" },
+        "exa": { "enabled": true, "apiKey": "EXA_API_KEY" },
+        "searxng": { "enabled": true, "instanceUrl": "https://search.mothership" },
+        "tavily": { "enabled": true, "apiKey": "TAVILY_API_KEY" },
+
+        "duckduckgo": { "enabled": false },
+        "marginalia": { "enabled": false },
+        "jina": { "enabled": false, "apiKey": "JINA_API_KEY" },
+        "serper": { "enabled": false, "apiKey": "SERPER_API_KEY" },
+        "firecrawl": { "enabled": false, "apiKey": "FIRECRAWL_API_KEY" },
+        "langsearch": { "enabled": false, "apiKey": "LANGSEARCH_API_KEY" },
+        "websearchapi": { "enabled": false, "apiKey": "WEBSEARCHAPI_API_KEY" },
+        "perplexity": {
+            "enabled": false,
+            "apiKey": "PERPLEXITY_API_KEY",
+            "model": "sonar"
+        },
+        "linkup": { "enabled": false, "apiKey": "LINKUP_API_KEY" },
+        "youcom": { "enabled": false, "apiKey": "YOUCOM_API_KEY" },
+        "fastcrw": { "enabled": false, "apiKey": "FASTCRW_API_KEY" },
+        "sofya": { "enabled": false, "apiKey": "SOFYA_API_KEY" }
+    }
+}
