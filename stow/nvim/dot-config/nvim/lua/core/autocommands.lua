@@ -2,6 +2,19 @@
 -- Autocommands definitions
 --
 
+-- Autoupdate Lazy and Mason
+vim.api.nvim_create_autocmd("VimEnter", {
+  desc = "Auto-sync Lazy and update Mason on startup",
+  once = true,
+  callback = function()
+    -- Small defer so UI is fully ready
+    vim.defer_fn(function()
+      require("lazy").sync({ wait = false, show = false })
+      vim.cmd("MasonUpdate")
+    end, 100)
+  end,
+})
+
 -- Hightlight selection on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yankin text",
