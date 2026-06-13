@@ -27,7 +27,5 @@ hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
 -- Toggle Workspace's scratchpad
 hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("scratchpad"))
-hl.bind("SUPER + CTRL + S", require("functions.move_window_to_workspace_scratchpad"))
-
-hl.bind("SUPER + grave", hl.dsp.workspace.toggle_special("terminal"))
+hl.bind("SUPER + CTRL + S", hl.dsp.window.move({ workspace = "special:scratchpad" }))
 
