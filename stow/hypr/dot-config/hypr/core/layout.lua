@@ -13,4 +13,3 @@ hl.config({
 
 hl.workspace_rule({ workspace = "10", layout = "scrolling" })
 
-hl.on("window.active", require("functions.scrolling_edge_expansion"))

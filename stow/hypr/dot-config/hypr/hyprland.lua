@@ -9,11 +9,8 @@ Programs = {
     terminal = "kitty",
 }
 
-Gridwalk = require("modules.gridwalk")
-Gridwalk.setup({
-    linear = { style = "slide", speed = "2", curve = "default" },
-    jump_to = { style = "fade", speed = "1", curve = "default" },
-})
+-- require("safeguards")
+require("hyprplug").load()
 
 require("core.environment")
 require("core.autostart")

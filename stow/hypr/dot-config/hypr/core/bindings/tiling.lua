@@ -15,16 +15,6 @@ hl.bind("SUPER + SHIFT + right", hl.dsp.window.move({ direction = "r" }))
 hl.bind("SUPER + SHIFT + up",    hl.dsp.window.move({ direction = "u" }))
 hl.bind("SUPER + SHIFT + down",  hl.dsp.window.move({ direction = "d" }))
 
--- Workspace navigation
-hl.bind("SUPER + CTRL + right", function() Gridwalk.walk("right") end)
-hl.bind("SUPER + CTRL + left",  function() Gridwalk.walk("left") end)
-
--- Jump to workspace
-for i = 1, 9 do
-    hl.bind("SUPER + " .. i, function() Gridwalk.jump_to(i) end)
-end
-hl.bind("SUPER + 0", function() Gridwalk.jump_to(0) end)
-
 -- Move window to workspace
 for i = 1, 9 do
     hl.bind("SUPER + SHIFT + " .. i, hl.dsp.window.move({ workspace = i }))
