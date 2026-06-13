@@ -9,3 +9,12 @@ hl.window_rule({
     size = { 512, 288 }, -- 800 450 | 512 288 | 400 225
     move = { "monitor_w * 1 - 532", "monitor_h * 1 - 308" }, -- 820 470 | 532 308 | 420 245
 })
+
+hl.on("workspace.active", function(ws)
+    for _, w in ipairs(hl.get_windows({ workspace = ws.id})) do
+        if w.title ~= "Picture-in-Picture" then
+            hl.dispatch(hl.dsp.focus({ window = w }))
+            return
+        end
+    end
+end)
