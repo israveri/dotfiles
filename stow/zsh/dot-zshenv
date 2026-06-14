@@ -1,28 +1,24 @@
-# XDG Base Directory Specification Enforcement
+# Baseline PATH variable
+export PATH="$HOME/.local/scripts:$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin"
+
+# XDG Directory Specification
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_STATE_HOME="$HOME/.local/state/"
 export XDG_RUNTIME_DIRS="/run/user/$UID"
-#export XDG_CONFIG_DIRS=""
-#export XDG_DATA_DIRS=""
 
-export ZDOTDIR=$HOME
+export ZDOTDIR="$HOME"
+export TERM="xterm-256color"
 
-export HISTFILE=$XDG_CONFIG_HOME/zsh/.zhistory
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+export HISTCONTROL="ignoreboth"
+export HISTFILE="$XDG_CONFIG_HOME/zsh/.zhistory"
 export HISTSIZE=1000000
-export SAVEHIST=1000000
-export HISTCONTROL=ignoreboth
-
-export EDITOR=nvim
-export VISUAL=nvim
-
-export TERM=xterm-256color
-
 export MANPAGER='nvim +Man!'
-
-# Custom scripts
-export PATH="$HOME/.local/scripts:$PATH"
+export SAVEHIST=1000000
 
 # Load environment
 fpath=("${XDG_CONFIG_HOME}/zsh/functions" $fpath)
@@ -32,4 +28,4 @@ load_env
 # Application specifics
 
 # starship
-export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship/config.toml
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/config.toml"
