@@ -2,17 +2,17 @@ hl.config({
     input = {
         kb_layout = "us",
         kb_variant = "intl",
-        kb_model = "",
-        kb_options = "",
-        kb_rules = "",
 
         follow_mouse = 0,
-        repeat_rate = 35,
-        repeat_delay = 200,
+        repeat_rate = 50,
+        repeat_delay = 400,
         sensitivity = 0.5,
+
+        accel_profile = "flat"
     },
 
     cursor = {
         no_warps = true,
+        inactive_timeout = 5,
     }
 })

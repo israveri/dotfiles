@@ -15,7 +15,8 @@ function M.edge(window)
     local column_index = window.layout.column.index
 
     -- Counts the amount of windows in the workspace
-    for _, w in ipairs(hl.get_windows()) do
+    local ws = hl.get_active_workspace()
+    for _, w in ipairs(hl.get_windows({ workspace = ws })) do
         if not w.floating
             and w.workspace ~= nil
             and w.workspace.id == w.workspace.id

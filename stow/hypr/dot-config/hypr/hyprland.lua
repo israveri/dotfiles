@@ -9,16 +9,18 @@ Programs = {
     terminal = "kitty",
 }
 
--- require("safeguards")
 require("hyprplug").load()
 
-require("core.environment")
+require("core.base")
 require("core.autostart")
 require("core.monitors")
 require("core.rules")
 require("core.inputs")
 require("core.bindings")
-require("core.looknfeel")
 require("core.layout")
 require("core.workspace")
-require("core.misc")
+require("core.looknfeel")
+require("core.animations")
+
+-- For Noctalia Color templates
+require("noctalia")

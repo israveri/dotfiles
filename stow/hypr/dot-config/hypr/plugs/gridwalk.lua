@@ -2,8 +2,8 @@ return {
     source = { path = "modules.gridwalk" },
     config = function(plug)
         plug.configure({
-            linear = { style = "slide", speed = "2", curve = "default" },
-            jump_to = { style = "fade", speed = "1", curve = "default" },
+            linear = { style = "slide", speed = "3.5", curve = "easeOutCubic" },
+            jump_to = { style = "fade", speed = "0.01", curve = "easeOutQuint" },
         })
     end,
     setup = function(plug)
