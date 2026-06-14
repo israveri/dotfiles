@@ -1,6 +1,5 @@
 -- Check https://easings.net/#
 -- ─── Curves ──────────────────────────────────────────────────────────────────
-
 hl.curve("linear",         { type = "bezier", points = { {1, 1},       {1, 1}        } })
 hl.curve("snap",           { type = "bezier", points = { {0.09, 0.57}, {0.49, 0.9}   } })
 hl.curve("swift",          { type = "bezier", points = { {0.55, 0},    {0.1, 1}      } })
@@ -38,6 +37,17 @@ hl.curve("easeInBack",     { type = "bezier", points = { {0.36, 0},    {0.66, -0
 hl.curve("easeOutBack",    { type = "bezier", points = { {0.34, 1.56}, {0.64, 1}     } })
 hl.curve("easeInOutBack",  { type = "bezier", points = { {0.68, -0.6}, {0.32, 1.6}   } })
 
+-- Crafted Curves
+hl.curve("easeOutBackSnappy", { type = "bezier", points = { {0.07, 0.93}, {0.12, 1.04} } })
+
 -- -- ─── Animations ──────────────────────────────────────────────────────────────
-hl.animation({ leaf = "workspaces",       enabled = true,  speed = 3.5, bezier = "easeOutCubic", style = "slide" })
-hl.animation({ leaf = "specialWorkspace", enabled = true,  speed = 5,   bezier = "easeOutQuint", style = "slidefadevert -100%" })
+hl.animation({ leaf = "windows", enabled = true, speed = 3, bezier = "easeOutCirc", style = "popin 95%" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 2, bezier = "easeInCirc", style = "popin 97%" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 2, bezier = "easeInOutCirc" })
+
+hl.animation({ leaf = "fade", enabled = true, speed = 3, bezier = "easeOutQuart" })
+hl.animation({ leaf = "fadeOut", enabled = true, speed = 3, bezier = "easeInQuart" })
+hl.animation({ leaf = "fadeLayers", enabled = true, speed = 2, bezier = "easeInOutQuad" })
+
+hl.animation({ leaf = "workspaces",       enabled = true,  speed = 5, bezier = "easeOutCubic", style = "slide" })
+hl.animation({ leaf = "specialWorkspace", enabled = true,  speed = 5, bezier = "easeOutQuint", style = "slidefadevert -100%" })
