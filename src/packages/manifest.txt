@@ -97,7 +97,6 @@ stow
 swtpm
 syncthing
 television
-tinty-git
 tmux
 tree-sitter
 tree-sitter-cli
@@ -110,6 +109,7 @@ virt-manager
 virt-viewer
 wireplumber
 wl-clipboard
+xpadneo-dkms
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 yelp
