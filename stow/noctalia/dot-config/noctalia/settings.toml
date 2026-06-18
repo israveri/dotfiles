@@ -1,0 +1,186 @@
+[bar]
+order = ["Top"]
+
+[bar.Top]
+end = [
+    "tray",
+    "caffeine",
+    "recorder",
+    "screenshot",
+    "clipboard",
+    "wallpaper",
+    "bluetooth",
+    "network",
+    "volume",
+    "notifications",
+    "session"
+]
+margin_edge = 5
+margin_ends = 10
+padding = 10
+panel_overlap = 0
+radius = 0
+scale = 1.1000000000000001
+start = [ "workspaces" ]
+thickness = 30
+widget_spacing = 20
+
+[calendar]
+enabled = true
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "clipboard"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[desktop_widgets]
+enabled = false
+schema_version = 2
+widget_order = []
+
+[lockscreen]
+blur_intensity = 0.69999998435378075
+blurred_desktop = true
+tint_intensity = 0.4999999888241291
+
+[notification]
+background_opacity = 0.99999997764825821
+offset_x = 10
+offset_y = 10
+scale = 1.25
+
+[osd]
+background_opacity = 0.99999997764825821
+offset_y = 20
+position = "bottom_center"
+scale = 1.1000000000000001
+
+[osd.kinds]
+brightness = false
+lock_keys = false
+
+[plugin_settings."noctalia/screen_recorder"]
+color_range = "full"
+copy_to_clipboard = true
+replay_duration = 60
+replay_enabled = true
+video_codec = "av1"
+
+[plugins]
+enabled = [ "noctalia/screen_recorder" ]
+
+[shell]
+avatar_path = "/var/lib/AccountsService/icons/israel"
+clipboard_image_action_command = "satty --initial-tool=brush --copy-command=wl-copy --early-exit--disable-notifications--floating-hack --resize=smart --filename={path} --output-filename={path}"
+font_family = "Inter Medium"
+lang = "en"
+launch_apps_as_systemd_services = true
+password_style = "random"
+polkit_agent = true
+settings_show_advanced = true
+telemetry_enabled = true
+
+[shell.panel]
+launcher_compact = true
+launcher_session_search = true
+open_near_click_control_center = true
+session_placement = "centered"
+
+[shell.screenshot]
+directory = "/home/israel/Pictures/Screenshots"
+filename_pattern = "screenshot_%Y-%m-%d_%H-%M-%S"
+
+[[shell.session.actions]]
+action = "lock"
+enabled = true
+shortcut = "1"
+variant = "default"
+
+[[shell.session.actions]]
+action = "logout"
+enabled = true
+shortcut = "2"
+variant = "default"
+
+[[shell.session.actions]]
+action = "lock_and_suspend"
+enabled = false
+shortcut = "3"
+variant = "default"
+
+[[shell.session.actions]]
+action = "reboot"
+enabled = true
+shortcut = "4"
+variant = "default"
+
+[[shell.session.actions]]
+action = "shutdown"
+enabled = true
+shortcut = "5"
+variant = "destructive"
+
+[shell.shadow]
+direction = "down_right"
+
+[system.monitor]
+enabled = false
+
+[widget.clock]
+format = "{:%R}"
+vertical_format = "{:%R}"
+
+[widget.cpu]
+label_min_width = 25
+
+[widget.media]
+capsule = true
+capsule_fill = "secondary"
+capsule_foreground = "on_tertiary"
+capsule_padding = 10.0
+capsule_radius = 0
+color = "on_primary"
+title_scroll = "always"
+
+[widget.network]
+show_label = false
+
+[widget.network_rx]
+label_min_width = 60
+
+[widget.network_tx]
+label_min_width = 60
+
+[widget.ram]
+label_min_width = 25
+
+[widget.recorder]
+type = "noctalia/screen_recorder:recorder"
+
+[widget.tray]
+drawer = true
+drawer_columns = 4
+font_weight = 500
+match_adjacent_spacing = true
+scale = 1.1000000000000001
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+capsule_radius = 0
+empty_color = "tertiary"
+focused_color = "#999B21"
