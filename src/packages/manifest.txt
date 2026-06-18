@@ -68,6 +68,7 @@ obs-studio
 obs-studio-plugin-browser
 obsidian
 okular
+opendeck
 openssl
 overmind
 paru
@@ -109,9 +110,9 @@ virt-manager
 virt-viewer
 wireplumber
 wl-clipboard
-xpadneo-dkms
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
+xpadneo-dkms
 yelp
 zam-plugins-lv2
 zoxide
