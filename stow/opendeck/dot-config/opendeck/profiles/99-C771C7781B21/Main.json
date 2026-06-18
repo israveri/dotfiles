@@ -1,0 +1,883 @@
+{
+  "keys": [
+    null,
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.1.0",
+      "current_state": 0,
+      "settings": {
+        "down": "playerctl previous",
+        "file": "",
+        "rotate": "",
+        "show": false,
+        "up": ""
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Inter",
+          "image": "0.png",
+          "image_scale": 50,
+          "name": "",
+          "show": true,
+          "size": 18,
+          "stroke_colour": "#000000",
+          "stroke_size": 2,
+          "style": "Regular",
+          "text": "Previous",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.2.0",
+      "current_state": 0,
+      "settings": {
+        "down": "playerctl play-pause",
+        "file": "",
+        "rotate": "",
+        "show": false,
+        "up": ""
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Inter",
+          "image": "0.png",
+          "image_scale": 50,
+          "name": "",
+          "show": true,
+          "size": 18,
+          "stroke_colour": "#000000",
+          "stroke_size": 2,
+          "style": "Regular",
+          "text": "Play\nPause",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+        "name": "Run Command",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/runCommand.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/runCommand.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Run a command",
+        "uuid": "com.amansprojects.starterpack.runcommand",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.3.0",
+      "current_state": 0,
+      "settings": {
+        "down": "playerctl next",
+        "file": "",
+        "rotate": "",
+        "show": false,
+        "up": ""
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Inter",
+          "image": "0.png",
+          "image_scale": 50,
+          "name": "",
+          "show": true,
+          "size": 18,
+          "stroke_colour": "#000000",
+          "stroke_size": 2,
+          "style": "Regular",
+          "text": "Next",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/icon_disk.svg",
+        "name": "Disk",
+        "plugin": "com.kahikara.opendeck-redline.sdplugin",
+        "property_inspector": "plugins/com.kahikara.opendeck-redline.sdplugin/pi/index.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/actionDefaultImage.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "",
+        "uuid": "com.kahikara.opendeck-redline.disk",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.4.0",
+      "current_state": 0,
+      "settings": {
+        "barMode": "temp",
+        "batteryDevice": "auto",
+        "batteryLabel": "",
+        "brightnessStep": 5,
+        "fanLabel": "",
+        "fanSelector": "auto",
+        "gpuSelector": "auto",
+        "networkInterface": "auto",
+        "pingHost": "1.1.1.1",
+        "pressAction": "default",
+        "pressCommand": "",
+        "ramMode": "available",
+        "refreshRate": 10,
+        "selectedDisks": [
+          "/dev/sdb"
+        ],
+        "timerStep": 1,
+        "topMode": "grouped",
+        "volumeStep": 2
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/icon_cpu.svg",
+        "name": "CPU",
+        "plugin": "com.kahikara.opendeck-redline.sdplugin",
+        "property_inspector": "plugins/com.kahikara.opendeck-redline.sdplugin/pi/index.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/actionDefaultImage.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "",
+        "uuid": "com.kahikara.opendeck-redline.cpu",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.5.0",
+      "current_state": 0,
+      "settings": {
+        "barMode": "temp",
+        "batteryDevice": "auto",
+        "batteryLabel": "",
+        "brightnessStep": 5,
+        "fanLabel": "",
+        "fanSelector": "auto",
+        "gpuSelector": "auto",
+        "networkInterface": "auto",
+        "pingHost": "1.1.1.1",
+        "pressAction": "default",
+        "pressCommand": "",
+        "ramMode": "available",
+        "refreshRate": 1,
+        "selectedDisks": [],
+        "timerStep": 1,
+        "topMode": "grouped",
+        "volumeStep": 2
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    null,
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+        "name": "Output Volume",
+        "plugin": "com.sfgrimes.pipewire-audio.sdPlugin",
+        "property_inspector": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/propertyInspector/outputSettings.html",
+        "states": [
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-volume-up.png",
+            "image_scale": 100,
+            "name": "Unmuted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          },
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/output-mute.png",
+            "image_scale": 100,
+            "name": "Muted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Increase or decrease output device volume",
+        "uuid": "com.sfgrimes.pipewire-audio.outputvolume",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.7.0",
+      "current_state": 0,
+      "settings": {
+        "customName": "",
+        "direction": "mute",
+        "outputName": "alsa_output.usb-BurrBrown_from_Texas_Instruments_USB_AUDIO_CODEC-00.analog-stereo",
+        "showBar": false,
+        "showName": false,
+        "showPercent": false,
+        "volumeStep": 5
+      },
+      "states": [
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 80,
+          "name": "Unmuted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        },
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "1.svg",
+          "image_scale": 100,
+          "name": "Muted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/mic-up.png",
+        "name": "Mic Volume",
+        "plugin": "com.sfgrimes.pipewire-audio.sdPlugin",
+        "property_inspector": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/propertyInspector/encoderSettings.html",
+        "states": [
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/mic-up.png",
+            "image_scale": 100,
+            "name": "Unmuted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          },
+          {
+            "alignment": "top",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.sfgrimes.pipewire-audio.sdPlugin/icons/mic-mute.png",
+            "image_scale": 100,
+            "name": "Muted",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Increase or decrease microphone volume",
+        "uuid": "com.sfgrimes.pipewire-audio.micvolume",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.8.0",
+      "current_state": 0,
+      "settings": {
+        "customName": "",
+        "direction": "mute",
+        "showBar": false,
+        "showName": false,
+        "showPercent": false,
+        "volumeStep": 5
+      },
+      "states": [
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 80,
+          "name": "Unmuted",
+          "show": false,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        },
+        {
+          "alignment": "top",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "1.svg",
+          "image_scale": 100,
+          "name": "Muted",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    null,
+    {
+      "action": {
+        "controllers": [
+          "Keypad"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/icon_net.svg",
+        "name": "Network",
+        "plugin": "com.kahikara.opendeck-redline.sdplugin",
+        "property_inspector": "plugins/com.kahikara.opendeck-redline.sdplugin/pi/index.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/actionDefaultImage.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "",
+        "uuid": "com.kahikara.opendeck-redline.net",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.10.0",
+      "current_state": 0,
+      "settings": {
+        "barMode": "temp",
+        "batteryDevice": "auto",
+        "batteryLabel": "",
+        "brightnessStep": 5,
+        "fanLabel": "",
+        "fanSelector": "auto",
+        "gpuSelector": "auto",
+        "networkInterface": "enp5s0",
+        "pingHost": "1.1.1.1",
+        "pressAction": "default",
+        "pressCommand": "",
+        "ramMode": "available",
+        "refreshRate": 1,
+        "selectedDisks": [],
+        "timerStep": 1,
+        "topMode": "grouped",
+        "volumeStep": 2
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/icon_gpu.svg",
+        "name": "GPU",
+        "plugin": "com.kahikara.opendeck-redline.sdplugin",
+        "property_inspector": "plugins/com.kahikara.opendeck-redline.sdplugin/pi/index.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/actionDefaultImage.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "",
+        "uuid": "com.kahikara.opendeck-redline.gpu",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.11.0",
+      "current_state": 0,
+      "settings": {
+        "barMode": "temp",
+        "batteryDevice": "auto",
+        "batteryLabel": "",
+        "brightnessStep": 5,
+        "fanLabel": "",
+        "fanSelector": "auto",
+        "gpuSelector": "amd:0000:08:00.0",
+        "networkInterface": "auto",
+        "pingHost": "1.1.1.1",
+        "pressAction": "default",
+        "pressCommand": "",
+        "ramMode": "available",
+        "refreshRate": 1,
+        "selectedDisks": [],
+        "timerStep": 1,
+        "topMode": "grouped",
+        "volumeStep": 2
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad",
+          "Encoder"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/switchProfile.png",
+        "name": "Switch Profile",
+        "plugin": "com.amansprojects.starterpack.sdPlugin",
+        "property_inspector": "plugins/com.amansprojects.starterpack.sdPlugin/propertyInspector/switchProfile.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.amansprojects.starterpack.sdPlugin/icons/switchProfile.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "Switch the selected profile",
+        "uuid": "com.amansprojects.starterpack.switchprofile",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.12.0",
+      "current_state": 0,
+      "settings": {
+        "anticlockwise": "Default",
+        "clockwise": "Default",
+        "device": "99-C771C7781B21",
+        "profile": "profiles"
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Inter",
+          "image": "0.png",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 18,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "Switch",
+          "underline": false
+        }
+      ]
+    },
+    null,
+    null,
+    null,
+    {
+      "action": {
+        "controllers": [
+          "Keypad"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/icon_ping.svg",
+        "name": "Ping",
+        "plugin": "com.kahikara.opendeck-redline.sdplugin",
+        "property_inspector": "plugins/com.kahikara.opendeck-redline.sdplugin/pi/index.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/actionDefaultImage.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "",
+        "uuid": "com.kahikara.opendeck-redline.ping",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.16.0",
+      "current_state": 0,
+      "settings": {},
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    },
+    {
+      "action": {
+        "controllers": [
+          "Keypad"
+        ],
+        "disable_automatic_states": false,
+        "icon": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/icon_vram.svg",
+        "name": "VRAM",
+        "plugin": "com.kahikara.opendeck-redline.sdplugin",
+        "property_inspector": "plugins/com.kahikara.opendeck-redline.sdplugin/pi/index.html",
+        "states": [
+          {
+            "alignment": "middle",
+            "background_colour": "#000000",
+            "colour": "#FFFFFF",
+            "family": "Liberation Sans",
+            "image": "plugins/com.kahikara.opendeck-redline.sdplugin/icons/actionDefaultImage.png",
+            "image_scale": 100,
+            "name": "",
+            "show": true,
+            "size": 16,
+            "stroke_colour": "#000000",
+            "stroke_size": 3,
+            "style": "Regular",
+            "text": "",
+            "underline": false
+          }
+        ],
+        "supported_in_multi_actions": true,
+        "tooltip": "",
+        "uuid": "com.kahikara.opendeck-redline.vram",
+        "visible_in_action_list": true
+      },
+      "children": null,
+      "context": "Keypad.17.0",
+      "current_state": 0,
+      "settings": {
+        "barMode": "temp",
+        "batteryDevice": "auto",
+        "batteryLabel": "",
+        "brightnessStep": 5,
+        "fanLabel": "",
+        "fanSelector": "auto",
+        "gpuSelector": "amd:0000:08:00.0",
+        "networkInterface": "auto",
+        "pingHost": "1.1.1.1",
+        "pressAction": "default",
+        "pressCommand": "",
+        "ramMode": "available",
+        "refreshRate": 1,
+        "selectedDisks": [],
+        "timerStep": 1,
+        "topMode": "grouped",
+        "volumeStep": 2
+      },
+      "states": [
+        {
+          "alignment": "middle",
+          "background_colour": "#000000",
+          "colour": "#FFFFFF",
+          "family": "Liberation Sans",
+          "image": "0.svg",
+          "image_scale": 100,
+          "name": "",
+          "show": true,
+          "size": 16,
+          "stroke_colour": "#000000",
+          "stroke_size": 3,
+          "style": "Regular",
+          "text": "",
+          "underline": false
+        }
+      ]
+    }
+  ],
+  "sliders": []
+}
