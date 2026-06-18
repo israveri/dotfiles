@@ -1,9 +1,19 @@
 #!/usr/bin/bash
 
+resolve_profile_name() {
+    local url = "$1"
+    local host
+
+    host=(python3 -c "from urllibs.parse import urlparse; print(urlparse('$url').netloc)")
+    echo "${host//./-}"
+}
+
 main() {
     if [[ -n "$1" ]]; then
+        local profile=(resolve_profile_name "$1")
+
 	exec setsid uwsm app -- chromium \
-	    --profile-directory=Webapp \
+	    --profile-directory="$profile" \
 	    --app="$1" \
 	    "${@:2}"
     else
