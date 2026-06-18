@@ -1,7 +1,9 @@
 return {
     'RRethy/base16-nvim',
-    enabled = false,
     config = function()
-	require('colors.noctalia').setup()
+        -- This is an auto-generated file from Noctalia shell
+        -- to dynamically change the color theming using Noctalia's
+        -- current configuration
+        require("matugen").setup()
     end,
 }
