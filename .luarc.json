@@ -1,8 +1,7 @@
 {
   "workspace": {
     "library": [
-      "/usr/share/hypr/stubs",
-      "$HOME/.local/share/nvim/lazy/blink.cmp"
+      "/usr/share/hypr/stubs"
     ]
   }
 }
