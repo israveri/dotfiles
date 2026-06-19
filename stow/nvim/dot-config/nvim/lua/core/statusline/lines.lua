@@ -24,10 +24,10 @@ M.special = function (winid)
     local buftype = vim.api.nvim_get_option_value("buftype", { buf = bufid })
     local filetype = vim.api.nvim_get_option_value("filetype", { buf = bufid })
 
-    if filetype == "NvimTree" then return "  NvimTree" end
-    if buftype == "help" then return string.format("󰋼  Help | %s", get_filename(bufid, true)) end
-    if buftype == "nofile" then return "󰧧 No File" end
-    if buftype == "terminal" then return "  Terminal" end
+    if filetype == "NvimTree" then return "   NvimTree" end
+    if buftype == "help" then return string.format(" 󰋼  Help | %s", get_filename(bufid, true)) end
+    if buftype == "nofile" then return " 󰧧 No File" end
+    if buftype == "terminal" then return "   Terminal" end
 
     return nil
 end
@@ -41,7 +41,7 @@ M.inactive = function (winid)
     local filetype = vim.api.nvim_get_option_value("filetype", { buf = bufid })
     local ft = filetype ~= "" and filetype or "plain"
 
-    return string.format("%s | %s", filename, ft)
+    return string.format(" %s | %s", filename, ft)
 end
 
 --- Detects and returns the statusline for active (focused) buffers
@@ -49,12 +49,12 @@ end
 --- @return string
 M.active = function (winid)
     local bufid = vim.api.nvim_win_get_buf(winid)
+    local hl = config.highlights.hl
 
     local padding = (" "):rep(config.padding)
     return table.concat({
-        padding,
         table.concat({
-            config.components.mode().name,
+            hl(config.components.mode().hl, " " .. config.components.mode().name .. " "),
             --components.git.branch(bufid),
             get_filename(bufid),
         }, config.icons.separator.left),

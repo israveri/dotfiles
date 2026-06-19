@@ -31,6 +31,7 @@ M.setup = function(opts, module_path)
     end
 
     M.lines = require(module_path .. ".lines")
+    M.highlights = require(module_path .. ".highlights")
     M.components = {
         mode = require(module_path .. ".components.mode"),
         file = {
@@ -44,11 +45,20 @@ M.setup = function(opts, module_path)
         },
     }
 
+    M.highlights.apply()
+
     -- Loads nvim-web-devicons
     local ok, result = pcall(require, "nvim-web-devicons")
     M._devicons = ok and result or nil
 
     M._module_path = module_path
 end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    group = vim.api.nvim_create_augroup("StatuslineHighlights", { clear = true }),
+    callback = function()
+        M.highlights.apply()
+    end
+})
 
 return M
