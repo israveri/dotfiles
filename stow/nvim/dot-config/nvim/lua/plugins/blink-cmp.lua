@@ -35,6 +35,9 @@ return {
 
         completion = {
             documentation = { auto_show = true },
+            accept = {
+                auto_brackets = { enabled = true },
+            },
             menu = {
                 draw = {
                     components = {
