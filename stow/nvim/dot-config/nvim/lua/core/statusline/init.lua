@@ -24,9 +24,7 @@ M.render = function()
     return M.config.lines.active(winid)
 end
 
--- =======================================================================================================
 -- Side Effects
--- =======================================================================================================
 local module_path = M._module_path
 vim.api.nvim_create_user_command("StatuslineReload", function()
     package.loaded["colors.palette"] = nil
@@ -50,9 +48,7 @@ end, { desc = "Reloads statusline module" })
 vim.o.showmode = false
 vim.o.statusline = string.format("%%!v:lua.require('%s').render()", module_path)
 
--- =======================================================================================================
--- Wrap up
--- =======================================================================================================
+-- Setup and cleanup
 M.setup({})
 
 return M

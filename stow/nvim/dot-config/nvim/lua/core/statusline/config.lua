@@ -16,7 +16,7 @@ M.setup = function(opts, module_path)
             },
         },
         git = {
-            branch = " "
+            branch = ""
         },
         separator = {
             left = " | ",
