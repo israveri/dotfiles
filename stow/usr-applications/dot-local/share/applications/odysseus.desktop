@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Odysseus
+Comment=Odysseus AI harness
+Exec=launch-webapp https://chat.mothership
+Terminal=false
+Type=Application
+Icon=/home/israel/.local/share/applications/icons/odysseus.svg
+StartupNotify=true
+Categories=Artificial Inteligence;
