@@ -1,4 +1,5 @@
 require("core.rules.firefox")
+require("core.rules.discord")
 require("core.rules.kitty")
 require("core.rules.gamescope")
 require("core.rules.gnome-calculator")
