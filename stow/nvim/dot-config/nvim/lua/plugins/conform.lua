@@ -14,7 +14,7 @@ return {
             go = { "goimports" },
             html = { "prettierd" },
             javascript = { "prettierd" },
-            lua = { "stylua" },
+            lua = { "lua_ls" },
             ruby = { "standardrb" },
             sh = { "shfmt" },
             typescript = { "prettierd" },
