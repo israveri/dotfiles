@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+    <action>
+        <icon>media-playback-start</icon>
+        <name>Launch SWF</name>
+        <submenu></submenu>
+        <unique-id>1778283773240084-1</unique-id>
+        <command>launch-swf %f</command>
+        <description>Launch SWF with umu-launcher</description>
+        <range>1</range>
+        <patterns>*.exe</patterns>
+        <other-files/>
+    </action>
+</actions>
