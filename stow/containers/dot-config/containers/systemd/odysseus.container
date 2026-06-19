@@ -16,6 +16,8 @@ AutoUpdate=registry
 
 Network=homelab.network
 
+Volume=odysseus.volume:/app/data
+
 EnvironmentFile=%h/.config/containers/systemd/environments/odysseus.env
 
 Environment=OLLAMA_BASE_URL=http://ollama:11434
