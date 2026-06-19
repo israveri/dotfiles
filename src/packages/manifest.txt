@@ -98,11 +98,15 @@ stow
 swtpm
 syncthing
 television
+thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
 tmux
 tree-sitter
 tree-sitter-cli
 ttf-dejavu
 ttf-liberation
+tumbler
 ungoogled-chromium-bin
 usage
 uwsm
