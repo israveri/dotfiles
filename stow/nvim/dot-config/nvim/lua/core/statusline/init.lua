@@ -48,7 +48,7 @@ end, { desc = "Reloads statusline module" })
 vim.o.showmode = false
 vim.o.statusline = string.format("%%!v:lua.require('%s').render()", module_path)
 
--- Setup and cleanup
+-- Wrap up
 M.setup({})
 
 return M
