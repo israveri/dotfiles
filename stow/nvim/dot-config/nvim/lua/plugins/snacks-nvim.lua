@@ -5,7 +5,7 @@ return {
         input = {},
         notifier = {
             timeout = 3000,
-            style = "fancy",
+            style = "compact",
         },
     },
     config = function(_, opts)
