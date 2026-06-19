@@ -184,3 +184,12 @@ show_label = false
 capsule_radius = 0
 empty_color = "tertiary"
 focused_color = "#999B21"
+
+[theme.templates.user.cheatsheet]
+input_path  = "$XDG_CONFIG_HOME/noctalia/templates/noctalia-palette.json"
+output_path = "$XDG_CONFIG_HOME/noctalia/palette.json"
+
+[theme.templates.user.nvim]
+input_path  = "$XDG_CONFIG_HOME/noctalia/templates/nvim-palette.lua"
+output_path = "$XDG_CONFIG_HOME/nvim/lua/colors/palette.lua"
+post_hook   = "$XDG_CONFIG_HOME/noctalia/hooks/nvim-reload.sh"
