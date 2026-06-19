@@ -7,15 +7,12 @@ return {
     opts = {
         keymap = {
             preset = "none",
-            ["<C-k>"] = { "select_prev", "fallback" },
-            ["<C-j>"] = { "select_next", "fallback" },
-            ["<Up>"] = { "select_prev", "fallback" },
-            ["<Down>"] = { "select_next", "fallback" },
+            ["<S-Up>"] = { "select_prev", "fallback" },
+            ["<S-Down>"] = { "select_next", "fallback" },
             ["<Tab>"] = { "accept", "fallback" },
             ["<S-CR>"] = { "accept", "fallback" },
-            ["<C-y>"] = { "accept", "fallback" },
-            ["<C-b>"] = { "scroll_documentation_up", "fallback" },
-            ["<C-f>"] = { "scroll_documentation_down", "fallback" },
+            ["<C-Up>"] = { "scroll_documentation_up", "fallback" },
+            ["<C-Down>"] = { "scroll_documentation_down", "fallback" },
             ["<C-Space>"] = { "show", "fallback" },
         },
 
