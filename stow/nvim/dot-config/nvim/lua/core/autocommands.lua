@@ -2,17 +2,25 @@
 -- Autocommands definitions
 --
 
+-- Set listchars colors
+vim.api.nvim_create_autocmd({"UIEnter", "ColorScheme"}, {
+    callback = function()
+        local colors = require("base16-colorscheme").colors
+        vim.api.nvim_set_hl(0, "Whitespace", { fg = colors.base01 })
+    end,
+})
+
 -- Autoupdate Lazy and Mason
 vim.api.nvim_create_autocmd("VimEnter", {
-  desc = "Auto-sync Lazy and update Mason on startup",
-  once = true,
-  callback = function()
-    -- Small defer so UI is fully ready
-    vim.defer_fn(function()
-      require("lazy").sync({ wait = false, show = false })
-      vim.cmd("MasonUpdate")
-    end, 100)
-  end,
+    desc = "Auto-sync Lazy and update Mason on startup",
+    once = true,
+    callback = function()
+        -- Small defer so UI is fully ready
+        vim.defer_fn(function()
+            require("lazy").sync({ wait = false, show = false })
+            vim.cmd("MasonUpdate")
+        end, 100)
+    end,
 })
 
 -- Hightlight selection on yank
