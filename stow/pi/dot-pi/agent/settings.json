@@ -30,7 +30,7 @@
     "--",
     "npm"
   ],
-  "lastChangelogVersion": "0.79.6",
+  "lastChangelogVersion": "0.79.7",
   "packages": [
     "npm:context-mode",
     "npm:pi-search-hub",
