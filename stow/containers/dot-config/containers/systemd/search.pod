@@ -1,6 +1,5 @@
-# /* vim: set filetype=systemd : */
 [Unit]
-Description=Local Search Container Cod
+Description=Local Search Container Pod
 Requires=search-network.service
 
 [Install]

@@ -10,11 +10,11 @@ WantedBy=default.target
 Restart=always
 
 [Container]
-Image=docker.io/searxng/searxng:latest
 ContainerName=searxng
+Image=docker.io/searxng/searxng:latest
 AutoUpdate=registry
 
-EnvironmentFile=%h/.config/searxng/searxng.env
+EnvironmentFile=%h/.config/containers/systemd/environments/searxng.env
 Environment=SEARXNG_VALKEY_URL=valkey://localhost:6379/0
 
 Volume=search-searxng.volume:/etc/searxng/:rw
