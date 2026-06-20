@@ -1,0 +1,17 @@
+[Unit]
+Description=Postgres database for dev environment
+After=devenv-pod.service
+
+[Service]
+Restart=on-failure
+
+[Container]
+ContainerName=postgres
+Image=docker.io/library/postgres:17-alpine
+AutoUpdate=registry
+
+EnvironmentFile=%h/.config/containers/systemd/environments/dev.env
+
+Volume=devenv-postgres.volume:/var/lib/postgresql/data
+
+Pod=devenv.pod

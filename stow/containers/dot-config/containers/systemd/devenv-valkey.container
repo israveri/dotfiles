@@ -1,0 +1,15 @@
+[Unit]
+Description=Valkey database for dev environment
+After=devenv-pod.service
+
+[Service]
+Restart=on-failure
+
+[Container]
+ContainerName=valkey
+Image=docker.io/valkey/valkey:alpine
+AutoUpdate=registry
+
+Volume=devenv-valkey.volume:/data
+
+Pod=devenv.pod
