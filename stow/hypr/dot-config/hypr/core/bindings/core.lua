@@ -1,7 +1,7 @@
 -- Core
-hl.bind("SUPER + RETURN",           hl.dsp.exec_cmd("uwsm app -- " .. Programs.terminal),     { description = "Open Terminal" })
-hl.bind("SUPER + B",                hl.dsp.exec_cmd("uwsm app -- " .. Programs.browser),      { description = "Open Browser" })
-hl.bind("SUPER + E",                hl.dsp.exec_cmd("uwsm app -- " .. Programs.fileManager),  { description = "Open File Explorer" })
+hl.bind("SUPER + RETURN",           hl.dsp.exec_cmd("uwsm app -- kitty"),   { description = "Open Terminal" })
+hl.bind("SUPER + B",                hl.dsp.exec_cmd("uwsm app -- firefox"), { description = "Open Browser" })
+hl.bind("SUPER + E",                hl.dsp.exec_cmd("uwsm app -- thunar"),  { description = "Open File Explorer" })
 hl.bind("SUPER + Q",                hl.dsp.window.close(),                                    { description = "Close active window" })
 hl.bind("SUPER + CTRL + SHIFT + M", hl.dsp.exit(),                                            { description = "Close Hyprland" })
 

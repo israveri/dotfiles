@@ -2,13 +2,6 @@
 -- https://wiki.hypr.land/Configuring/Start/
 
 -- Default programs. Can be referenced in any required file as Programs._key_
-Programs = {
-    browser = "firefox",
-    fileManager = "thunar",
-    menu = "hyprlauncher",
-    terminal = "kitty",
-}
-
 require("hyprplug").load()
 
 require("core.base")
