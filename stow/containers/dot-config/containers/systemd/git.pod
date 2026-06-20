@@ -1,0 +1,12 @@
+[Unit]
+Description=Local Git Hosting Pod
+Requires=git.network
+
+[Install]
+WantedBy=default.target
+
+[Pod]
+PodName=git
+Network=git.network
+
+PublishPort=2222:2222

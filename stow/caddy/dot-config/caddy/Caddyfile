@@ -17,6 +17,11 @@ chat.mothership {
     reverse_proxy odysseus:7000
 }
 
+git.mothership {
+    tls internal
+    reverse_proxy git:3000
+}
+
 search.mothership {
     tls internal
     reverse_proxy search:8080

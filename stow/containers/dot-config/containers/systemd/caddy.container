@@ -21,6 +21,7 @@ PublishPort=443:443
 # Networks
 Network=homelab.network
 Network=search.network
+Network=git.network
 
 # Volumes
 Volume=%h/.config/caddy/Caddyfile:/etc/caddy/Caddyfile:ro

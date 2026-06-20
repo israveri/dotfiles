@@ -1,0 +1,23 @@
+[Unit]
+Description=Postgres database for Gitea
+After=git-pod.service
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Restart=always
+
+[Container]
+ContainerName=git-postgres
+Image=docker.io/library/postgres:17-alpine
+
+# Locks postgres to only accept connections from localhost, locking it
+# from outside access.
+Exec=-c listen_addresses=localhost
+
+EnvironmentFile=%h/.config/containers/systemd/environments/git.env
+
+Volume=git-postgres.volume:/var/lib/postgresql/data
+
+Pod=git.pod
