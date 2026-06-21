@@ -1,7 +1,6 @@
 return {
     "folke/snacks.nvim",
     opts = {
-        dim = {},
         input = {},
         notifier = {
             timeout = 3000,
@@ -11,7 +10,6 @@ return {
     config = function(_, opts)
         local snacks = require("snacks")
         snacks.setup(opts)
-        snacks.dim.enable(opts)
         vim.notify = snacks.notifier.notify
 
         vim.api.nvim_create_autocmd("LspProgress", {
