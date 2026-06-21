@@ -1,9 +1,0 @@
-[Unit]
-Description=Local development environment tools pod
-
-[Pod]
-PodName=devenv
-Network=devenv.network
-
-PublishPort=5432:5432
-PublishPort=6379:6379

@@ -1,6 +1,5 @@
 [Unit]
 Description=Valkey database for dev environment
-After=devenv-pod.service
 
 [Service]
 Restart=on-failure
@@ -10,6 +9,7 @@ ContainerName=valkey
 Image=docker.io/valkey/valkey:alpine
 AutoUpdate=registry
 
-Volume=devenv-valkey.volume:/data
+Network=devenv.network
+PublishPort=6379:6379
 
-Pod=devenv.pod
+Volume=valkey.volume:/data
