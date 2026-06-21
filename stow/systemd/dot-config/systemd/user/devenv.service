@@ -1,0 +1,8 @@
+[Unit]
+Description=Local development environment
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/systemctl --user start postgres valkey
+ExecStop=/usr/bin/systemctl --user stop postgres valkey
