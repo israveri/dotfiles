@@ -31,6 +31,7 @@ git-delta
 gnome-font-viewer
 godot
 godot-mono
+greetd
 grim
 gtk4
 gtk4-layer-shell
@@ -60,6 +61,7 @@ nerd-fonts
 networkmanager
 nmap
 noctalia-git
+noctalia-greeter-git
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
@@ -90,8 +92,6 @@ retroarch-assets-ozone
 ripgrep
 rust
 satty
-sddm
-sddm-silent-theme
 slurp
 sqlite
 starship
