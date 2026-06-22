@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-    <action>
-        <icon>media-playback-start</icon>
-        <name>Launch SWF</name>
-        <submenu></submenu>
-        <unique-id>1778283773240084-1</unique-id>
-        <command>launch-swf %f</command>
-        <description>Launch SWF with umu-launcher</description>
-        <range>1</range>
-        <patterns>*.exe</patterns>
-        <other-files/>
-    </action>
+<action>
+	<icon>media-playback-start</icon>
+	<name>Launch SWF</name>
+	<submenu></submenu>
+	<unique-id>1778283773240084-1</unique-id>
+	<command>launch-swf %f</command>
+	<description>Launch SWF with umu-launcher</description>
+	<range>1</range>
+	<patterns>*.exe</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>edit-copy-path</icon>
+	<name>Copy Filepath</name>
+	<submenu></submenu>
+	<unique-id>1782098563725850-1</unique-id>
+	<command>sh -c &quot;echo -n %f | wl-copy&quot;</command>
+	<description>Copy complete file path to clipboard</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
 </actions>
