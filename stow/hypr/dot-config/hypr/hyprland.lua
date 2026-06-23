@@ -4,6 +4,7 @@
 -- Default programs. Can be referenced in any required file as Programs._key_
 require("hyprplug").load()
 
+require("core.helpers")
 require("core.base")
 require("core.autostart")
 require("core.monitors")
