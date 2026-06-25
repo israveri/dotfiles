@@ -8,3 +8,6 @@ hl.workspace_rule({ workspace = "7", monitor = "", persistent = true })
 hl.workspace_rule({ workspace = "8", monitor = "", persistent = true })
 hl.workspace_rule({ workspace = "9", monitor = "", persistent = true })
 hl.workspace_rule({ workspace = "10", monitor = "", persistent = true })
+
+hl.workspace_rule({ workspace = "special:scratchpad", monitor = "", persistent = true })
+hl.workspace_rule({ workspace = "special:workspace", monitor = "", persistent = true })

@@ -25,7 +25,8 @@ hl.bind("SUPER + SHIFT + 0", hl.dsp.window.move({ workspace = 10 }))
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
--- Toggle Workspace's scratchpad
+-- Toggle Special Workspaces
 hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("scratchpad"))
 hl.bind("SUPER + CTRL + S", hl.dsp.window.move({ workspace = "special:scratchpad" }))
-
+hl.bind("SUPER + W", hl.dsp.workspace.toggle_special("workspace"))
+hl.bind("SUPER + CTRL + W", hl.dsp.window.move({ workspace = "special:workspace" }))
