@@ -1,8 +1,26 @@
 Helpers = {}
 
+local function cursor_inside_window(win)
+    local cursor = hl.get_cursor_pos()
+
+    if cursor ~= nil then
+        return cursor.x >= win.at.x
+        and cursor.x <= win.at.x + win.size.x
+        and cursor.y >= win.at.y
+        and cursor.y <= win.at.y + win.size.y
+    else
+        return false
+    end
+end
+
 Helpers.avoid_auto_focus_floating_window = function(window_title)
     hl.on("window.active", function(w)
         if w.title == "Picture-in-Picture" then
+
+            if cursor_inside_window(w) then
+                return
+            end
+
             for _, win in ipairs(hl.get_windows({ workspace = w.workspace.id })) do
                 if win.title ~= "Picture-in-Picture" then
                     hl.dispatch(hl.dsp.focus({ window = win }))
