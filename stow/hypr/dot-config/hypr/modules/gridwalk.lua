@@ -7,6 +7,10 @@ local configs = {
     jump_n =  { style = "slide", enabled = true, speed = 1, curve = "linear", },
 }
 
+local function set_animations(c)
+    hl.animation({ leaf = "workspaces", enabled = c.enabled, speed = c.speed, bezier = c.curve, style = c.style })
+end
+
 function M.configure(opts)
     for k, v in pairs(opts) do
         if configs[k] and type(v) == "table" then
@@ -17,10 +21,6 @@ function M.configure(opts)
             configs[k] = v
         end
     end
-end
-
-local function set_animations(c)
-    hl.animation({ leaf = "workspaces", enabled = c.enabled, speed = c.speed, bezier = c.curve, style = c.style })
 end
 
 function M.walk(direction)

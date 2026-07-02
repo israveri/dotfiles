@@ -1,7 +1,7 @@
 -- Window management
 hl.bind("SUPER + F",           hl.dsp.window.fullscreen())
+hl.bind("SUPER + Z",           hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind("SUPER + V",           hl.dsp.window.float({ action = "toggle" }))
-hl.bind("SUPER + Z",           hl.dsp.window.fullscreen({ mode = 1 }))
 
 -- Move focus
 hl.bind("SUPER + left",        hl.dsp.focus({ direction = "l" }))
@@ -30,3 +30,4 @@ hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("scratchpad"))
 hl.bind("SUPER + CTRL + S", hl.dsp.window.move({ workspace = "special:scratchpad" }))
 hl.bind("SUPER + W", hl.dsp.workspace.toggle_special("workspace"))
 hl.bind("SUPER + CTRL + W", hl.dsp.window.move({ workspace = "special:workspace" }))
+hl.bind("SUPER + P", hl.dsp.workspace.toggle_special("password"))
