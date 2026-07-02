@@ -3,7 +3,6 @@ ananicy-cpp
 avahi-daemon
 bluetooth
 limine-snapper-sync
-sddm
 systemd-resolved
 systemd-timesyncd
 ufw

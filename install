@@ -91,19 +91,6 @@ _install_dotfiles() {
     cd "$dotdir/stow" && stow --dotfiles --dir="$dotdir/stow" --target="$HOME" -v1 */
 }
 
-_customize_sddm() {
-    _header "Customizing SDDM"
-
-    sudo mkdir -p "/etc/sddm.conf.d"
-
-    sudo install -m 644 "$dotdir/src/applications/sddm/custom.conf" "/etc/sddm.conf.d/custom.conf"
-    sudo install -m 644 "$dotdir/src/applications/sddm/hyprland.desktop" "/usr/share/wayland-sessions/hyprland.desktop"
-    sudo install -m 644 "$dotdir/src/applications/sddm/hyprland-uwsm.desktop" "/usr/share/wayland-sessions/hyprland-uwsm.desktop"
-
-    setfacl -m u:sddm:x "$HOME"
-    setfacl -m u:sddm:r "$HOME/.face.icon"
-}
-
 _change_default_shell() {
     _header "Changing default shell"
 
@@ -198,7 +185,6 @@ _main() {
     _install_pi_agent
 
     # Programs customizations and adjustments
-    _customize_sddm
     _change_default_shell
     _enable_systemd_units
     _customize_systemd_units
