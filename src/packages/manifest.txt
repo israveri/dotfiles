@@ -29,7 +29,6 @@ gimp
 git
 git-delta
 gnome-font-viewer
-godot
 godot-mono
 greetd
 grim
@@ -61,7 +60,6 @@ nerd-fonts
 networkmanager
 nmap
 noctalia-git
-noctalia-greeter-git
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
