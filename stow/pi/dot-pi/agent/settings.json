@@ -53,8 +53,8 @@
     "observationsPoolTargetTokens": 10000,
     "agentMaxTurns": 16,
     "model": {
-      "provider": "ollama",
-      "id": "qwen3:14b",
+      "provider": "ollama-cloud",
+      "id": "qwen2.5:3b",
       "thinking": "low"
     },
     "passive": false,
