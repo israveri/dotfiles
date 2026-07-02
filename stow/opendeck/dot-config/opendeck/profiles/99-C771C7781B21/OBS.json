@@ -1,4 +1,5 @@
 {
+  "infobars": [],
   "keys": [
     null,
     null,
@@ -19,6 +20,7 @@
           "Encoder"
         ],
         "disable_automatic_states": false,
+        "encoder": null,
         "icon": "plugins/com.amansprojects.starterpack.sdPlugin/icons/switchProfile.png",
         "name": "Switch Profile",
         "plugin": "com.amansprojects.starterpack.sdPlugin",
