@@ -31,6 +31,7 @@ git-delta
 gnome-font-viewer
 godot-mono
 greetd
+greetd-tuigreet
 grim
 gtk4
 gtk4-layer-shell

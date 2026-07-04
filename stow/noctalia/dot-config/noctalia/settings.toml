@@ -189,6 +189,11 @@ focused_color = "#999B21"
 input_path  = "$XDG_CONFIG_HOME/noctalia/templates/noctalia-palette.json"
 output_path = "$XDG_CONFIG_HOME/noctalia/palette.json"
 
+[theme.templates.user.virtual_console]
+input_path  = "$XDG_CONFIG_HOME/noctalia/templates/vt_console_palette.sh"
+output_path = "/usr/local/bin/vt_console_palette.sh"
+post_hook   = "chmod +x /usr/local/bin/vt_console_palette.sh"
+
 [theme.templates.user.nvim]
 input_path  = "$XDG_CONFIG_HOME/noctalia/templates/nvim-palette.lua"
 output_path = "$XDG_CONFIG_HOME/nvim/lua/colors/palette.lua"

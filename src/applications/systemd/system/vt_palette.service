@@ -1,0 +1,12 @@
+[Unit]
+Description=Apply color palette to tty1
+Before=greetd.service
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/vt_console_palette.sh /dev/tty1
+RemainAfterExit=yes
+
+[Install]
+WantedBy=sysinit.target

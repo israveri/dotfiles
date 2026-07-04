@@ -48,7 +48,7 @@ _clone_self() {
 
     if [ ! -d "$dotdir" ]; then
         git clone "$repoHttps" "$dotdir"
-        git -C "$dotdir" remote set-url origin $repoGit
+        git -C "$dotdir" remote set-url origin "$repoGit"
         git -C "$dotdir" remote rename origin github
     fi
 }
@@ -135,6 +135,21 @@ _config_deluged() {
     sudo install -m 644 "$sourcedir/override.conf" "$targetdir/override.conf"
 }
 
+_config_greetd(){
+    local service_file="vt_palette.service"
+    local conf_file="vt_palette.conf"
+
+    local systemd_service_file="$dotdir/src/applications/systemd/system/$service_file"
+    local greetd_dropin_file="$dotdir/src/applications/systemd/system/greetd.service.d/$conf_file"
+
+    local systemd_dir="/etc/systemd/system/"
+    local greetd_dir="$systemd_dir/greetd.service.d/"
+
+    sudo mkdir -p "$greetd_dir"
+    sudo install -m 644 "$greetd_dropin_file" "$greetd_dir/$conf_file"
+    sudo install -m 644 "$systemd_service_file" "$systemd_dir/$service_file"
+}
+
 _restart_daemons() {
     sudo systemctl daemon-reload
 }
@@ -148,6 +163,7 @@ _customize_systemd_units() {
 
     _config_mounts
     _config_deluged
+    _config_greetd 
     _restart_daemons
 
     _enable_mount_units
