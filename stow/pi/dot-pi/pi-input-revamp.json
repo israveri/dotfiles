@@ -1,0 +1,26 @@
+{
+    "layout": {
+        "topLeft": [
+            "agent",
+            "model",
+            "thinking-level",
+            "cwd",
+            "tok"
+        ],
+        "topRight": [
+            "turn-out",
+            "ctx-percent",
+            "ctx-tokens-full"
+        ],
+        "bottomLeft": [],
+        "bottomRight": [
+            "turn-duration"
+        ]
+    },
+    "animations": {
+        "typingPulse": false,
+        "submitFlash": true,
+        "metricPulse": true,
+        "tokPulse": false
+    }
+}

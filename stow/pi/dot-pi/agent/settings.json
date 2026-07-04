@@ -1,5 +1,5 @@
 {
-  "theme": "dark",
+  "theme": "noctalia",
   "defaultProvider": "ollama",
   "defaultModel": "qwen3:14b",
   "quietStartup": false,
@@ -30,7 +30,7 @@
     "--",
     "npm"
   ],
-  "lastChangelogVersion": "0.79.7",
+  "lastChangelogVersion": "0.80.3",
   "packages": [
     "npm:context-mode",
     "npm:pi-search-hub",
@@ -42,8 +42,9 @@
     "npm:pi-system-prompt",
     "npm:@amb007/deep-wiki",
     "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:pi-sandbox",
-    "npm:@aliou/pi-guardrails"
+    "npm:@aliou/pi-guardrails",
+    "npm:@nerisma/pi-input-revamp",
+    "npm:@slix/pi-file-tracker"
   ],
   "observational-memory": {
     "observeAfterTokens": 10000,
