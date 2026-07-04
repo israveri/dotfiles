@@ -15,6 +15,7 @@ tdl() {
 
     local editor_pane ai_pane
     local current_dir="${PWD}"
+    local editor="nvim"
     local ai="pi"
 
     # Grabs the pane id
@@ -24,10 +25,11 @@ tdl() {
     tmux split-window -v -p 25 -t "$editor_pane" -c "$current_dir"
 
     # Creates ai split pane with 25% screen and grab its id
-    ai_pane=$(tmux split-window -h -p 25 -t "$editor_pane" -c "$current_dir" -P -F "#{pane_id}" "exec $ai")
+    ai_pane=$(tmux split-window -h -p 25 -t "$editor_pane" -c "$current_dir")
 
-    # Opens editor
-    tmux send-keys -t "$editor_pane" "$EDITOR ." C-m
+    # Opens editor and ai harness
+    tmux send-keys -t "$editor_pane" "$editor ." C-m
+    tmux send-keys -t "$ai_pane" "$ai" C-m
 
     # Focus the editor pane
     tmux select-pane -t "$editor_pane"
