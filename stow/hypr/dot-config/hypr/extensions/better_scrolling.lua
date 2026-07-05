@@ -1,6 +1,4 @@
-local M = {}
-
-function M.edge(window)
+local fit_edges = function(window)
     if window == nil
         or window.floating
         or window.workspace == nil
@@ -37,17 +35,7 @@ function M.edge(window)
     else
         hl.config({ scrolling = { focus_fit_method = 1 } })
     end
-
-    -- Handles cursor warping shennanigans with centered floating windows
-    local cursor = hl.get_cursor_pos()
-    if cursor ~= nil then
-        hl.dispatch(hl.dsp.layout("focus l"))
-        hl.dispatch(hl.dsp.layout("focus r"))
-        hl.dispatch(hl.dsp.cursor.move({
-            x = cursor.x,
-            y = cursor.y,
-        }))
-    end
 end
 
-return M
+hl.on("window.open", fit_edges)
+hl.on("window.active", fit_edges)

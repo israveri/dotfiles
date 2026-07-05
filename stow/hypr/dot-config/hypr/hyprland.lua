@@ -1,9 +1,6 @@
 -- Refer to the wiki for more information.
 -- https://wiki.hypr.land/Configuring/Start/
 
--- Default programs. Can be referenced in any required file as Programs._key_
-require("hyprplug").load()
-
 require("core.helpers")
 require("core.base")
 require("core.autostart")
@@ -15,6 +12,9 @@ require("core.layout")
 require("core.workspace")
 require("core.looknfeel")
 require("core.animations")
+
+require("extensions.better_scrolling")
+require("extensions.better_workspace_switching")
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()
