@@ -10,5 +10,3 @@ hl.workspace_rule({ workspace = "9", monitor = "DP-1", persistent = true })
 hl.workspace_rule({ workspace = "10", monitor = "DP-1", persistent = true })
 
 hl.workspace_rule({ workspace = "special:scratchpad", monitor = "", persistent = true })
-hl.workspace_rule({ workspace = "special:workspace", monitor = "", persistent = true })
-hl.workspace_rule({ workspace = "special:password", monitor = "", persistent = true })

@@ -2,11 +2,9 @@
 hl.config({
     general = {
         allow_tearing    = false,
-        gaps_in  = 5,
-        gaps_out = 10,
-
-        border_size = 2,
-
+        gaps_in          = 5,
+        gaps_out         = 10,
+        border_size      = 2,
         resize_on_border = false,
     },
 })
@@ -25,10 +23,10 @@ hl.config({
         },
 
         blur = {
-            enabled   = true,
-            size      = 3,
-            passes    = 2,
-            vibrancy  = 0.1696,
+            enabled  = true,
+            size     = 3,
+            passes   = 2,
+            vibrancy = 0.1696,
         },
     },
 })

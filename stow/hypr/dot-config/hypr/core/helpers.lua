@@ -1,6 +1,6 @@
 Helpers = {}
 
-local function cursor_inside_window(win)
+local function is_cursor_inside_window(win)
     local cursor = hl.get_cursor_pos()
 
     if cursor ~= nil then
@@ -13,11 +13,11 @@ local function cursor_inside_window(win)
     end
 end
 
-Helpers.avoid_auto_focus_floating_window = function(window_title)
+Helpers.avoid_auto_focus_floating_window = function(_)
     hl.on("window.active", function(w)
         if w.title == "Picture-in-Picture" then
 
-            if cursor_inside_window(w) then
+            if is_cursor_inside_window(w) then
                 return
             end
 

@@ -6,10 +6,6 @@ hl.on("config.reloaded", function()
     hl.notification.create({ text = "Hyprland reloaded.", timeout = 2000 })
 end)
 
--- Basic Movement
--- hl.bind("SUPER + CTRL + right", hl.dsp.focus({ workspace = "r+1" }))
--- hl.bind("SUPER + CTRL + left",  hl.dsp.focus({ workspace = "r-1" }))
-
 -- Miscelaneous changes
 hl.config({
     misc = {
