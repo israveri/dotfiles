@@ -18,3 +18,4 @@ require("extensions.better_workspace_switching")
 
 -- For Noctalia Color templates
 require("noctalia").apply_theme()
+

@@ -5,6 +5,7 @@ require("core.rules.gamescope")
 require("core.rules.gnome-calculator")
 require("core.rules.mission-center")
 require("core.rules.noctalia")
+require("core.rules.satty")
 require("core.rules.steam")
 require("core.rules.xwayland")
 

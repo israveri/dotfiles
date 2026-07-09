@@ -102,6 +102,8 @@ session_placement = "centered"
 [shell.screenshot]
 directory = "/home/israel/Pictures/Screenshots"
 filename_pattern = "screenshot_%Y-%m-%d_%H-%M-%S"
+pipe_command = "satty --auto-copy  --filename - --init-tool brush --disable-notifications"
+pipe_to_command = true
 
 [[shell.session.actions]]
 action = "lock"
