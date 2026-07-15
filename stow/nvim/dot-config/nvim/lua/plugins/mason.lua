@@ -20,6 +20,7 @@ return {
                 "basedpyright",     -- python
                 "bashls",           -- bash
                 "clangd",           -- c/c++
+                "csharp_ls",        -- c#
                 "cssls",            -- css
                 "elixirls",         -- elixir
                 "erlangls",         -- erlang
