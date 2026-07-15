@@ -117,7 +117,8 @@ _install_pi_agent() {
 
 _enable_systemd_units() {
     _header "Enabling service units"
-    sudo systemctl enable $(cat "$dotdir/src/services/manifest.txt")
+    sudo systemctl enable $(cat "$dotdir/src/services/system.txt")
+    systemctl --user enable $(cat "$dotdir/src/services/user.txt")
 }
 
 _config_mounts() {
