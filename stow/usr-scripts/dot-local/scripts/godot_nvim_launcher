@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Parses Godot's launch flags to correctly open
+# Neovim at the right file, line, and column
+# 
+# Creates a socket to run neovim under server mode
+# so same instance can open multiple files
+#
+# format:  {project} {file}:{line}:{col}
+# example: my_game some_script.gd:10:5
+project="$1"
+target="$2"
+
+file="${target%%:*}"
+linecol="${target#*:}"
+line="${linecol%%:*}"
+col="${linecol#*:}"
+
+socket="/tmp/godot_nvim_$(basename "$project").sock"
+
+cd "$project" || exit 1
+
+if [ -S "$socket" ]; then
+    nvim --server "$socket" --remote-send "<C-\\><C-n>:edit $file<CR>:call cursor($line, $col) | call histdel(':', '\v^(edit|call)*')<CR>:echo ''<CR>"
+else
+    exec kitty \
+        --single-instance \
+        --instance-group="godot" \
+        --title="Godotvim" \
+        env -u NVIM -u NVIM_LISTEN_ADDRESS \
+        nvim --listen "$socket" "+silent! call cursor($line, $col) | call histdel(':', '\v^(edit|call)*') | echo ''" "$file"
+fi
+
