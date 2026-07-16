@@ -6,3 +6,4 @@ hl.monitor({ output = "DP-2", mode = "2560x1440@144.00Hz", position = "0x0", sca
 
 -- Fallback for any new monitor
 hl.monitor({ output = "", mode = "preferred", position = "auto", scale = 1 })
+
