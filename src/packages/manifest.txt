@@ -97,6 +97,7 @@ starship
 stow
 swtpm
 syncthing
+tailscale
 television
 thunar
 thunar-archive-plugin
