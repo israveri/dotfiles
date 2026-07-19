@@ -115,6 +115,15 @@ _install_pi_agent() {
     mise exec npm@latest -- npm install -f @mariozechner/pi-coding-agent
 }
 
+_install_csakura() {
+    _header "Installing csakura"
+
+    rm -rf /tmp/csakura
+    git clone https://github.com/realstrawhat/csakura /tmp/csakura
+    cd /tmp/csakura
+    makepkg -i
+}
+
 _enable_systemd_units() {
     _header "Enabling service units"
     sudo systemctl enable $(cat "$dotdir/src/services/system.txt")
@@ -200,6 +209,7 @@ _main() {
     _install_neovim_plugins
     _install_devenv
     _install_pi_agent
+    _install_csakura
 
     # Programs customizations and adjustments
     _change_default_shell
