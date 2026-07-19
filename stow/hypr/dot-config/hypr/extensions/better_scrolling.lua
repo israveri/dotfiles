@@ -28,8 +28,8 @@ local fit_edges = function(window)
         end
     end
 
-    -- If window is "in the middle", set fit method to 'center'
-    -- Otherwise it is in one of the edges, then set fit method to 'fit'
+    -- If window is "in the middle", set fit method to 'center' (0)
+    -- Otherwise it is in one of the edges, then set fit method to 'fit' (1)
     if column_index > 0 and column_index ~= max_index then
         hl.config({ scrolling = { focus_fit_method = 0 } })
     else

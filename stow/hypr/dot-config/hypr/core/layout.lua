@@ -1,5 +1,5 @@
 hl.config({
-    general = { layout = "dwindle" },
+    general = { layout = "scrolling" },
 
     dwindle = {
         force_split    = 2,
@@ -12,6 +12,7 @@ hl.config({
     }
 })
 
-hl.workspace_rule({ workspace = "9", layout = "scrolling" })
-hl.workspace_rule({ workspace = "10", layout = "scrolling" })
+hl.workspace_rule({ workspace = "1", layout = "dwindle" })
+hl.workspace_rule({ workspace = "2", layout = "dwindle" })
+hl.workspace_rule({ workspace = "3", layout = "dwindle" })
 
