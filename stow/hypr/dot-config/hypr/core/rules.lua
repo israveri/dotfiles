@@ -7,6 +7,7 @@ require("core.rules.mission-center")
 require("core.rules.noctalia")
 require("core.rules.satty")
 require("core.rules.steam")
+require("core.rules.thunar")
 require("core.rules.xwayland")
 
 -- ─── Global rules ───────────────────────────────────
