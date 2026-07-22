@@ -1,0 +1,26 @@
+[Unit]
+Description=Valkey Storage for Immich
+After=photos-pod.service
+Requires=photos-pod.service
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Restart=always
+
+[Container]
+Image=docker.io/valkey/valkey:alpine
+ContainerName=photos-valkey
+AutoUpdate=registry
+
+Volume=photos-valkey.volume:/data
+
+Exec=valkey-server --supervised systemd
+
+HealthCmd=valkey-cli ping || exit 1
+HealthInterval=30s
+HealthRetries=3
+
+Pod=photos.pod
+

@@ -1,0 +1,12 @@
+[Unit]
+Description=Photois Hosting with Immich
+Requires=photos.network
+
+[Install]
+WantedBy=default.target
+
+[Pod]
+PodName=photos
+Network=photos.network
+
+PublishPort=2283:2283

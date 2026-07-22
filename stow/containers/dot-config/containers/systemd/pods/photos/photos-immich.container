@@ -1,0 +1,25 @@
+[Unit]
+Description=Immich Server
+After=photos-postgres.service photos-valkey.service
+Requires=photos-postgres.service photos-valkey.service
+
+[Install]
+WantedBy=default.target
+
+[Service]
+Restart=always
+TimeoutStartSec=300
+
+[Container]
+ContainerName=photos-immich
+Image=ghcr.io/immich-app/immich-server:release
+EnvironmentFile=%h/.config/containers/systemd/environments/photos.env
+
+Volume=photos-immich-data.volume:/data
+Volume=/etc/localtime:/etc/localtime:ro
+
+HealthCmd=curl -f http://localhost:2283/api/server/ping || exit 1
+HealthInterval=30s
+HealthRetries=3
+
+Pod=photos.pod
