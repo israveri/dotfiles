@@ -27,7 +27,7 @@ export QT_QPA_PLATFORMTHEME="hyprqt6engine"
 export XDG_SESSION="wayland"
 
 # Gaming optimizations
-export PROTON_ENABLE_WAYLAND=1
+# export PROTON_ENABLE_WAYLAND=1 # Messes up resolution detection and controller support
 export PROTON_FSR4_UPGRADE=1
 export PROTON_FSR4_RDNA3_UPGRADE=1
 export PROTON_NO_WM_DECORATION=1
